@@ -25,3 +25,44 @@ subscriptions:
     stage: A
     diff_threshold_pct: 15
   keyword_recall_mode: or
+  intent_profiles:
+    - tag: DL PDE
+      description: 深度学习 神经算子 飞机进气道，尾喷管 PDE求解
+      enabled: true
+      paper_sources:
+        - arxiv
+      keywords:
+        - keyword: Neural Operator
+          keyword_cn: 神经算子
+          query: Deep learning neural operators for PDE solving
+        - keyword: Aircraft Intake
+          keyword_cn: 飞机进气道
+          query: Deep learning simulation of aircraft engine intakes
+        - keyword: Exhaust Nozzle
+          keyword_cn: 尾喷管
+          query: Neural network modeling of aircraft exhaust nozzles
+        - keyword: PDE Solver
+          keyword_cn: PDE求解器
+          query: Physics-informed neural networks for partial differential equations
+      intent_queries:
+        - query: Neural operator applications in intake and nozzle flow simulation
+          query_cn: 神经算子在进气道和喷管流动模拟中的应用
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-03-28T12:38:01.592Z'
+source_backends:
+  arxiv:
+    papers_table: arxiv_papers
+    use_vector_rpc: true
+    vector_rpc: match_arxiv_papers
+    vector_rpc_exact: match_arxiv_papers_exact
+    use_bm25_rpc: true
+    bm25_rpc: match_arxiv_papers_bm25
+    sync_table: arxiv_sync_status
+    sync_success_value: success
+    schema: public
+    kind: supabase
+    enabled: true
+    url: https://lyucdwgefyfbmaiopjbk.supabase.co
+    anon_key: sb_publishable_lX-oi64Uxyd7SIVv3_w2Uw_MTOojeKq
