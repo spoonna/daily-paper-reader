@@ -1,0 +1,158 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-001.webp",
+      "caption": "Table 11: Quantitative comparison with recent state-of-the-art baselines (SINGER, AMG-GNN, Transolver) on representative tasks.",
+      "page": 26,
+      "index": 1,
+      "width": 736,
+      "height": 193
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-002.webp",
+      "caption": "Figure 18: Visualization of the failure mode in the quasilinear Phase Transition scenario.",
+      "page": 26,
+      "index": 2,
+      "width": 748,
+      "height": 239
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-003.webp",
+      "caption": "Table 3: Simulation parameters of all datasets used in experiments.",
+      "page": 15,
+      "index": 3,
+      "width": 768,
+      "height": 280
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-004.webp",
+      "caption": "Table 1: Governing equations and physical contexts for experimental scenarios.",
+      "page": 7,
+      "index": 4,
+      "width": 830,
+      "height": 187
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-005.webp",
+      "caption": "Figure 6: Ablation study on the complex obstacle scenario.",
+      "page": 10,
+      "index": 5,
+      "width": 801,
+      "height": 215
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-006.webp",
+      "caption": "Table 6: Comparison of single-trajectory inference time (in seconds) between DGNet and baseline methods.",
+      "page": 18,
+      "index": 6,
+      "width": 722,
+      "height": 193
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-007.webp",
+      "caption": "Figure 11: Ablation study results on the Laser Heat scenario.",
+      "page": 18,
+      "index": 7,
+      "width": 801,
+      "height": 215
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-008.webp",
+      "caption": "Figure 10: Ablation study results on the FitzHugh–Nagumo scenario.",
+      "page": 18,
+      "index": 8,
+      "width": 801,
+      "height": 216
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-009.webp",
+      "caption": "Figure 15: Visualization of the 3D heat conduction scenario, showing the mechanical bracket geometry.",
+      "page": 23,
+      "index": 9,
+      "width": 477,
+      "height": 425
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-010.webp",
+      "caption": "Table 2: Results across scenarios from three categories of spatiotemporal PDE systems under the limited-trajectory training. For both MSE (in log scale) and RNE, lower values indicate better performance. The best results are highlighted in bold.",
+      "page": 8,
+      "index": 10,
+      "width": 794,
+      "height": 398
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-011.webp",
+      "caption": "Figure 12: Eigenvalue spectrum analysis for the FitzHugh–Nagumo task. Blue indicates the physics prior Lphysics, and orange indicates the total hybrid operator L.",
+      "page": 19,
+      "index": 11,
+      "width": 651,
+      "height": 427
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-012.webp",
+      "caption": "Figure 13: Eigenvalue spectrum analysis for the Laser Heat task. Blue indicates the physics prior Lphysics, and orange indicates the total hybrid operator L.",
+      "page": 19,
+      "index": 12,
+      "width": 651,
+      "height": 429
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-013.webp",
+      "caption": "Table 5: DGNet inference complexity and throughput measurements.",
+      "page": 17,
+      "index": 13,
+      "width": 825,
+      "height": 247
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-014.webp",
+      "caption": "Figure 9: Scalability of inference time and peak memory with respect to mesh size.",
+      "page": 17,
+      "index": 14,
+      "width": 787,
+      "height": 457
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-015.webp",
+      "caption": "Figure 3: Visualization of prediction results on classical PDE scenarios. Rows from top to bottom correspond to the Allen–Cahn, FitzHugh–Nagumo, and Fisher–KPP equations, respectively.",
+      "page": 9,
+      "index": 15,
+      "width": 829,
+      "height": 367
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-016.webp",
+      "caption": "Figure 14: Speed-accuracy comparison between DGNet and the classical FEM numerical solver on the FitzHugh-Nagumo task.",
+      "page": 20,
+      "index": 16,
+      "width": 617,
+      "height": 396
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-017.webp",
+      "caption": "Figure 1: Overview of DGNet architecture. The model centers on a hybrid operator L = Lphysics + Lneural, where Lphysics encodes gradient and Laplacian discretizations and Lneural is a GNN-based correction for mesh-induced errors. This operator is integrated into the discrete Green’s function update (Eq. 7), which naturally combines system evolution with source-term response and provides structural inductive bias for data-efficient learning.",
+      "page": 5,
+      "index": 17,
+      "width": 818,
+      "height": 315
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-018.webp",
+      "caption": "Figure 8: Heatmap visualization of operator matrices. Left: Lphysics. Middle: Lneural. Right: final corrected operator L.",
+      "page": 16,
+      "index": 18,
+      "width": 759,
+      "height": 217
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01762v1/fig-019.webp",
+      "caption": "Figure 7: Comparison of the learned operator with the reference. Left: input physical field. Center: reference operator computed by finite difference. Right: operator predicted by DGNet.",
+      "page": 16,
+      "index": 19,
+      "width": 805,
+      "height": 233
+    }
+  ]
+}

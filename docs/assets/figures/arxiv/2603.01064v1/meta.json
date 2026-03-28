@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.01064v1/fig-001.webp",
+      "caption": "Fig. 2: Eigenvectors corresponding to different eigenvalues of the linear system discretized from the Poisson equation (first row) and the Integral equation (second row).",
+      "page": 6,
+      "index": 1,
+      "width": 623,
+      "height": 275
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01064v1/fig-002.webp",
+      "caption": "Fig. 3: Error vectors when solving different linear systems using the Jacobi method.",
+      "page": 6,
+      "index": 2,
+      "width": 629,
+      "height": 262
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01064v1/fig-003.webp",
+      "caption": "Fig. 7: The graph illustration of the neural multigrid cycle for one-dimensional problems when L = 3.",
+      "page": 15,
+      "index": 3,
+      "width": 700,
+      "height": 484
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01064v1/fig-004.webp",
+      "caption": "Table 4: The average number of iterations and evaluation time required for solving the two-dimensional integral equation.",
+      "page": 21,
+      "index": 4,
+      "width": 827,
+      "height": 204
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01064v1/fig-005.webp",
+      "caption": "Fig. 4: Graph illustration of a V-cycle multigrid scheme with L = 3",
+      "page": 7,
+      "index": 5,
+      "width": 775,
+      "height": 417
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01064v1/fig-006.webp",
+      "caption": "Fig. 10: Difference between Êl and Êl−1 for l = 1, 2, 3, 4.",
+      "page": 22,
+      "index": 6,
+      "width": 706,
+      "height": 604
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01064v1/fig-007.webp",
+      "caption": "Fig. 6: Plot of ml for l = 1, 2, 3.",
+      "page": 13,
+      "index": 7,
+      "width": 713,
+      "height": 201
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01064v1/fig-008.webp",
+      "caption": "Fig. 9: Magnitude spectrums of unsolved errors at the fine grid after applying neural smoothers at each level.",
+      "page": 19,
+      "index": 8,
+      "width": 621,
+      "height": 375
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01064v1/fig-009.webp",
+      "caption": "Fig. 8: Plot of M̂l for l = 1, 2, 3.",
+      "page": 17,
+      "index": 9,
+      "width": 713,
+      "height": 201
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01064v1/fig-010.webp",
+      "caption": "Fig. 5: Explanation of the frequency domain decomposition (L=3).",
+      "page": 9,
+      "index": 10,
+      "width": 629,
+      "height": 340
+    }
+  ]
+}

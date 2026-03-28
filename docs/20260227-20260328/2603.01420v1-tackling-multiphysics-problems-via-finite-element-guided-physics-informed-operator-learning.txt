@@ -1,0 +1,551 @@
+Title: Tackling multiphysics problems via finite element-guided physics-informed operator learning
+
+URL Source: https://arxiv.org/pdf/2603.01420v1
+
+Published Time: Tue, 03 Mar 2026 03:19:02 GMT
+
+Number of Pages: 36
+
+Markdown Content:
+# Tackling multiphysics problems via finite element–guided physics-informed operator learning 
+
+Yusuke Yamazaki 1∗, Reza Najian Asl 2, Markus Apel 3, Mayu Muramatsu 4, Shahed Rezaei 3∗
+
+> 1Graduate School of Science and Technology, Keio University, Hiyoshi3-14-1,Kohoku-ku, Yokohama 223-8522, Japan
+> 2Chair of Structural Analysis, Technical University of Munich, Arcisstraße 21, 80333 Munich, Germany
+> 3ACCESS e.V., Intzestr. 5, 52072 Aachen, Germany
+> 4Department of Mechanical Engineering, Keio University, Hiyoshi3-14-1,Kohoku-ku, Yokohama 223-8522, Japan
+> ∗Corresponding authors: yusuke.yamazaki.0615@keio.jp, s.rezaei@access-technology.de
+
+Abstract 
+
+This work presents a finite element–guided physics-informed operator learning framework for multiphysics problems with coupled partial differential equations (PDEs) on arbitrary domains. Implemented with Folax, a JAX-based operator-learning platform, the proposed framework learns a mapping from the input parameter space to the solution space with a weighted residual formulation based on the finite element method, enabling discretization-independent predic-tion beyond the training resolution without relying on labeled simulation data. The present framework for multiphysics problems is verified on nonlinear coupled thermo-mechanical prob-lems. Two- and three-dimensional representative volume elements with varying heterogeneous microstructures, and a close-to-reality industrial casting example under varying boundary con-ditions are investigated as the example problems. We investigate the potential of several neural operator backbones, including Fourier neural operators (FNOs), deep operator networks (Deep-ONets), and a newly proposed implicit finite operator learning (iFOL) approach based on condi-tional neural fields. The results demonstrate that FNOs yield highly accurate solution operators on regular domains, where the global topology can be efficiently learned in the spectral domain, and iFOL offers efficient parametric operator learning capabilities for complex and irregular geometries. Furthermore, studies on training strategies, network decomposition, and training sample quality reveal that a monolithic training strategy using a single network is sufficient for accurate predictions, while training sample quality strongly influences performance. Overall, the present approach highlights the potential of physics-informed operator learning with a finite element–based loss as a unified and scalable approach for coupled multiphysics simulations. 
+
+Keywords: Multiphysics problem, Parameterized PDEs, Physics-informed operator learning 
+
+1. Introduction 
+
+Solving partial differential equations (PDEs) along with boundary conditions is fundamental to understanding a wide range of physical phenomena across various engineering disciplines, in-cluding structural mechanics, fluid dynamics, and phase transformations in material microstruc-tures. However, the computational cost can become prohibitively high, especially when dealing 
+
+> arXiv:2603.01420v1 [cs.LG] 2 Mar 2026
+
+with large-scale problems involving complex features such as nonlinearity and stiffness. Ex-amples include multiphysics problems, in which multiple governing equations associated with different physical processes are coupled to describe complex phenomena.Thermo-mechanical coupling in the solidification process [1, 2], thermo-mechanical phase-field coupling for thermal fracture [3], chemo-mechanical coupling [4], hydro-mechanical coupling for hydraulic fracture [5], and electro-chemo-mechanical coupling in Lithium-ion batteries [6] are part of the multiphysics examples. In recent years, deep learning (DL) has emerged as a promising tool, leveraging the expressive power of neural networks (NNs) to efficiently approximate solutions of PDEs and reduce com-putational cost. Popular neural network architectures, such as convolutional neural networks (CNNs), recurrent neural networks (RNNs), and graph neural networks (GNNs) have been ap-plied in computational mechanics. Geneva et al. [7] proposed an auto-regressive convolutional encoder-decoder architecture for nonlinear spatiotemporal dynamics. Gao et al. [8] introduced a coordinate mapping to CNN to handle irregular domains while preserving their advantages of local feature extraction and parameter efficiency. 3D CNN [9] and convolutional residual network blocks [10] have also been utilized, whose architecture and input/output are tailored to their target PDEs. Hu et al. [11] utilized an RNN and dimensionality reduction methods to learn microstructure evolutions described by phase-field models in a latent space. Pfaff et al. [12] proposed MeshGraphNets, which utilized graph neural networks to learn solutions of mesh-based simulations. Many other studies have presented CNN-based, RNN-based, and GNN-based models for various PDEs, see [13, 14, 15, 16] for example. Furthermore, non-intrusive reduced order modeling for spatiotemporal PDEs, which exploits a latent space constructed by trained autoencoders and latent ordinary differential equations identified through training, has also been explored and shown potential as a fast surrogate while maintaining prediction accuracy in long rollout [17, 18, 19]. Physics-informed neural networks (PINNs) are also one of the popular models to approximate PDE solutions with NNs [20], which is enabled by automatic differentiation in modern deep learning frameworks such as TensorFlow, PyTorch, and JAX. The potential of PINNs has been explored through modifying the architecture and training algorithm tailored to specific problems [21, 22, 23], and PINNs have demonstrated high efficiency and accuracy in solving inverse, ill-posed, and high-dimensional problems that are computationally expensive or unstable for traditional numerical methods [24, 25, 26, 27]. PINNs have also been extended to multiphysics problems and demonstrated promising results in obtaining solutions to coupled and complex systems efficiently. Chen et al. [28] presented the effectiveness of a staggered training scheme for coupled systems in phase-field corrosion problems. Harandi et al. [29] introduced mixed PINNs to heterogeneous domains in a thermo-mechanical coupling setup. PINNs have been applied to other problem domains such as material degradation [30] and thermo-chemical curing [31] with enhanced PINN architecture. The spectral element method is integrated with PINNs to enhance accuracy and efficiency in solving multiphysics problems [32]. Recently, operator learning, which learns mappings between functions defined on infinite-dimensional Banach spaces, has gained popularity due to its superior capability of predicting PDE solutions across a wide range of problems and resolutions. Two popular models are Fourier neural operators (FNOs) [33, 34, 35] and deep operator networks (DeepONets) [36, 37, 38, 39]. Several other operator learning models have been proposed, such as Laplace neural operator [40], deep green networks [41], Wavelet neural operator [42], and convolutional neural operator [43]. The potential of operator learning approaches has been demonstrated in various problem domains, including fluid flows [44, 45], solid mechanics [46, 47], seismology [48], and phase-field 2modeling [49, 50], with the advancement of their architecture and training strategies. Further-more, implicit neural representations (INRs), which have initially gained popularity in computer vision have also been extended to continuous learning of PDE solutions due to their superior ability to continuously represent fields. Several neural field architectures have been proposed for continuous solutions of spatiotemporal PDEs both in time and space, such as dynamics-aware INR (DINo)[51], vectorized conditional neural fields (VCNeFs) [52]. Serrano et al. [53] pro-posed a coordinate-based model for operator learning (CORAL) for various problem domains such as dynamics modeling and geometry-aware inference, demonstrating its versatility. Con-ditional neural fields can also be combined with latent diffusion models to achieve generative modeling of turbulence flow [54]. Our previous work proposed implicit Finite Operator Learning (iFOL) for continuous solutions of nonlinear PDEs [55] on arbitrary geometries. iFOL utilizes a physics-informed encoder–decoder architecture to learn the mapping between continuous pa-rameter spaces and corresponding solution fields. The decoder reconstructs parametric solutions through an implicit neural field conditioned on a latent feature representation. Instance-specific latent codes are obtained via a PDE-constrained encoding procedure formulated as a second-order meta-learning problem. Training relies solely on a physics-informed objective derived from the method of weighted residuals based on the finite element discretization, eliminating the need for labeled data. Its performance is demonstrated on hyperelasticity, nonlinear thermal diffusion, and phase separation by a phase-field model on both regular and irregular domains. Moreover, iFOL is also combined with the nonlinear FEM to form a hybrid solver, termed Neural initialized Newton, to enhance the convergence of nonlinear FEM [56]. Operator learning models have also been applied to multiphysics problems, with advance-ments in their architecture. Examples include DeepM&Mnet on a two-dimensional electro-convection problem for unseen electric potentials [57], Codomain Attention Neural Operator (CoDA-NO) which demonstrates superior performance on fluid-structure and fluid-thermal in-teractions [58], physics-informed parallel neural operator (PIPNO) [59], and coupled multi-physics operator learning (COMPOL) with FNO backbone [60]. Systematic evaluations of the performance of neural operators on multiphysics problems have also been conducted to explore their potential in addressing such complex problems [61, 62]. Their architectures have also been modified to enable accurate predictions of complex physical phenomena modeled by phase-field models, such as fracture [63] and liquid-metal dealloying [64]. These studies have demonstrated the applicability of machine learning approaches to mul-tiphysics problem domains. However, so far, it has still been limited to relatively simple two-dimensional geometries, and a comprehensive understanding of applying physics-informed loss functions, such as discretized weak form losses, to multiphysics coupled systems in the realm of operator learning has not been well explored. Therefore, it is essential to gain a deeper under-standing of the prediction capabilities of neural operators on different problem setups, ranging from a two-dimensional regular domain to an application-oriented three-dimensional irregular domain. This study presents a finite element-guided physics-informed operator learning framework for nonlinear multiphysics problems that involve interaction between multiple governing equations to enable surrogate modeling of such problems, including engineering application scenarios on a three-dimensional domain across scales, without labeled data. The concept of the present con-tribution is depicted in Fig. 1. The development is built on the JAX-based platform Folax [65], which allows for the seamless integration of classical numerical methods into operator learning architectures. In this work, we employ multiple types of backbones, such as FNO, DeepONet, and iFOL, to enable a flexible framework regardless of the target geometry by leveraging the 3Figure 1: Overall idea of the present research: addressing multiphysics problems across scales with a novel and scalable physics-informed operator learning framework, where finite element residuals are directly used for parametric training of deep learning models. The final goal would be to enable strong coupling of multiphysics problems between macro and microscale as illustrated on the bottom. As a first step, the present work demon-strates the performance of the proposed framework on typical multiphysics problems on both scales. 
+
+advantages of each backbone. The proposed approach builds on the concept of Finite Operator Learning (FOL) [66, 67, 68] to extend classical numerical solvers toward learning parametric, resolution-independent solution operators. The physics-informed loss function is formulated as weighted residuals based on the finite element method with the predicted solution field act-ing as the test function, thereby enabling the backpropagation of discrete residuals during the training. The resulting model is not tied to a single boundary value problem or a fixed discretiza-tion, but generalizes across varying input parameters, including material property distributions, topologies, and boundary conditions. Importantly, the learning process does not require labeled solution data, resulting in a fully physics-driven parametric solver that operates independently of precomputed simulations and generalizes across resolutions and problem instances. The ad-vantages of employing the finite element-based loss function are threefold: (i) it enables the use of unstructured meshes, which are essential for accurately representing complex geometries and capturing localized phenomena in multiphysics problems, (ii) it avoids the need for automatic differentiation to compute partial derivatives in the governing equations, which can be compu-tationally expensive and memory-intensive, especially for complex multiphysics problems, and (iii) the loss formulation based on the weak form of the governing equations allows for a more flexible and stable training process, as it can better handle discontinuities and singularities in the solution, which is common in multiphysics problems, and it provides a unified framework to encode coupling terms and interface conditions between multiple physical fields. To demon-strate the performance of the proposed framework, nonlinear thermo-mechanical coupling with temperature-dependent material properties is considered. It is noted that, however, the pro-posed framework is highly flexible and can be extended to other multiphysics problems, such as electro-mechanical and chemo-mechanical coupling, by modifying the loss function according to the problem of interest. We systematically evaluate the performance of neural operators from various aspects. For the test cases, practical-oriented distributions from engineering materials are adopted to evaluate the extrapolation performance in a zero-shot super-resolution setting. We also consider two training schemes analogous to multiphysics FEM, namely the monolithic and staggered training schemes. Additionally, separate and single FNO architectures are com-pared to investigate the possibility of further enhancement in prediction performance. Other as-4pects, such as the influence of traning samples and inference cost evaluation are also investigated to gain an deeper understanding of the performance. The example problems considered in this work include not only a two-dimensional square domain problem, but also a three-dimensional representative volume element (RVE) problem and a industrial-oriented three-dimensional cast-ing example to demonstrate the capability of the present framework in addressing application scenario cases involving large-scale complex geometry. This paper consists of five sections. In Section 2, we introduce the derivation of the loss formulation of the coupled partial differential equations for thermo-mechanical coupling. Section 3 summarizes the neural operators employed in this work and training algorithms. This is followed by Section 4, which presents and discusses the results for three different problems: the two-dimensional square problem, the three-dimensional representative volume element (RVE) problem, and an application-oriented three-dimensional casting example. The conclusion and outlook are provided in Section 5. 
+
+2. Coupled partial differential equations 
+
+In this study, we focus on thermo-mechanical coupling as an example of a coupled system of PDEs. More specifically, we consider a nonlinear steady thermo-mechanical problem that cou-ples heat conduction with elastic deformation through thermal strains. The nonlinear behavior mainly originates from the temperature-dependent material properties. In addition, spatial heterogeneity is incorporated to represent the microstructural features of engineering materials. Heat transfer is modeled by steady-state conduction, where the thermal conductivity depends on both spatial position and temperature k(X, T ):
+
+∇ · q(X, T ) = 0 in Ω, (1) 
+
+T = ¯T on ¯ΓD, (2) 
+
+q · n = ¯ q on ¯ΓN , (3) 
+
+q(X, T ) = −k(X, T )∇T. (4) Here, T is the temperature field, q the heat flux vector, ¯T the prescribed temperature on the Dirichlet boundary ¯ΓD, and ¯q the prescribed normal heat flux on the Neumann boundary ¯ΓN .The mechanical equation with temperature-dependent elastic properties is given by: 
+
+∇ · σ(X, T ) = 0 in Ω, (5) 
+
+u = ¯ u on ¯ΓD, (6) 
+
+σ · n = ¯ t on ¯ΓN , (7) where u denotes the displacement vector, σ the Cauchy stress tensor, ¯u the prescribed dis-placement on the Dirichlet boundary, and ¯t the prescribed traction on the Neumann boundary. Within the thermo-mechanical formulation, the total strain is decomposed into elastic and ther-mal contributions in an additive manner, i.e. ε = εe + εt, where the thermal strain εt reads, 
+
+εt = α T − T0
+
+I. (8) Here, ε is the total strain tensor, εe the elastic strain, α the thermal expansion coefficient, and 
+
+T0 the reference temperature. In this study, α is set to a constant value for simplicity. The constitutive relation is described by Hooke’s law for heterogeneous linear elasticity: 
+
+σ(X, T ) = C(X) ε(X) − εt(X, T ). (9) 5Figure 2: Temperature-dependent material properties utilized in this study. 
+
+For isotropic materials, the fourth-order elasticity tensor C(X) is defined in terms of the Young’s modulus E(X) and Poisson’s ratio ν(X) as 
+
+Cijkl (X) = E(X)1 + ν(X) (δik δjl + δil δjk ) + E(X) ν(X)
+
+ 1 + ν(X)  1 − 2ν(X) δij δkl , (10) where δij denotes the Kronecker delta. This formulation naturally incorporates material het-erogeneity through spatially varying elastic constants over the domain. In this study, the following temperature-dependent thermal conductivity and Young’s mod-ulus is introduced to account for the nonlinear thermo-mechanical coupling: 
+
+k(T, X) = k0(X)
+
+12 + 12
+
+
+
+1 + e20( T − 12 )
+
+ , (11) 
+
+E(T, X) = E0(X)(1 − 3T
+
+5 ), (12) where k0 and E0 are the given phase contrast values distributed over the domain. This function formula is determined based on the material properties reported in aluminum alloy [69, 70]. The plot of these functions is shown in Fig. 2. The thermo-mechanically coupled system is enforced using a composite loss function com-prising thermal ( Lt) and mechanical ( Lu) terms through a weighted residual formulation based on the finite element method with the predicted solution field as the test function, which is expressed as: 
+
+L = Lt + Lu =
+
+> nel
+
+X
+
+> e=1
+
+ T eθ
+
+T ret +
+
+> nel
+
+X
+
+> e=1
+
+ U eθ
+
+T reu. (13) Here, the thermal and mechanical losses are written for a discretized finite element mesh, where 
+
+ret and reu denote the residual vectors of the thermal and mechanical element level, respectively. The subscript θ indicates the neural network parameters. and nel is the total number of elements in the training mesh, with e representing the element index. The thermal and mechanical 6residuals for element e is given by 
+
+ret =
+
+> nint
+
+X
+
+> k=1
+
+WkBt(ξk)T Nt(ξk)k(ξk, T eθ )Bt(ξk)T eθ −
+
+> nint
+
+X
+
+> k=1
+
+WkNt(ξk)T f e, (14) 
+
+reu =
+
+> nint
+
+X
+
+> k=1
+
+Wk Bu(ξk)T D(ξk, T eθ )
+
+
+
+Bu(ξk)U eθ − αNt(ξk)( T eθ − T e 
+
+> 0
+
+)se
+
+
+
+−
+
+> nint
+
+X
+
+> k=1
+
+Wk N Tu f e. (15) Here, k(ξk, T ) denotes the temperature-dependent thermal conductivity, and Nt and Nu rep-resents the shape function matrices for the thermal and mechanical fields, respectively. nint is the number of integration points, with ξk being the coordinates of the k-th integration point in the reference element. T e 
+
+> 0
+
+is the reference temperature vector at the element level, and 
+
+f e is the body force vector. se is a coupling vector to appropriately map the thermal strain contribution to the mechanical residual. Furthermore, we define the thermal gradient matrix 
+
+Bt = dNt
+
+> dX
+
+ and the strain–displacement matrix Bu = dNu
+
+> dX
+
+. The weighting factor is expressed as Wk = wk det( J), with wk being the quadrature weight. For the mechanical residual, D
+
+denotes the elastic stiffness matrix, while se is the stress coupling vector at the element level. These residuals constitute the core components of the physics-informed loss, ensuring that both thermal and mechanical governing equations are satisfied in a strongly coupled framework. The loss function in Eq. (13) is utilized to train the neural operators. Multiple training schemes, namely staggered and monolithic approaches, along with different backbone network architectures, are investigated. Moreover, multiple coupling strategies between the networks are explored for multiphysics coupling, and these aspects are discussed progressively in the following sections. 
+
+3. Neural operators and training algorithm 
+
+3.1. Neural operators 
+
+We briefly summarize the three neural operator architectures employed in this study: Fourier Neural Operator (FNO) [33], Deep Operator Network (DeepONet) [36], and Implicit Finite Operator Learning (iFOL) [55]. The schetatic of the three architectures is illustrated in Fig. 3. The choice of these architectures is based on the popularity and effectiveness of FNO and DeepONet in learning solution operators of PDEs, as well as the promising performance of iFOL in physics-informed operator learning tasks. 
+
+3.1.1. Fourier neural operator 
+
+The Fourier Neural Operator (FNO) is a neural operator that learns mappings between function spaces, with the goal of approximating solution operators of partial differential equa-tions (PDEs) [33]. Given an input function u(x) (e.g., material properties or forcing terms), FNO learns an operator G such that 
+
+v(x) = G(u)( x), (16) where v(x) denotes the solution field. An FNO layer consists of a spectral convolution combined with a pointwise linear transfor-mation. For a feature function v(x), the update is written as 
+
+vk+1 (x) = σ  F−1 (Rk · F (vk)( ξ)) ( x) + Wkvk(x) , (17) 7Figure 3: Schematic of the three operator learning backbones employed in this study: Fourier Neural Operator (FNO), Deep Operator Network (DeepONet), and implicit Finite Operator Learning (iFOL). 
+
+where F and F−1 denote the Fourier and inverse Fourier transforms, respectively, Rk is a learnable complex-valued weight tensor acting on a truncated set of Fourier modes ξ, Wk is a local (pointwise) linear operator, and σ(·) is a nonlinear activation function. By truncating high-frequency modes, the spectral convolution captures global dependencies efficiently while keeping the computational cost independent of spatial resolution. Consequently, FNO generalizes well across different discretizations and can be evaluated on unseen meshes, making it suitable for surrogate modeling of parametric PDEs. 
+
+3.1.2. Deep operator network (DeepONet) 
+
+The Deep Operator Network (DeepONet) is a neural operator architecture designed to ap-proximate nonlinear operators between function spaces, such as solution operators of partial differential equations (PDEs) [36]. Given an input function a(y) and a query location x, Deep-ONet learns an operator G satisfying Eq. 16. DeepONet consists of two subnetworks: a branch network and a trunk network . The branch network takes discrete samples of the input function, 
+
+u = ( u(x1), u (x2), . . . , u (xm)) , (18) and maps them to a latent representation. The trunk network takes the query coordinate y as input and produces a location-dependent feature vector. The output is given by an inner product of the branch and trunk features: 
+
+v(x) = 
+
+> p
+
+X
+
+> i=1
+
+bi(u) ti(x), (19) 8where {bi}pi=1 are the outputs of the branch network and {ti}pi=1 are the outputs of the trunk network. This structure enables DeepONet to approximate operators by learning a data-driven basis expansion, where the branch network encodes the input function and the trunk network provides coordinate-dependent basis functions. As a result, DeepONet can generalize across different input functions and evaluation points, making it effective for learning parametric PDE solution operators. 
+
+3.1.3. implicit Finite Operator Learning (iFOL) 
+
+iFOL builds on conditional neural fields, which employ INRs along with conditioning on input features [55] with another network called a modulator. While this is in fact analogous to the branch-trunk network architecture in DeepONet, the way of conditioning is enhanced to improve the expressivity of the model. In this work, we modify the original iFOL architecture to efficiently handle parametric input. More specifically, we introduce a new modulator network architecture that directly maps the input parameter to the output of the modulator, which acts on the output of each layer of the synthesizer, instead of encoding the input features into latent codes with a PDE-based optimization. Additionally, skip connections are introduced to the synthesizer to enhance training stability. Formally, the modulator network at each layer takes the input parameter c and outputs modulation parameters ϕi(c), and the synthesizer network takes the spatial coordinate x and the modulation parameters to produce the solution field: 
+
+vθ(x, c) = WL (σL−1 ◦ σL−2 ◦ · · · ◦ σ0(x)) + bL,σi(ηi, ηi−1, ϕi) = ηi−1 + a
+
+
+
+Wi
+
+ ηi
+
+ηi−1
+
+
+
++ bi + ϕi(c)
+
+ (20) 
+
+ϕi(c) = Vi,K (ψi,K −1 ◦ ψi,K −2 ◦ · · · ◦ ψi, 0(c)) + di,K 
+
+ψi,k (z) = a(Vi,k z + di,k ). (21) Here, ηi denotes the output of the i-th layer of the synthesizer, Wi and bi are the weight matrix and bias vector of the i-th layer, respectively. a(·) is a nonlinear activation function, for which Leaky ReLU is chosen in this work, and L is the total number of layers in the synthesizer. In the modulator network, Vi,k and di,k are the weight matrix and bias vector of the k-th layer of the modulator corresponding to the i-th layer of the synthesizer, respectively, and K is the total number of layers in the modulator. 
+
+3.2. Training algorithm 
+
+Traditional finite element methods for coupled systems employ two main approaches for solving a system of coupled equations: the monolithic scheme and the staggered scheme. In the monolithic scheme, all governing equations corresponding to different physical fields are assem-bled into a single global system and solved simultaneously. In contrast, the staggered scheme (also referred to as a partitioned or sequential scheme) solves each physical field separately by decoupling the governing equations and iterating between them. We adapt these two schemes to the training algorithm of neural operators to investigate their effectiveness in learning coupled multiphysics problems in the context of physics-informed operator learning. In the monolithic approach, the loss of the two governing equations is minimized simultaneously, as shown in Algorithm 1, and the staggered approach minimizes each physical loss term from the governing equations alternately, as described in Algorithm 2, similar to [28] but in a parametric way. The switching epoch Nn in the staggered scheme is a parameter, and it is set to 1 in this study based on the results of parameter studies. 9Algorithm 1 Monolithic training scheme  
+
+> 1:
+
+n ← 0 
+
+> 2:
+
+while not converged and n ≤ nepoch do  
+
+> 3:
+
+n ← n + 1  
+
+> 4:
+
+for all mini-batch M ⊆ B do  
+
+> 5:
+
+L = Lt + Lm 
+
+> 6:
+
+θ ← θ − λ 1
+
+> |M|
+
+P 
+
+> i∈M
+
+∇θ L(uθ(x), ci) 
+
+> 7:
+
+end for  
+
+> 8:
+
+end while Algorithm 2 Staggered training scheme  
+
+> 1:
+
+n ← 0 
+
+> 2:
+
+while not converged and n ≤ nepoch do  
+
+> 3:
+
+n ← n + 1  
+
+> 4:
+
+for all mini-batch M ⊆ B do  
+
+> 5:
+
+▷ Switch loss  
+
+> 6:
+
+if n mod (2 Nn) < N n then  
+
+> 7:
+
+/*Stage 1 (Thermal)*/  
+
+> 8:
+
+Lactive = Lt 
+
+> 9:
+
+else  
+
+> 10:
+
+/*Stage 2 (Mechanical)*/  
+
+> 11:
+
+Lactive = Lm 
+
+> 12:
+
+end if  
+
+> 13:
+
+θ ← θ − λ 1
+
+> |M|
+
+P 
+
+> i∈M
+
+∇θ Lactive (uθ(x), ci) 
+
+> 14:
+
+end for  
+
+> 15:
+
+end while 4. Results 
+
+The performance of the multiphysics FOL-based neural operators is presented in this sec-tion. To quantitatively evaluate the performance, we carried out studies on several aspects of neural operators on three example problem setups shown in Fig. 4. For simplicity, all physical quantities in this study are normalized to be dimensionless. Nevertheless, the proposed frame-work can be directly applied to dimensional physical quantities without any modification. We consider the solution by the Nonlinear FEM (NFEM) as the reference solution to evaluate the accuracy of the trained neural operators. 
+
+4.1. Two-dimensional nonlinear thermo-mechanics 
+
+We first consider a simple two-dimensional square domain and perform several studies on this problem setup. The domain and boundary conditions are depicted in Fig. 4 (a). The training hyperparameters are summarized in Table A.1, which is determined based on hyperparameter studies. For training the neural operator, we generate training samples using the Fourier-based function described in Appendix B. The training samples consist of heterogeneous microstruc-tures with spatially and continuously varying material properties, i.e., thermal conductivity and elastic modulus, as shown on the left of Fig. 5. For this problem on a regular domain, we employ FNO as a backbone for learning solutions given the microstructure that represents the value of material properties, i.e. thermal conductivity and elastic modulus. We refer to FOL with a 10 Figure 4: Domain and boundary conditions of the three examples. (a) Two-dimensional squared-domain problem, (b) three-dimensional RVE problem with varying material properties, and (c) casting example problem with varying boundary conditions. 
+
+> Figure 5: Examples of training (left) and test samples (right) employed for the two-dimensional square-domain problem.
+
+FNO backbone as FNO-FOL in this paper. In total, 5000 samples are utilized for training the neural operator model. 
+
+4.1.1. Studies on prediction accuracy for unseen cases 
+
+In addition to the in-distribution test samples from the Fourier series-based sample generator, we introduce three extreme test samples to evaluate the prediction capability to unseen input distributions. These test samples include (a) gyroid structures which mimics the microstructure of metamaterials, (2) polycrystalline microstructures generated by Voronoi tessellation, and (3) dual-phase microstructures with sharp interfaces between the two phases. Examples of the test samples are shown in Fig. 5. These samples can be generated using a simple Python script within a few seconds. Furthermore, these test cases are generated at a resolution of 84 × 84 ,which is finer than the training grid of 42 ×42 to demonstrate the capability of the trained model to perform zero-shot super-resolution tasks. In this study, the relative L2 error statistics over 50 samples are computed by taking the relative L2 error between the predicted and reference solution from NFEM for each physical field on each input sample and then averaging the error over 50 samples for each test case. The comparison on the in-distribution test case and the three test cases are shown in Fig. 6, ane examples of the prediction results are shown in Figs. 11 7, 8 and 9. The relative L2 error for all physical fields remains below 3% for the in-distribution test samples and below 10% for the three extreme test cases, demonstrating the accuracy and generalizability of the multiphysics FOL-based neural operator for unseen input distributions. The error for the displacement field Uy is slightly higher than that of other fields, which can be attributed to the smaller magnitude of some displacement values on the domain compared to other physical fields, leading to a larger relative error. Nevertheless, the deformed configurations compared in Fig. 7 indicate that there is a good qualitative agreement between the predicted and reference deformed states on every test case. Looking at the distribution of the error in Figs. 8 and 9, the maximum point-wise error also remains below 10% for all physical fields, indicating that the trained neural operator can accu-rately capture the spatial distribution of the coupled thermo-mechanical fields even in extreme cases with complex microstructures. On the other hand, in the three extreme test cases in Figs. 8 and 9, it can be observed that the error tends to be higher around the regions with high gradients, such as phase interfaces or regions with rapid changes in material properties. This behavior is particularly pronounced near the Dirichlet boundary, where steep temperature gra-dients introduce high-frequency components. Due to the spectral truncation inherent in FNO, these high-frequency features are not fully resolved, leading to increased errors in the boundary region, even though the zero-padding technique is employed to mitigate boundary artifacts. Addressing this limitation may require incorporating adaptive basis representations or hybrid architectures to better capture fine-scale features. Furthermore, exploring alternative operator learning architectures that are truly representation-equivalent could enhance the model’s per-formance in these challenging regions. Another point worth mentioning for this phenomenon is this issue would not arise if periodic boundary conditions, as employed in homogenization methods, were considered. However, in this work, we focus on simple Dirichlet boundary con-ditions to demonstrate the capability of the proposed framework in prediction solution fields under non-periodic boundary conditions. 
+
+> Figure 6: Comparison of the relative L2 errors over 50 samples on each test case.
+> Figure 7: Comparison of the deformed states between pre-diction and reference solution from NFEM on a representa-tive sample of all test cases.
+
+12 Figure 8: Comparison of the prediction and reference solution from NFEM in the two-dimensional square domain problem for a representative case of the in-distribution and gyroid test samples. 
+
+13 Figure 9: Comparison of the prediction and reference solution from NFEM in the two-dimensional square domain problem for a representative case of the polycrystal and dualphase test samples. 
+
+4.1.2. Studies on network decomposition for field-specific learning 
+
+Since each physical field in multiphysics problems may exhibit different characteristics and magnitudes, we investigate different network decomposition strategies to enhance the learning capability of FNO for multiphysics problems. To that end, three different network decompo-sition strategies are considered for FNO-based multiphysics operator learning, as illustrated in Fig. 10: (a) a single FNO that learns all physical fields simultaneously, (b) separate FNOs for each physics, and (c) fully separate networks for each physical field. The training is performed 14 Figure 10: Comparison of the three different network decomposition strategies for FNO-based multiphysics operator learning. 
+
+> Figure 11: Relative L2 error statistics over 50 samples on four different test cases with three different network decomposition strategies.
+
+using the same training dataset and hyperparameters as in Appendix A for all three strategies, except for the number of channels to make the number of trainable parameters comparable, for a fair comparison. As a result, the relative L2 error statistics over 50 samples on four different test cases with the three different network decomposition strategies in Fig. 11 demonstrates that while the separate network architecture performs slightly better than the shared archi-tecture for in-distribution cases, the single FNO architecture performs slightly better than the separate FNOs for other cases, especially the polycrystal test case. Overall, the performance difference among the three strategies is not substantial, indicating that FNO can effectively learn multiphysics problems regardless of the network decomposition strategy using the pro-posed FOL approach On the other hand, the training time for the single FNO architecture is approximately 1.34 times faster than that of the separate FNOs and 1.46 times faster than that of the fully separate networks under the comparable number of trainable parameters. From the perspective of training efficiency, the single FNO architecture could be a preferable choice for multiphysics FOL under the current settings. To further enhance the learning capability, more advanced architectures such as connection between different FNOs for corresponding fields to enable information exchange among different physical fields could be explored in future work. 
+
+4.1.3. Studies on training schemes: staggered vs. monolithic 
+
+We have introduced two training schemes, the monolithic training scheme in Algorithm 1 and the staggered training scheme in Algorithm 2 to clarify which approach results in better predic-tion accuracy for unseen cases, by analogy with the approach in classical numerical methods for coupled systems. To that end, we trained the same network using the two training schemes and evaluate the prediction accuracy on the same test cases. As shown in Fig. 12, the monolithic training scheme outperforms the staggered training scheme in the in-distribution test case or 15 Figure 12: Relative L2 error statistics over 50 samples on four different test cases with the monolithic and staggered training schemes. 
+
+all the three solution fields. On the other hand, the staggered training scheme, using either 1 or 5 epochs for alternating the loss, performs slightly better in some of the solution fields for the three extreme test cases, although the performance difference is not substantial. This could be attributed to the fact that the staggered training scheme allows each physical field to be learned more independently, which may change how the model generalizes to extreme cases in the optimization landscape. In terms of the training time, the monolithic training scheme are by 2.53 percent faster than the staggered scheme cases, which is attributed to the necessity of the loss alternation in the training loop of the staggered scheme. Overall, both training schemes demonstrate comparable performance, indicating that the proposed multiphysics FOL-based neural operator can be effectively trained using either approach. However, taking the training efficiency and algorithmic simplicity into account, the monolithic training scheme could be a preferable choice under the current settings. 
+
+4.1.4. Studies on number and quality of the initial training fields 
+
+We also investigate the influence of the training samples on the prediction accuracy. To that end, we focus on two aspects of the sample generation strategy: the variety of training samples and number of training samples. For the variety of training samples, we generate two different sets of training samples using different frequency components in the Fourier-based sample gen-erator described in Appendix B. The first set uses a single set of frequency components, while the second set incorporates four sets of frequencies with more various frequency components to introduce more complex spatial variations in material properties. For the fair comparison, we use the same number of training samples (5000 samples) for both sets. As shown in Fig. 13, the training samples with more various frequency components result in enhanced prediction accuracy for all test cases, reducing the prediction error by more than 50%. This indicates that the variety of training samples plays a crucial role in enhancing the generalizability of the trained neural operator. Next, we investigate the influence of the number of training samples on the prediction accuracy. We generate three different training datasets with 100, 500, and 5000 samples using the multiple frequency sets determined based on the training sample study in the Fourier-based sample generator. As shown in Fig. 14, using more training samples such as 500 and 5000 results in better prediction accuracy for all test cases compared to the 100-sample dataset, demonstrating the importance of a sufficient number of training samples to capture the complex relationships between input material properties and output physical fields. The results also indicate that increasing the number of training samples leads to a more pronounced improvement in prediction accuracy for extreme test cases compared to in-distribution test 16 Figure 13: Relative L2 error statistics over 50 samples on four different test cases on two different training samples with different frequency sets in the generation of training samples based on the Fourier series.  
+
+> Figure 14: Relative L2 error statistics over 50 samples on four different test cases on two different training samples with different numbers of training samples.
+
+cases, suggesting that a larger dataset is particularly beneficial for enhancing generalizability to unseen input distributions within the capacity of the model. Overall, these studies high-light the significance of both the variety and quantity of training samples in achieving accurate predictions. 
+
+4.1.5. Inference cost 
+
+We evaluate the inference cost of the trained model on three different resolutions, 42 × 42 ,
+
+84 × 84 , and 168 × 168 , and compare it with the calculation cost of the conventional nonlinear FEM solver with the Newton-Raphson iterative scheme. The inference time is measured on a single NVIDIA GeForce RTX 4090 GPU, and the FEM calculation time is also measured on the same GPU using a JAX-based FE solver with a direct linear solver for the Newton-Raphson update. The results of the measurement over 50 cases are shown in Fig. 15. It can be observed that the inference cost of the neural operator is on average 32.1 times lower than the calculation cost of FEM for the resolution of 42 × 42 , 205.0 times lower for the higher-resolution grid of 
+
+84 × 84 , and 1772.3 times lower for the highest-resolution grid of 168 × 168 , demonstrating the efficiency of the proposed multiphysics FOL-based neural operator for rapid predictions. It is also worth noting that the inference cost of the neural operator remains almost constant regardless of the resolution, while the FEM calculation cost increases significantly with higher resolution and higher dimension due to the increased number of degrees of freedom in the nonlinear solver. 17 Figure 15: Comparison of average inference cost and calculation cost by NFEM over 50 cases on three different resolutions. 
+
+4.2. Three-dimensional nonlinear thermo-mechanics on a Representative Volume Element 
+
+Next, we consider a three-dimensional RVE problem to demonstrate the capability of the proposed multiphysics FOL-based neural operator on three-dimensional problems. The training hyperparameters are summarized in Table A.1, and the geometry and boundary conditions are shown in Fig. 4 (b) and also in Table 1. The training samples are generated using the Fourier-based function described in Appendix B, similar to the two-dimensional case in Section 4.1 but expanding the dimensions. In total, 5000 samples are utilized for training the neural operator model with FNO as the backbone architecture. The performance of the trained model is evaluated on two different test cases: (1) 20 in-distribution test samples generated using the same Fourier-based function as the training samples, and (2) 20 dual-phase microstructures generated by Voronoi tessellation at a higher resolution of 84 × 84 × 84 to demonstrate the zero-shot super-resolution capability of the trained model. Here, the dual-phase microstructures are selected as a representative extreme test case since the three extreme test cases in the previous two-dimensional setting do not show significant difference in prediction accuracy between each other. The relative L2 error statistics over the two test cases are shown in Fig. 16. For the in-distribution test samples, the relative L2 error for all physical fields remains below 3% on average, while for the dual-phase test samples, the error remains below 8% on average and 
+
+12% even for the largest error, demonstrating the accuracy and generalizability of the proposed multiphysics FOL-based neural operator for three-dimensional problems. The deformed states on a representative sample of the two test cases are compared in Fig. 17, and examples of the prediction results are shown in Figs. 18 and 19. In the in-distribution test case, FOL-FNO achieves an accurate prediction, which is also confirmed in the cross-section plots on the left of the figure. The dual-phase test case in Fig. 19 exhibits some aliasing errors around the Dirichlet boundaries, which is analogous to the observation in the two-dimensional case. The error is more pronounced in the heat flux, as seen in the cross-section comparison. However, the overall characteristics of the primary field, stress, and heat-flux responses are accurately captured, suggesting that the predictions are adequate for preliminary inspection of the system behavior as a surrogate model. The inference cost of the trained neural operator is also evaluated and compared with the calculation cost of the conventional nonlinear FEM solver with the Newton-Raphson iterative 18 Table 1: List of temperature and displacement boundary conditions for the three-dimensional nonlinear themo-mechanics on a RVE ; Here, T , Ux, Uy , Uz denote the prescribed temperature or displacements as Dirichlet boundary conditions in the x-, y-, and z-directions respectively, and "free" indicates Dirichlet boundary condi-tions are not enforced; Instead, natural boundary conditions are applied. 
+
+Location x = 0 x = Lx y = 0 y = Ly z = 0 z = Lz
+
+T 0.0 0.5 free free free free 
+
+Ux 0.0 0.1 free free free free 
+
+Uy 0.0 0.1 free free free free 
+
+Uz 0.0 0.1 free free free free 
+
+Figure 16: Relative L2 error statistics over (b) 20 in-distribution test samples on the training grid and (b) 20 polycrystal test samples on a 84 × 84 
+
+grid with different sets of traning samples. Figure 17: Comparison of the deformed states between pre-diction and reference solution from NFEM on a representa-tive case of the two test cases. 
+
+scheme. The inference time is measured on a single NVIDIA GeForce RTX 4090 GPU, and the FEM calculation time is also measured on the same GPU using a JAX-based FE solver with a direct linear solver, similar to the two-dimensional case. As a result, the inference cost of the neural operator is on average 62.9 times lower than the calculation cost of FEM for the resolution of 22 ×22 ×22 and 638.9 times lower for the higher-resolution grid of 44 ×44 ×44 over the 20 test cases, demonstrating the efficiency of the proposed multiphysics FOL-based neural operator for rapid predictions in three-dimensional problems. 19 Figure 18: Comparison of the prediction and reference solution from NFEM in the three-dimensional RVE problem for a representative case of the in-distribution test cases. 
+
+20 Figure 19: Comparison of the prediction and reference solution from NFEM in the three-dimensional RVE problem for a representative case of the dual-phase structure test cases. 
+
+21 4.3. Nonlinear thermo-mechanics on a three-dimensional casting example 
+
+Lastly, we consider a close-to-reality industrial casting example to demonstrate the capability of the proposed multiphysics FOL-based neural operator on complex and irregular geometries. The geometry and boundary conditions are shown in Fig. 4 (c) and Table 2. In this work, we compare two different backbones with FOL, DeepONet and iFOL, to investigate which architecture performs better on complex geometries. The hyperparameters are summarized in Table A.2. The input boundary conditions are parameterized by the temperature value at the top of the feeder in the casting geometry, varying between 0.001 and 1.0 in a normalized scale. For training, 50 values are generated by uniformly sampling the temperature values within the specified range. We limit the number of training samples to 50 to reduce the training time while maintaining a reasonable prediction accuracy upon training. We train the two models using the same set of training input values and monolithic training scheme. The performance of the trained models is evaluated on 10 unseen temperature values uniformly sampled within the same range. The relative L2 error statistics over the 10 test cases are shown in Fig. 20, demonstrating that iFOL outperforms DeepONet-FOL especially in Ux and Uy components. This could be attributed to the fact that iFOL employs multiple modulator networks acting on each layer of the main neural field network, which allows for more expressive representation of complex mappings compared to the vanilla DeepONet architecture. The error distributions in Figs. 21, 22, and 23 with an unseen temperature of 0.992 given as input also show that iFOL can better capture the spatial distribution of the coupled thermo-mechanical fields compared to DeepONet-FOL, in particular the internal stress response as shown in the top left of Figs. 22 and 23. In this example, it is important to accurately capture the stress distribution since high-stress regions are prone to defects such as cracks during the cooling process in casting. Therefore, the better performance of iFOL in predicting the stress field makes it a more suitable choice for this type of application. When comparing the inference cost with NFEM using the bi-conjugate gradient stabilized method for the linear solver due to the efficiency for large-scale problems, iFOL is on average 51.2 times faster than NFEM over the 10 test cases, while DeepONet is on average 81.0 times faster than NFEM. The relatively lower speedup of iFOL compared to DeepONet could be attributed to the additional computational cost introduced by the modulator networks in iFOL. Furthermore, the speedup gained on a fine mesh model is more significant due to the increased computational cost of NFEM with higher degrees of freedom. When comparing the inference cost on a fine mesh model of 55,267 nodes, iFOL is on average 346.3 times faster than NFEM, while DeepONet is on average 595.6 times faster than NFEM.           
+
+> Table 2: List of boundary conditions for the three-dimensional nonlinear themo-mechanics on a casting geometry ; Here, T,Ux,Uy,Uzdenote the prescribed temperature or displacements as Dirichlet boundary conditions in the x-, y-, and z-directions respectively, and "free" indicates natural boundary conditions are applied.
+
+Location Bottom of F-shaped part 
+
+z = 0 .0
+
+Surroundings of F-shaped part Bottom of inlet part Top of inlet part 
+
+z = 0 .85 
+
+T 0.001 0.001 free parametric 
+
+Ux 0.0 free 0.0 0.0
+
+Uy 0.0 free 0.0 0.0
+
+Uz 0.0 free free 0.0
+
+22 In summary, these results demonstrate the capability of the proposed FOL-based approach in handling application-oriented complex geometries and boundary conditions under the multi-physics setting, with iFOL showing superior prediction accuracy for this casting example. 
+
+Figure 20: Relative L2 error statistics over 10 uniformly sampled test temperature values on different operator learning backbones (DeepONet and iFOL) for the irregular casting example geometry. 
+
+Figure 21: Cross-section comparison of the prediction with iFOL and DeepONet-FOL against the reference NFEM solution at z = 0 .45 in the three-dimensional casting example problem for an unseen temperature case. 
+
+23 Figure 22: Comparison of the prediction with iFOL and reference solution from NFEM in the three-dimensional casting example problem for an unseen temperature case. 
+
+24 Figure 23: Comparison of the prediction with DeepONet-FOL and reference solution from NFEM in the three-dimensional casting example problem for an unseen temperature case. 
+
+25 5. Conclusion 
+
+In this work, we have presented a finite element-based physics-informed neural operator framework for a parametric solution of multiphysics problems. The proposed framework lever-ages weighted residuals with the predicted fields serving as the test functions based on the finite element method to construct a physics-informed loss function, which allows for the train-ing of neural operators without the need for labeled data while being capable of seamlessly handling complex geometries and boundary conditions. We demonstrate the effectiveness of the proposed framework through three numerical examples on a nonlinear thermo-mechanically coupled problem with temperature-dependent material property, including two-dimensional and three-dimesional RVEs, and a three dimensional casting geometry example. For the regular do-main cases such as RVEs, FNO is employed as the neural operator architecture due to its superior prediction performance through learning on spectral domains, while for the irregu-lar domain case such as the casting geometry, we utilize DeepONet and iFOL as the neural operator architectures due to its ability to handle irregular domains and complex boundary conditions without the need for additional modifications to the architecture. On the two- and three-dimensional RVE cases, the results show that the present framework can accurately pre-dict the solution fields within the error of less than 10% in relative L2 error even for extreme practical test cases such as gyroid structures, polycrystal structures, and dual-phase polycrystal structures as input. For the three-dimensional casting example case, iFOL is shown to work well in predicting the solution fields with a maximum relative L2 error of 10% on all the solution fields. This demonstrates its versatility and effectiveness in parametrically predicting solutions to multiphysics problems upon one-time training. The studies on the aspects of the framework, including the training schemes, network decomposition, and training samples, show that the monolithic training scheme with a single network is sufficient to achieve accurate predictions of the soluton fields, while the training sample quality significantly influences the prediction performance. It is also worth noting that the proposed framework is highly flexible and can be extended to other multiphysics problems, such as electro-mechanical and chemo-mechanical coupling, by modifying the loss function according to the governing equations of interest. Over-all, the current results provide a solid foundation for the development of finite element-guided physics-informed operator learning for multiphysics problems. Future work could focus on extending the framework to handle transient problems by incor-porating time-stepping schemes into the loss function and neural operator architecture. Fur-thermore, advanced neural operator architectures could be further explored to enable handling multiple input features and addressing varying geometry cases. Additionally, one could build a multiscale homogenization model by developing hierarchical operator learning architectures that properly incorporate micro-macro coupling. 
+
+CRediT authorship contribution statement 
+
+Yusuke Yamazaki: Writing – review & editing, Writing – original draft, Conceptualization, Methodology, Software, Visualization, Validation, Investigation, Formal analysis, Data cura-tion. Reza Najial Asl: Writing – review & editing, Conceptualization, Methodology, Software, Validation. Markus Apel: Writing – review & editing, Funding aquisition, Resources. Mayu Muramatsu: Writing – review & editing, Funding aquisition, Resources. Shahed Rezaei: Writ-ing – review & editing, Writing – original draft, Project administration, Conceptualization, Supervision, Methodology, Software. 26 Data availability 
+
+The implementation and the examples presented in this study will be made publicly available upon publication of the work. 
+
+Declaration of competing interest 
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper 
+
+Acknowledgments 
+
+The authors would like to thank the Deutsche Forschungsgemeinschaft (DFG) for the fund-ing support provided to develop the present work in the Cluster of Excellence Project ’Internet of Production’ (project: 390621612). The authors also acknowledge the financial support of SFB 1120 B07 - Mehrskalige thermomechanische Simulation der fest-flüssig Interaktionen bei der Erstarrung (B07) (260070971) (260070971). Yusuke Yamazaki and Mayu Muramatsu ac-knowledge the financial support from the Japan Society for the Promotion of Science (JSPS) KAKENHI Grant Number JP22H01367. Yusuke Yamazaki acknowledges the financial support from JST BOOST, Japan Grant Number JPMJBS2409. 
+
+Appendix A. Hyperparameters of neural operators and simulation parameters 
+
+The list of hyperparameters utilized in this study is summarized in Tables A.1 and A.2. We carefully selected the hyperparameters by carring out hyperparameter studies. Among them, the quantitative comparison on the influence of the number of Fourier modes as well as in FNO for Section 4.1 are shown in Figures A.1 and A.2, respectively. The results indicate that the number of Fourier modes and layers significantly affect the prediction accuracy if they are too small. However, after a certain threshold, the accuracy improvement becomes marginal. Based on these observations, we selected 12 modes for the two-dimensional problem and 10 modes for the three-dimensional problem since the training resolution of the three-dimensional problem is 
+
+22 × 22 × 22 , and four FNO layers for both cases. 27 Table A.1: Network hyperparameters for the 2D and 3D regular domain problems with Fourier neural operators. 
+
+Training parameter FNO (Sec. 4.1) FNO (Sec. 4.2) Number of epochs 1000 1000 Optimizer Adam Adam Grid in training 42 × 42 22 × 22 × 22 
+
+Grid in evaluation 84 × 84 44 × 44 × 44 
+
+Number of modes (12,12) (10,10,10) Number of channels 24 8Number of Fourier stages 4 4Last projection dimesion 128 128 Output scaling 0.001 0.001 Number of padding for training 4 4Activation function GELU GELU Learning rate for main optimization 1.0 × 10 −2 to 1.0 × 10 −3 1.0 × 10 −2 to 1.0 × 10 −3
+
+Number of samples 5000 5000 Batch size 100 50 Total trainable parameters 2,665,987 8,198,436 
+
+> Table A.2: Network hyperparameters of DeepONet and iFOL for the three-dimensional casting example problem.
+
+Training parameter DeepONet (Sec. 4.3) iFOL (Sec. 4.3) Number of epochs 10000 10000 Optimizer Adam Adam Number of nodes 16322 16322 Branch net/Modulator for each layer [512,512] [128,128,128,128] Trunk net/Synthesizer [128,128,128,128] [128,128,128,128,128,128] Activation function ReLU Leaky ReLU Learning rate for main optimization 1.0 × 10 −3 to 1.0 × 10 −4 1.0 × 10 −3 to 1.0 × 10 −4
+
+Number of samples 50 50 Batch size 1 1Total trainable parameters 642,432 483,344  
+
+> Figure A.1: Relative L2 error statistics over 50 samples on four different test cases on different numbers of Fourier modes in FNO.
+
+28 Figure A.2: Relative L2 error statistics over 50 samples on four different test cases on different numbers of FNO layers. 
+
+Appendix B. Training sample generation 
+
+We generate the heterogeneous material samples used in this study by employing a Fourier-based random field generator, as described in [55]. The microstructural patterns are constructed using a phase function ϕ(X), which varies spatially over the domain. The phase function is generated by superimposing multiple Fourier modes with random amplitudes and frequencies. The general form of the Fourier series used to construct the initial phase function ϕf (x, y ) in a two-dimensional domainis given by: 
+
+ϕf (x, y ) = 
+
+> nsum
+
+X
+
+> i
+
+[ci + Ai sin ( fx,i x) cos ( fy,i y) + Bi cos ( fx,i x) sin ( fy,i y)+ Ci sin ( fx,i x) sin ( fy,i y) + Di cos ( fx,i x) cos( fy,i y)] .
+
+(B.1) Here, ci denotes a real-valued constant, while {Ai, B i, C i, D i} are the amplitudes associated with the corresponding frequency mode. The quantities {fx,i , f y,i } represent the frequencies in the x- and y-directions, respectively. To enhance realism and generate more intricate mi-crostructural patterns, we further introduce a phase function ϕf , obtained through a sigmoidal projection: 
+
+ϕ(x, y ) = ( ϕmax − ϕmin ) · Sigmoid (β(ϕf − 0.5)) + ϕmin . (B.2) The above projection ensures that the phase values remain bounded between ϕmin and ϕmax . The parameter β controls the sharpness of the transition between the two phases. For simplicity, in the subsequent analysis, we retain only the constant term together with the final term involving the product of two cosine functions, i.e., Ai = Bi = Ci = 0 . For the two-dimensional studies in Section 4.1, we consider four sets of three frequencies for each direction. The frequencies in the 
+
+x- and y-directions are sampled independently as 
+
+fx,i ∈ { 2, 4, 6}, {1, 2, 3}, {3, 4, 5}, {4, 6, 8}, fy,i ∈ { 2, 4, 6}, {1, 2, 3}, {3, 4, 5}, {4, 6, 8}.
+
+The Fourier coefficients are sampled from a standard normal distribution, and then the resulting fields are normalized between the specified minimum and maximum values. In this case, we set the minimum as 0.1 and the maximum as 1.0. In Section 4.1.4, we also investigate the influence of the variety of training samples. To that end, we consider a single set of frequencies as fx,i ∈ { 2, 4, 6} and fy,i ∈ { 2, 4, 6} to generate less-varied training samples. 29 Including the constant term, this construction yields M = 3 ×3+1 = 10 basis terms for each set. These terms can be combined to construct the phase function ϕ(x, y ) according to Eq. B.1 and Eq. B.2. In all heterogeneous materials considered in this study, temperature-dependent material properties are defined through the phase function ϕ(X). For example, in Sections 4.1 and 4.2, the thermal conductivity and Young’s modulus are prescribed as the spatially varying material properties k0(X) = E(X) = ϕ(X). As a result, the minimum and maximum stiffness and thermal conductivity values are normalized based on the ϕ(X). For test cases involving polycrystalline materials or other microstructures with varying phase contrasts, the distribution of ϕ(X) is chosen in an application-dependent manner. It should be noted, however, that during training we restrict the dataset to samples with a fixed phase contrast ratio, i.e., ϕmax /ϕ min .The extension of this formulation to three dimensions is straightforward; see also [47]. 
+
+References 
+
+[1] Seid Koric and Brian G. Thomas. Efficient thermo-mechanical model for so-lidification processes. International Journal for Numerical Methods in Engi-neering , 66(12):1955–1989, 2006. doi: https://doi.org/10.1002/nme.1614. URL 
+
+https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.1614 .[2] Matthew LS Zappulla, Seong-Mook Cho, Seid Koric, Hyoung-Jun Lee, Seon-Hyo Kim, and Brian G Thomas. Multiphysics modeling of continuous casting of stainless steel. Journal of Materials Processing Technology , 278:116469, 2020. [3] Hui Ruan, Shahed Rezaei, Yangyiwei Yang, Dietmar Gross, and Bai-Xiang Xu. Athermo-mechanical phase-field fracture model: Application to hot cracking simulations in additive manufacturing. Journal of the Mechanics and Physics of Solids , 172: 105169, 2023. ISSN 0022-5096. doi: https://doi.org/10.1016/j.jmps.2022.105169. URL 
+
+https://www.sciencedirect.com/science/article/pii/S0022509622003453 .[4] Benjamin Loret, Tomasz Hueckel, and Alessandro Gajo. Chemo-mechanical coupling in saturated porous media: elastic–plastic behaviour of homoionic expansive clays. Interna-tional Journal of Solids and Structures , 39(10):2773–2806, 2002. [5] Lei Zhou and Michael Z Hou. A new numerical 3d-model for simulation of hydraulic fracturing in consideration of hydro-mechanical coupling effects. International Journal of Rock Mechanics and Mining Sciences , 60:370–380, 2013. [6] Tobias Hofmann, Daniel Westhoff, Julian Feinauer, Heiko Andrä, Jochen Zausch, Volker Schmidt, and Ralf Müller. Electro-chemo-mechanical simulation for lithium ion batteries across the scales. International Journal of Solids and Structures , 184:24–39, 2020. [7] Nicholas Geneva and Nicholas Zabaras. Modeling the dynamics of pde systems with physics-constrained deep auto-regressive networks. Journal of Computational Physics , 403:109056, 2020. [8] Han Gao, Luning Sun, and Jian-Xun Wang. Phygeonet: Physics-informed geometry-adaptive convolutional neural networks for solving parameterized steady-state pdes on irregular domain. Journal of Computational Physics , 428:110079, 2021. 30 [9] Reeju Pokharel, Anup Pandey, and Alexander Scheinker. Physics-informed data-driven surrogate modeling for full-field 3d microstructure and micromechanical field evolution of polycrystalline materials. JOM , 73(11):3371–3382, 2021. [10] Xin-Yang Liu, Min Zhu, Lu Lu, Hao Sun, and Jian-Xun Wang. Multi-resolution partial differential equations preserved learning framework for spatiotemporal dynamics. Commu-nications Physics , 7(1):31, 2024. [11] C Hu, S Martin, and R Dingreville. Accelerating phase-field predictions via recurrent neural networks learning the microstructure evolution in latent space. Computer Methods in Applied Mechanics and Engineering , 397:115128, 2022. [12] Tobias Pfaff, Meire Fortunato, Alvaro Sanchez-Gonzalez, and Peter Battaglia. Learning mesh-based simulation with graph networks. In International conference on learning rep-resentations , 2020. [13] Jiagang Qu, Weihua Cai, and Yijun Zhao. Learning time-dependent pdes with a linear and nonlinear separate convolutional neural network. Journal of Computational Physics , 453: 110928, 2022. [14] Romit Maulik, Bethany Lusch, and Prasanna Balaprakash. Reduced-order modeling of advection-dominated systems with recurrent neural networks and convolutional autoen-coders. Physics of Fluids , 33(3), 2021. [15] Federico Pichi, Beatriz Moya, and Jan S Hesthaven. A graph convolutional autoencoder ap-proach to model order reduction for parametrized pdes. Journal of Computational Physics ,501:112762, 2024. [16] Nicola Rares Franco, Stefania Fresca, Filippo Tombari, and Andrea Manzoni. Deep learning-based surrogate models for parametrized pdes: Handling geometric variability through graph neural networks. Chaos: An Interdisciplinary Journal of Nonlinear Science ,33(12), 2023. [17] William D Fries, Xiaolong He, and Youngsoo Choi. Lasdi: Parametric latent space dynam-ics identification. Computer Methods in Applied Mechanics and Engineering , 399:115436, 2022. [18] Christophe Bonneville, Youngsoo Choi, Debojyoti Ghosh, and Jonathan L Belof. Gplasdi: Gaussian process-based interpretable latent space dynamics identification through deep autoencoder. Computer Methods in Applied Mechanics and Engineering , 418:116535, 2024. [19] Alessandro Longhi, Danny Lathouwers, and Zoltán Perkó. Latent space modeling of para-metric and time-dependent pdes using neural odes. Computer Methods in Applied Mechan-ics and Engineering , 448:118394, 2026. [20] M. Raissi, P. Perdikaris, and G. E. Karniadakis. Physics-informed neural networks: Adeep learning framework for solving forward and inverse problems involving nonlinear par-tial differential equations. Journal of Computational Physics , 378:686–707, 2019. ISSN 00219991. 31 [21] Revanth Mattey and Susanta Ghosh. A novel sequential method to train physics informed neural networks for allen cahn and cahn hilliard equations. Computer Methods in Applied Mechanics and Engineering , 390:114474, 2022. ISSN 00457825. [22] Navid Zobeiry and Keith D. Humfeld. A physics-informed machine learning approach for solving heat transfer equation in advanced manufacturing and engineering applications. 
+
+Engineering Applications of Artificial Intelligence , 101:104232, 2021. ISSN 09521976. [23] Chi Zhao, Feifei Zhang, Wenqiang Lou, Xi Wang, and Jianyong Yang. A comprehensive review of advances in physics-informed neural networks and their applications in complex fluid dynamics. Physics of Fluids , 36(10), 2024. [24] George Em Karniadakis, Ioannis G. Kevrekidis, Lu Lu, Paris Perdikaris, Sifan Wang, and Liu Yang. Physics-informed machine learning. Nature Reviews Physics , 3(6):422–440, 2021. [25] Ameya D Jagtap, Zhiping Mao, Nikolaus Adams, and George Em Karniadakis. Physics-informed neural networks for inverse problems in supersonic flows. Journal of Computa-tional Physics , 466:111402, 2022. [26] Zheyuan Hu, Khemraj Shukla, George Em Karniadakis, and Kenji Kawaguchi. Tackling the curse of dimensionality with physics-informed neural networks. Neural Networks , 176: 106369, 2024. [27] Haoteng Hu, Lehua Qi, and Xujiang Chao. Physics-informed neu-ral networks (pinn) for computational solid mechanics: Numerical frame-works and applications. Thin-Walled Structures , 205:112495, 2024. ISSN 0263-8231. doi: https://doi.org/10.1016/j.tws.2024.112495. URL 
+
+https://www.sciencedirect.com/science/article/pii/S0263823124009364 .[28] Nanxi Chen, Chuanjie Cui, Rujin Ma, Airong Chen, and Sifan Wang. Sharp-pinns: Staggered hard-constrained physics-informed neural networks for phase field mod-elling of corrosion. Computer Methods in Applied Mechanics and Engineering , 447: 118346, 2025. ISSN 0045-7825. doi: https://doi.org/10.1016/j.cma.2025.118346. URL 
+
+https://www.sciencedirect.com/science/article/pii/S0045782525006188 .[29] Ali Harandi, Ahmad Moeineddin, Michael Kaliske, Stefanie Reese, and Shahed Rezaei. Mixed formulation of physics-informed neural networks for thermo-mechanically coupled systems and heterogeneous domains. International Journal for Numerical Methods in En-gineering , 125(4):e7388, 2024. [30] Mahmoud Khadijeh, Veronica Cerqueglini, Cor Kasbergen, Sandra Erkens, and Aika-terini Varveri. Multistage physics informed neural network for solving coupled mul-tiphysics problems in material degradation and fluid dynamics. Engineering with Computers , 2025. ISSN 1435-5663. doi: 10.1007/s00366-025-02174-4. URL 
+
+https://doi.org/10.1007/s00366-025-02174-4 .[31] Sina Amini Niaki, Ehsan Haghighat, Trevor Campbell, Anoush Poursar-tip, and Reza Vaziri. Physics-informed neural network for modelling the thermochemical curing process of composite-tool systems during manufac-ture. Computer Methods in Applied Mechanics and Engineering , 384:113959, 32 2021. ISSN 0045-7825. doi: https://doi.org/10.1016/j.cma.2021.113959. URL 
+
+https://www.sciencedirect.com/science/article/pii/S0045782521002966 .[32] Khemraj Shukla, Zongren Zou, Chi Hin Chan, Additi Pandey, Zhicheng Wang, and George Em Karniadakis. Neurosem: A hybrid framework for simulat-ing multiphysics problems by coupling pinns and spectral elements. Com-puter Methods in Applied Mechanics and Engineering , 433:117498, 2025. ISSN 0045-7825. doi: https://doi.org/10.1016/j.cma.2024.117498. URL 
+
+https://www.sciencedirect.com/science/article/pii/S0045782524007527 .[33] Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, Burigede Liu, Kaushik Bhattacharya, Andrew Stuart, and Anima Anandkumar. Fourier neural operator for parametric partial differential equations. arXiv preprint arXiv:2010.08895 , 2020. [34] Zongyi Li, Hongkai Zheng, Nikola Kovachki, David Jin, Haoxuan Chen, Burigede Liu, Kamyar Azizzadenesheli, and Anima Anandkumar. Physics-informed neural operator for learning partial differential equations. ACM/JMS Journal of Data Science , 2021. [35] Meer Mehran Rashid, Tanu Pittie, Souvik Chakraborty, and NM Anoop Krishnan. Learn-ing the stress-strain fields in digital composites using fourier neural operator. Iscience , 25 (11), 2022. [36] Lu Lu, Pengzhan Jin, Guofei Pang, Zhongqiang Zhang, and George Em Karniadakis. Learning nonlinear operators via deeponet based on the universal approximation theo-rem of operators. Nature Machine Intelligence , 3(3):218–229, 2021. ISSN 2522-5839. doi: 10.1038/s42256-021-00302-5. URL https://doi.org/10.1038/s42256-021-00302-5 .[37] Somdatta Goswami, Minglang Yin, Yue Yu, and George Em Karniadakis. A physics-informed variational deeponet for predicting crack path in quasi-brittle materials. Computer Methods in Applied Mechanics and Engineering , 391:114587, 2022. ISSN 00457825. [38] Junyan He, Seid Koric, Shashank Kushwaha, Jaewan Park, Diab Abueidda, and Iwona Ja-siuk. Novel deeponet architecture to predict stresses in elastoplastic structures with variable complex geometries and loads. Computer Methods in Applied Mechanics and Engineering ,415:116277, 2023. ISSN 00457825. [39] Minglang Yin, Ehsan Ban, Bruno V Rego, Enrui Zhang, Cristina Cavinato, Jay D Humphrey, and George Em Karniadakis. Simulating progressive intramural damage lead-ing to aortic dissection using deeponet: an operator–regression neural network. Journal of the Royal Society Interface , 19(187):20210670, 2022. [40] Qianying Cao, Somdatta Goswami, and George Em Karniadakis. Laplace neural operator for solving differential equations. Nature Machine Intelligence , 6(6):631–640, 2024. [41] Craig R Gin, Daniel E Shea, Steven L Brunton, and J Nathan Kutz. Deepgreen: deep learning of green’s functions for nonlinear boundary value problems. Scientific Reports , 11 (1):21614, 2021. [42] Tapas Tripura and Souvik Chakraborty. Wavelet neural operator for solving parametric partial differential equations in computational mechanics problems. Computer Methods in Applied Mechanics and Engineering , 404:115783, 2023. 33 [43] Bogdan Raonic, Roberto Molinaro, Tobias Rohner, Siddhartha Mishra, and Emmanuel de Bezenac. Convolutional neural operators. In ICLR 2023 workshop on physics for ma-chine learning , 2023. [44] Gege Wen, Zongyi Li, Kamyar Azizzadenesheli, Anima Anandkumar, and Sally M Benson. U-fno—an enhanced fourier neural operator-based deep-learning model for multiphase flow. 
+
+Advances in Water Resources , 163:104180, 2022. [45] Jinglai Zheng, Hanying Hu, Jie Huang, Buyue Zhao, and Haiming Huang. Cf-deeponet: Deep operator neural networks for solving compressible flows. Aerospace Science and Tech-nology , page 110329, 2025. [46] Zongyi Li, Daniel Zhengyu Huang, Burigede Liu, and Anima Anandkumar. Fourier neural operator with learned deformations for pdes on general geometries. Journal of Machine Learning Research , 24(388):1–26, 2023. [47] Ali Harandi, Hooman Danesh, Kevin Linka, Stefanie Reese, and Shahed Rezaei. Spifol: A spectral-based physics-informed finite operator learning for prediction of mechanical behavior of microstructures. Journal of the Mechanics and Physics of Solids , page 106219, 2025. [48] Ehsan Haghighat, Umair bin Waheed, and George Karniadakis. En-deeponet: An en-richment approach for enhancing the expressivity of neural operators with applications to seismology. Computer Methods in Applied Mechanics and Engineering , 420:116681, 2024. [49] Wei Li, Martin Z Bazant, and Juner Zhu. Phase-field deeponet: Physics-informed deep operator neural network for fast simulations of pattern formation governed by gradient flows of free-energy functionals. Computer Methods in Applied Mechanics and Engineering , 416: 116299, 2023. [50] Danielle Ciesielski, Yulan Li, Shenyang Hu, Ethan King, Jordan Corbey, and Panos Stinis. Deep operator network surrogate for phase-field modeling of metal grain growth during solidification. Computational Materials Science , 246:113417, 2025. [51] Yuan Yin, Matthieu Kirchmeyer, Jean-Yves Franceschi, Alain Rakotomamonjy, and Patrick Gallinari. Continuous pde dynamics forecasting with implicit neural representations. arXiv preprint arXiv:2209.14855 , 2022. [52] Jan Hagnberger, Marimuthu Kalimuthu, Daniel Musekamp, and Mathias Niepert. Vector-ized conditional neural fields: A framework for solving time-dependent parametric partial differential equations, 2024. URL https://arxiv.org/abs/2406.03919 .[53] Louis Serrano, Lise Le Boudec, Armand Kassaï Koupaï, Thomas X Wang, Yuan Yin, Jean-Noël Vittaut, and Patrick Gallinari. Operator learning with neural fields: Tackling pdes on general geometries. Advances in Neural Information Processing Systems , 36:70581–70611, 2023. [54] Pan Du, Meet Hemant Parikh, Xiantao Fan, Xin-Yang Liu, and Jian-Xun Wang. Condi-tional neural field latent diffusion model for generating spatiotemporal turbulence. Nature Communications , 15(1):10416, 2024. 34 [55] Reza Najian Asl, Yusuke Yamazaki, Kianoosh Taghikhani, Mayu Muramatsu, Markus Apel, and Shahed Rezaei. A physics-informed meta-learning framework for the continuous solution of parametric pdes on arbitrary geometries. Computers & Structures , 322:108102, 2026. [56] Kianoosh Taghikhani, Yusuke Yamazaki, Jerry Paul Varghese, Markus Apel, Reza Najian Asl, and Shahed Rezaei. Neural-initialized newton: Accelerating nonlinear finite elements via operator learning. arXiv preprint arXiv:2511.06802 , 2025. [57] Shengze Cai, Zhicheng Wang, Lu Lu, Tamer A. Zaki, and George Em Karni-adakis. Deepm&mnet: Inferring the electroconvection multiphysics fields based on operator approximation by neural networks. Journal of Computational Physics , 436: 110296, 2021. ISSN 0021-9991. doi: https://doi.org/10.1016/j.jcp.2021.110296. URL 
+
+https://www.sciencedirect.com/science/article/pii/S0021999121001911 .[58] Md Ashiqur Rahman, Robert Joseph George, Mogab Elleithy, Daniel Leibovici, Zongyi Li, Boris Bonev, Colin White, Julius Berner, Raymond A. Yeh, Jean Kossaifi, Kam-yar Azizzadenesheli, and Anima Anandkumar. Pretraining codomain attention neural operators for solving multiphysics pdes. arXiv preprint arXiv:2403.12553 , 2024. URL 
+
+https://arxiv.org/abs/2403.12553 .[59] Biao Yuan, He Wang, Yanjie Song, Ana Heitor, and Xiaohui Chen. High-fidelity mul-tiphysics modelling for rapid predictions using physics-informed parallel neural operator. 
+
+arXiv preprint arXiv:2502.19543 , 2025. URL https://arxiv.org/abs/2502.19543 .[60] Shibo Li, Tao Wang, Yifei Sun, and Hewei Tang. Multi-physics simulations via coupled fourier neural operator. arXiv preprint arXiv:2501.17296 , 2025. URL 
+
+https://arxiv.org/abs/2501.17296 .[61] Kazuma Kobayashi, Jaewan Park, Qibang Liu, Seid Koric, Diab Abueidda, and Syed Bahauddin Alam. When network architecture meets physics: Deep opera-tor learning for coupled multiphysics. arXiv preprint arXiv:2507.03660 , 2025. URL 
+
+https://arxiv.org/abs/2507.03660 .[62] Changfan Yang, Lichen Bai, Yinpeng Wang, Shufei Zhang, and Zeke Xie. Multiphysics bench: Benchmarking and investigating scientific machine learning for multiphysics pdes. 
+
+arXiv preprint arXiv:2505.17575 , 2025. URL https://arxiv.org/abs/2505.17575 .[63] Somdatta Goswami, Minglang Yin, Yue Yu, and George Em Karniadakis. Aphysics-informed variational deeponet for predicting crack path in quasi-brittle ma-terials. Computer Methods in Applied Mechanics and Engineering , 391:114587, 2022. ISSN 0045-7825. doi: https://doi.org/10.1016/j.cma.2022.114587. URL 
+
+https://www.sciencedirect.com/science/article/pii/S004578252200010X .[64] Christophe Bonneville, Nathan Bieberdorf, Arun Hegde, Mark Asta, Habib N. Najm, Laurent Capolungo, and Cosmin Safta. Accelerating phase field simulations through a hybrid adaptive fourier neural operator with u-net backbone. npj Computational Materials , 11(1):14, 2025. ISSN 2057-3960. doi: 10.1038/s41524-024-01488-z. URL 
+
+https://doi.org/10.1038/s41524-024-01488-z .35 [65] Reza Najian Asl and Shahed Rezaei. Folax (Finite Operator Learning with JAX), a framework for solving and optimizing pdes by integrating machine learning with numerical methods in computational mechanics., 2025. URL 
+
+https://github.com/Neural-Mechanics-Lab/folax .[66] Shahed Rezaei, Reza Najian Asl, Shirko Faroughi, Mahdi Asgharzadeh, Ali Harandi, Ra-soul Najafi Koopas, Gottfried Laschet, Stefanie Reese, and Markus Apel. A finite operator learning technique for mapping the elastic properties of microstructures to their mechanical deformations. International Journal for Numerical Methods in Engineering , 126(1):e7637, 2025. [67] Shahed Rezaei, Reza Najian Asl, Kianoosh Taghikhani, Ahmad Moeineddin, Michael Kaliske, and Markus Apel. Finite operator learning: bridging neural operators and numer-ical methods for efficient parametric solution and optimization of pdes. Finite Elements in Analysis and Design , 254:104506, 2026. [68] Yusuke Yamazaki, Ali Harandi, Mayu Muramatsu, Alexandre Viardin, Markus Apel, Tim Brepols, Stefanie Reese, and Shahed Rezaei. A finite element-based physics-informed op-erator learning framework for spatiotemporal partial differential equations on arbitrary domains. Engineering with Computers , 41(1):1–29, 2025. [69] James Cox, Dung D Luong, Vasanth Chakravarthy Shunmugasamy, Nikhil Gupta, Oliver M Strbik III, and Kyu Cho. Dynamic and thermal properties of aluminum alloy a356/silicon carbide hollow particle syntactic foams. Metals , 4(4):530–548, 2014. [70] Sayavur I Bakhtiyarov, Ruel Anthony Overfelt, and Sorin G Teodorescu. Electrical and thermal conductivity of a319 and a356 aluminum alloys. Journal of Materials Science , 36 (19):4643–4648, 2001. 36

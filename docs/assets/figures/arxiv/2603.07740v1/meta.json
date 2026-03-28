@@ -1,0 +1,94 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.07740v1/fig-001.webp",
+      "caption": "Fig. 2 (a) Strouhal number St comparation between experiment data and CFD results (b) Static pressure coefficient Cp comparation between experiment data and CFD results",
+      "page": 6,
+      "index": 1,
+      "width": 761,
+      "height": 1235
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07740v1/fig-002.webp",
+      "caption": "Fig. 5 Comparison of the normalized velocity magnitude and pressure fields between CFD and Meta-PINNs at different instants within one shedding cycle for Reynolds number 300",
+      "page": 11,
+      "index": 2,
+      "width": 761,
+      "height": 1389
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07740v1/fig-003.webp",
+      "caption": "Fig. 3 Architecture of Meta-PINNs framework",
+      "page": 7,
+      "index": 3,
+      "width": 761,
+      "height": 530
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07740v1/fig-004.webp",
+      "caption": "Fig. 4 Comparison of the normalized velocity magnitude and pressure fields between CFD and Meta-PINNs at different instants within one shedding cycle for Reynolds number 260",
+      "page": 10,
+      "index": 4,
+      "width": 761,
+      "height": 1410
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07740v1/fig-005.webp",
+      "caption": "Fig. 7 Comparison of normalized velocity magnitude, pressure, and effective viscosity fields predicted by CFD and Meta-PINNs for angles of attack from 0.5 ◦ to 4.5 ◦",
+      "page": 14,
+      "index": 5,
+      "width": 761,
+      "height": 700
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07740v1/fig-006.webp",
+      "caption": "Fig. 9 Total pressure loss coefficient comparison between CFD results and prediction from Meta-PINNs",
+      "page": 18,
+      "index": 6,
+      "width": 761,
+      "height": 523
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07740v1/fig-007.webp",
+      "caption": "Fig. 1 (a) Computation domain and mesh topology for circular cylinder flow case (b) Computation domain and mesh topology for compressor cascade flow case",
+      "page": 4,
+      "index": 7,
+      "width": 761,
+      "height": 878
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07740v1/fig-008.webp",
+      "caption": "Table 5 RMSE comparison of Meta-PINNs predictions at different angles of attack, RMSE values are computed based on normalized flow-field variables",
+      "page": 17,
+      "index": 8,
+      "width": 502,
+      "height": 327
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07740v1/fig-009.webp",
+      "caption": "Fig. 6 Strouhal number comparison between CFD results and predictions from Meta-PINNs",
+      "page": 12,
+      "index": 9,
+      "width": 761,
+      "height": 527
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07740v1/fig-010.webp",
+      "caption": "Table 3 RMSE comparison of Meta-PINNs predictions at Reynolds numbers 260 and 300 based on normalized flow-field variables",
+      "page": 9,
+      "index": 10,
+      "width": 952,
+      "height": 241
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07740v1/fig-011.webp",
+      "caption": "Fig. 8 Comparison of normalized velocity magnitude, pressure, and effective viscosity fields predicted by CFD and Meta-PINNs for angles of attack from 6◦ to 10 ◦",
+      "page": 16,
+      "index": 11,
+      "width": 761,
+      "height": 667
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.01001v1/fig-001.webp",
+      "caption": "Fig. 1 Schematic of the proposed Hybrid Convolutional PINN architecture. The network processes input spatial coordinates via a Fourier feature embedding layer, followed by a stack of L = 6 Hybrid Convolutional Blocks. Each block sequentially applies a large-kernel radial 1D convolution and an anisotropic azimuthal 2D convolution to embed directional physical inductive biases. Finally, the processed hidden states are mapped to the macroscopic flow variables (ρ, u, v, p) through a Multi-Layer Perceptron (MLP) decoder equipped with Softplus-based positivity constraints to ensure thermodynamic realizability.",
+      "page": 6,
+      "index": 1,
+      "width": 773,
+      "height": 675
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01001v1/fig-002.webp",
+      "caption": "Fig. 8 Comparison of profiles of density, velocity, temperature and pressure along the stagnation streamline obtained using PINNs type A and B with their reference CFD solution, when Ma∞ = 2.",
+      "page": 25,
+      "index": 2,
+      "width": 758,
+      "height": 496
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01001v1/fig-003.webp",
+      "caption": "Fig. 5 Profiles of physical quantities (ρ, u, T and p) along the stagnation streamline (Y = 0) comparing PINN type A predictions with CFD references.",
+      "page": 21,
+      "index": 3,
+      "width": 765,
+      "height": 764
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01001v1/fig-004.webp",
+      "caption": "Fig. 2 Schematic representation of the computational domain (left frame) and the spatial distribution of the composite loss function components (right frame). The physical boundary conditions are strictly enforced via localized penalty terms: freestream inflow (Lin), solid slip wall (Lwall), and geometric symmetry (Lsym). To stabilize the purely data-free optimization, specific regional constraints are introduced: an upstream fixing mask (Lmask) to prevent non-physical pre-shock oscillations, a localized nose region penalty (Lnose) to enforce sharp shock resolution, and a pointwise stagnation anchor (Lstag) to calibrate the macroscopic thermodynamic amplitude. Additionally, a Total Variation penalty (Ltv) is applied azimuthally to suppress carbuncle instabilities, while the Mach-scaled Euler PDE residuals (Lpde) and enthalpy conservation (LH) are evaluated globally across the continuous fluid domain.",
+      "page": 10,
+      "index": 4,
+      "width": 765,
+      "height": 337
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01001v1/fig-005.webp",
+      "caption": "Fig. 6 Convergence history of the total composite loss function across successive training epochs for varying freestream Mach numbers (3 ≤ Ma∞ ≤ 15). The optimization trajectory is visually partitioned into two distinct stages: the red shaded region illustrates the global exploration phase driven by the AdamW optimizer, while the green shaded region corresponds to the local fine-tuning phase executed by the L-BFGS algorithm. The explicit marker Nan denotes the exact epoch at which the artificial viscosity annealing protocol is completed, locking the numerical dissipation to its minimum threshold. The virtually instantaneous termination of the L-BFGS phase in high-Mach regimes visually corroborates that the optimizer is forced into an extremely narrow, stiff local plateau by the conclusion of the AdamW phase.",
+      "page": 23,
+      "index": 5,
+      "width": 767,
+      "height": 712
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01001v1/fig-006.webp",
+      "caption": "Table 1 Comparison of PINN studies for compressible Euler equations. Abbreviations: PDE: Partial Differential Equation residuals; BC: Boundary Conditions; IC: Initial Conditions; RH: Rankine-Hugoniot conditions; CON: Conservation laws; VIS: Artificial Viscosity term; EOS: Equation of State; Mask: Upstream fixing; TV: Total Variation; Data: Reference data.",
+      "page": 4,
+      "index": 6,
+      "width": 902,
+      "height": 814
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01001v1/fig-007.webp",
+      "caption": "Fig. 4 Contours of density, Mach number, temperature, and pressure for various Mach numbers (Ma = 3, 5, 9, 11, 13 and 15). Top halves (0 ≤ Y ) show PINN type A predictions; bottom halves (Y ≤ 0) show CFD reference solutions.",
+      "page": 19,
+      "index": 7,
+      "width": 771,
+      "height": 992
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01001v1/fig-008.webp",
+      "caption": "Fig. 3 Snapshots of density contours across training epochs (ep= 10 3, 8×10 3 and 1.1×10 4) obtained using baseline MLP.",
+      "page": 17,
+      "index": 8,
+      "width": 771,
+      "height": 204
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01001v1/fig-009.webp",
+      "caption": "Fig. 7 Comparison of density at Ma∞ = 2 obtained using PINNs type A and B (0 ≤ Y ) with their reference CFD solution (Y ≤ 0).",
+      "page": 24,
+      "index": 9,
+      "width": 773,
+      "height": 784
+    }
+  ]
+}

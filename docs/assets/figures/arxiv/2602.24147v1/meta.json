@@ -1,0 +1,110 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2602.24147v1/fig-001.webp",
+      "caption": "Figure 4. Schematic architecture of our RBF-DeepONet. The trainable branch net generates coefficients in the fixed trunk net basis.",
+      "page": 6,
+      "index": 1,
+      "width": 767,
+      "height": 216
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24147v1/fig-002.webp",
+      "caption": "Figure 7. Eigenvalues of 50 × 50 noisy far-field matrices for a circular obstacle of radius 0.5, computed with noise levels η = 0.1 (blue), η = 0.01 (orange), η = 0.001 (green), and η = 0 (red), where η is defined in (2.6).",
+      "page": 11,
+      "index": 2,
+      "width": 459,
+      "height": 343
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24147v1/fig-003.webp",
+      "caption": "Figure 9. Comparison of the DeepONet-based indicator (left column), the corresponding LSM indicator (middle column) and the Morozov LSM (right column) for a kite in full aperture. The noise parameter is set respectively to η = 0.05 (first row), η = 0.1 (second row) and η = 0.2 (fourth row). The DeepONet output seems minimally affected by the noise and the associated LSM indicator provides better contrast compared to Morozov LSM, especially for higher noise levels.",
+      "page": 15,
+      "index": 3,
+      "width": 851,
+      "height": 729
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24147v1/fig-004.webp",
+      "caption": "Table 2 RBF-DeepONet architecture and training hyperparameters selected for optimal performance.",
+      "page": 10,
+      "index": 4,
+      "width": 617,
+      "height": 320
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24147v1/fig-005.webp",
+      "caption": "Table 5 Computation times for Morozov’s discrepancy principle and the DeepONet-based approach, together with the resulting speedup, for different grid sizes. The speedup stabilizes around a factor of six as the number of sampling points increases.",
+      "page": 18,
+      "index": 5,
+      "width": 621,
+      "height": 200
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24147v1/fig-006.webp",
+      "caption": "Figure 8. Exact versus predicted noise levels for different obstacle geometries and far-field matrix sizes. Left column: circle wirth radius r = 1. Right column: kite. Top row: initial far-field matrix of size 60 × 30. Bottom row: initial far-field matrix of size 100 × 100. Predictions align well with exact noise level overall.",
+      "page": 13,
+      "index": 6,
+      "width": 763,
+      "height": 630
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24147v1/fig-007.webp",
+      "caption": "Figure 5. One-dimensional Gaussian radial basis functions with identical center spacing h and two different overlap parameters: s = 0.15 (left) and s = 0.8 (right). Larger values of s yields broader overlap between basis functions, whereas smaller values produce more localized functions.",
+      "page": 8,
+      "index": 7,
+      "width": 884,
+      "height": 225
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24147v1/fig-008.webp",
+      "caption": "Figure 2. Morozov regularizer (left) and corresponding LSM indicator function (right) for m = n = 30. The Morozov regularization function computed from (2.5) is used in the Tikhonov-regularized LSM linear system (2.4). This is the standard LSM workflow, which we aim to improve in this paper.",
+      "page": 4,
+      "index": 8,
+      "width": 676,
+      "height": 300
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24147v1/fig-009.webp",
+      "caption": "Figure 11. Reconstructions for different obstacle configurations are shown. The first row corresponds to two circles of radius 0.6, the second row to two circles with radii 0.5 and 1, and the third row to two kites. The noise level is fixed to η = 0.1. The DeepONet accurately recovers the overall positions and sizes of the obstacles, although their geometry is not accurately resolved. The associated LSM indicator significantly improves the reconstruction, yielding results comparable to those obtained with the Morozov LSM indicator.",
+      "page": 17,
+      "index": 9,
+      "width": 851,
+      "height": 729
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24147v1/fig-010.webp",
+      "caption": "Table 3 Training configuration and noise prediction for the network.",
+      "page": 12,
+      "index": 10,
+      "width": 883,
+      "height": 591
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24147v1/fig-011.webp",
+      "caption": "Figure 6. NTK spectra (K, G, Pϵ) and training histories for s = 0.15 (left) and s = 0.8 (right). For s = 0.15, Pϵ is well conditioned, yielding a well-behaved NTK spectrum and improved training. For s = 0.8, Pϵ is highly ill conditioned, which deteriorates the spectrum of K and hampers training.",
+      "page": 9,
+      "index": 11,
+      "width": 877,
+      "height": 646
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24147v1/fig-012.webp",
+      "caption": "Figure 3. Schematic overview of the proposed methodology: the neural operator and the noise prediction network are trained independently; their outputs are combined to construct a regularization function, which is then used within the LSM.",
+      "page": 5,
+      "index": 12,
+      "width": 764,
+      "height": 280
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24147v1/fig-013.webp",
+      "caption": "Figure 10. Reconstructions are shown for a cirle (first row), an ellipse (second row), and a kite (third row). The noise level is fixed to η = 0.1. The DeepONet accurately recovers both the position and shape of the scatterers. When combined with the LSM, the resulting indicator further improves the geometric reconstruction. Compared to the Morozov-based LSM indicator, the DeepONet-informed LSM yields slightly improved contrast.",
+      "page": 16,
+      "index": 13,
+      "width": 852,
+      "height": 729
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-001.webp",
+      "caption": "Figure 16: Distribution of bending-moment QoIs for the optimal designs z†DINO, z†NO, and z†PDE. All designs are evaluated with 200 Monte Carlo samples. The DINO and NO solutions are obtained with 1,024 samples per iteration, while the PDE solution is computed deterministically at m̄s. The Shape-DINO distribution is much more tightly concentrated and shifted closer to zero, indicating reduced magnitude and variability of the bending-moment QoI compared to both the deterministic PDE and shape-NO designs.",
+      "page": 43,
+      "index": 1,
+      "width": 944,
+      "height": 281
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-002.webp",
+      "caption": "Figure 12: Comparison of representative flow fields for the initial object geometry and the optimized geometry obtained using DINO trained with 1024 samples. Each row corresponds to one of the two inflow scenarios (eastward and northward flow), and each column shows the velocity fields before (left column) and after (right column) optimization. All flow fields are evaluated using high-fidelity PDE solves. The optimized geometry z†DINO, though not symmetric, significantly reduces recirculation behind the object and lowers the overall viscous dissipation rate compared to the initial shape.",
+      "page": 38,
+      "index": 2,
+      "width": 904,
+      "height": 496
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-003.webp",
+      "caption": "Table A.4: Common coordinate transformations. Here Fχ := ∇Xχ is the deformation gradient tensor, | · | is the Euclidean norm of the vector, and (·)T corresponds to the matrix transpose.",
+      "page": 53,
+      "index": 3,
+      "width": 808,
+      "height": 294
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-004.webp",
+      "caption": "Figure 4: Optimal cost values at optimal solutions (left) and relative error of the objective function (right) versus the number of state PDE solves required for the optimization, both with quantile β = 0.95 and penalty weight α = 0.001. Solid lines show the mean relative error and shaded regions represent the 25%˘75% quantile bands. In this highly risk-sensitive setting, Shape-DINO achieves near-reference accuracy with orders of magnitude fewer PDE solves than the PDE-based SAA, whereas Shape-NO performs poorly for small and moderate training sizes, highlighting the importance of derivative information for accurate risk estimation.",
+      "page": 30,
+      "index": 4,
+      "width": 918,
+      "height": 309
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-005.webp",
+      "caption": "Figure 5: Optimal cost values at optimal solutions (left) and relative error of the objective function (right) versus the number of state PDE solves required for the optimization, both with quantile β = 0.95 and penalty weight α = 0.1. Solid lines denote the mean relative error and shaded regions show the 25%˘75% quantile bands. As the penalization term becomes dominant, the performance gap between Shape-DINO and the PDE-based method narrows, though Shape-DINO still provides the best trade-off between accuracy and offline computational cost, while Shape-NO remains significantly less reliable.",
+      "page": 30,
+      "index": 5,
+      "width": 920,
+      "height": 310
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-006.webp",
+      "caption": "Figure 3: Optimal cost values at optimal solutions (left) and relative error of the objective function (right) versus the number of state PDE solves required for the optimization, both with mean SAA and penalty weight α = 0.001. Results are shown for shape-DINO, shape-NO, and the PDE-based SAA. Solid lines denote the mean relative error, and shaded regions indicate the 25%˘75%quantile bands across multiple runs. Even when the objective function is easy to estimate (as in the mean objective), Shape-DINO converges rapidly to the reference solution with substantially fewer PDE solves than the PDE-based method, while Shape-NO exhibits larger errors and slower convergence.",
+      "page": 29,
+      "index": 6,
+      "width": 920,
+      "height": 309
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-007.webp",
+      "caption": "Figure 13: Optimal cost values at optimal solutions (left) and relative error of the objective function (right) versus the number of state PDE solves required for the optimization, both with risk-aversion parameter β = 1 for entropic risk measure and penalty weight α = 0.001. NN train sizes are 512, 1,024, 2,048, and 4,096, and all used 8,192 samples per iteration for ouu. PDE ouu per iteration with 16, 32, 64, 128, 512 samples. PDE reference ouu is done with 8,192 samples for iteration. The results are evaluated with the same 16,384 samples. Note that the counts reported above refer to the number of samples per flow scenario. The actual number of PDE solves is twice the reported number since we evaluate the QoI for both the eastward flow and northward flow scenarios.",
+      "page": 39,
+      "index": 7,
+      "width": 920,
+      "height": 310
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-008.webp",
+      "caption": "Figure 15: Distribution of horizontal-force QoIs for the optimal designs z†DINO, z†NO, and z†PDE. All designs are evaluated with 200 Monte Carlo samples. The DINO and NO solutions are obtained with 1,024 samples per iteration, while the PDE solution is computed deterministically at m̄s. The Shape-DINO design yields a distribution that is both more concentrated and closer to zero, while shape-NO exhibits broader distributions with heavier tails, highlighting the benefit of incorporating derivative information for achieving robust designs under uncertainty.",
+      "page": 42,
+      "index": 8,
+      "width": 943,
+      "height": 279
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-009.webp",
+      "caption": "Figure 1: Mean relative testing errors for full order state (L2(Ω0)) (left) and reduced order Jacobians (middle and right) of Poisson PDE neural operators trained with (Shape-DINO) and without derivative information (Shape-NO). Training with Jacobian information consistently yields lower errors in both the solution and its sensitivities, demonstrating improved accuracy and robustness of shape-DINO.",
+      "page": 28,
+      "index": 9,
+      "width": 923,
+      "height": 228
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-010.webp",
+      "caption": "Figure 2: Example of state u plotted on deformed domain. Top-left: true PDE state utrue. Top-right: predicted state uDINO using Shape-DINO, with 512 training samples. Bottom-left: difference: uDINO − utrue. Bottom-right: parameter m used for the calculation. Visually, the prediction error is near-zero, confirming the accuracy of Shape-DINO.",
+      "page": 28,
+      "index": 10,
+      "width": 647,
+      "height": 375
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-011.webp",
+      "caption": "Figure 14: Geometry of the domain and initial frustum-shaped tower together with streamlines of the velocity field obtained from the PDE Navier–Stokes solution. The case shown corresponds to the left inflow condition with inflow on Γleft and outflow on Γright. The remaining faces Γfree-slip = Γfront ∪Γtop ∪Γback act as impermeable walls, while no-slip conditions are imposed on Γobject ∪ Γbase.",
+      "page": 40,
+      "index": 11,
+      "width": 620,
+      "height": 244
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-012.webp",
+      "caption": "Figure 8: Sample flux profile at the optimal designs obtained from CVaR optimization, with β = 0.95 and α = 0.001, using a discontinuous target flux profile defined by x2 = 1 for x1 ∈ [0, 2] and x2 = 2 for x1 ∈ [2, 4]. Both DINO and NO are trained with 512 samples, while the PDE reference is obtained from a large-sample PDE-based SAA. Despite the target flux lying outside of the distribution used during training, shape-DINO produces flux profiles that better match the target and remain stable across uncertainty, whereas shape-NO produces flux profiles that significantly deviate from the target.",
+      "page": 32,
+      "index": 12,
+      "width": 919,
+      "height": 184
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-013.webp",
+      "caption": "Figure 7: Sample flux profile at the optimal designs obtained from CVaR optimization with β = 0.95 and α = 0.001, using a smooth target flux profile different from Figure 6. Both DINO and NO are trained with 512 samples, while z⋆ref is obtained from a large-sampled PDE-based SAA with 16,284 samples. Despite using orders of magnitude fewer PDE solves in the offline stage, shape-DINO produces flux profiles that are nearly indistinguishable from those of the large-sample PDE reference, closely tracking the target flux across parameter realizations and exhibiting reduced variability, whereas shape-NO shows much larger deviations.",
+      "page": 32,
+      "index": 13,
+      "width": 914,
+      "height": 185
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-014.webp",
+      "caption": "Figure 17: Optimal tower shapes z† with streamlines evaluated under eastward flow at the mean parameter values mEast = m̄East. Panels 17a, 17c, and 17e correspond to the horizontal force QoI, while panels 17b, 17d, and 17f show results for the bending moment QoI. The Shape-DINO designs are thinner and allow smoother flow passage compared to deterministic PDE, whereas shape-NO yields bulkier and sometimes twisted geometries that induce stronger flow deflection and larger downstream recirculation regions. This comparison provides a physical explanation for the reduced forces and bending moment achieved by Shape-DINO.",
+      "page": 44,
+      "index": 14,
+      "width": 962,
+      "height": 570
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-015.webp",
+      "caption": "Figure 11: State (left) and Jacobians (middle and right) testing errors for northward inflow case 2D Navier-Stokes neural operators with (Shape-DINO) and without (Shape-NO) Jacobian training. Training sample sizes are 512, 1024, 2048, 4096 and test sample size is 1024. Similar to the eastward inflow case, Shape-DINO again yields markedly lower errors in both the predicted state and its derivatives compared to Shape-NO.",
+      "page": 37,
+      "index": 15,
+      "width": 923,
+      "height": 198
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-016.webp",
+      "caption": "Figure 10: State (left) and Jacobians (middle and right) testing errors for eastward inflow case 2D Navier-Stokes neural operators with (Shape-DINO) and without (Shape-NO) Jacobian training. Training sample sizes are 512, 1,024, 2,048, 4,096 and test sample size is 1,024. Shape-DINO yields significantly lower generalization errors in both the outputs and the derivatives compared to Shape-NO.",
+      "page": 37,
+      "index": 16,
+      "width": 923,
+      "height": 197
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03211v1/fig-017.webp",
+      "caption": "Figure 6: Top: optimal upper boundary designs from CVaR-SAA optimization with quantile β = 0.95 and penalty weight α = 0.001. The three subplots show the optimal designs by Shape-DINO, Shape-NO, and PDE reference, respectively, together with their corresponding PDE state solutions u(m, z) on the deformed domain. Here, z⋆ref is obtained from a large-sampled PDE-based SAA with 16,284 samples. Bottom: sample flux profile at optimal designs. The black line denotes the target flux τtarget. Colored lines correspond to flux profiles computed with u(m(i), z†DINO), u(m(i), z†NO) and u(m(i), z⋆ref) for 256 independent parameter samples m(i) ∼ µm. Shape-DINO optimal design produces flux profiles that aligns more closely with the target flux σtarget compared to shape-NO and achieve performance very close to the PDE reference.",
+      "page": 31,
+      "index": 17,
+      "width": 931,
+      "height": 451
+    }
+  ]
+}

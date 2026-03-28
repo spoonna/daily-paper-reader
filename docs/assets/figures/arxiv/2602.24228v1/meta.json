@@ -1,0 +1,102 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2602.24228v1/fig-001.webp",
+      "caption": "Figure 5: Boxplot comparison between OFormer and BLISSNet across different sensor configurations and domain sizes for NS flow. (a) - 60 sensors for 64 × 64 domain, (b) - 150 sensors for 64 × 64, (c) - 60 sensors for 128 × 128 domain, (d) - 150 sensors for 128× 128 domain",
+      "page": 11,
+      "index": 1,
+      "width": 976,
+      "height": 826
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24228v1/fig-002.webp",
+      "caption": "Figure 9: Comparison of interpolators in an AOT-nudging DA setup using the NS equations as the propagation model for 60 sensors. OFormer and BLISSNet show comparable relative error. Bicubic and RBF interpolations are included for reference and perform much worse than the learned interpolators. All observed data include 10% noise.",
+      "page": 15,
+      "index": 2,
+      "width": 979,
+      "height": 613
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24228v1/fig-003.webp",
+      "caption": "Figure 4: Comparison of interpolation performance between the baseline OFormer and our BLISSNet model using 60 sensors with 10% Gaussian noise on the sensor values for zero-shot domain sizes, first row - 32× 32 size, second row - 64× 64 size, third row - 128× 128 size, fourth row - 256× 256 size",
+      "page": 10,
+      "index": 3,
+      "width": 686,
+      "height": 811
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24228v1/fig-004.webp",
+      "caption": "Figure 8: Comparison of interpolation performance between the baseline OFormer and our BLISSNet model using 200 sensors with 10% Gaussian noise on the sensor values for zero-shot domain sizes: first row - 32× 32, second row - 64× 64, third row - 128× 128, fourth row - 256× 256",
+      "page": 14,
+      "index": 4,
+      "width": 686,
+      "height": 790
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24228v1/fig-005.webp",
+      "caption": "Figure 12: Comparison of the error of BLISSNet and OFormer for AOT-nudging for QG flow",
+      "page": 18,
+      "index": 5,
+      "width": 976,
+      "height": 781
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24228v1/fig-006.webp",
+      "caption": "Figure 7: Comparison of interpolation performance between the baseline OFormer and our BLISSNet model using 150 (top two rows) and 200 (bottom two rows) sensors with 10% Gaussian noise on the sensor values (first and third row are the same image, as well as second and fourth)",
+      "page": 13,
+      "index": 6,
+      "width": 882,
+      "height": 787
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24228v1/fig-007.webp",
+      "caption": "Figure 2: Time comparison of BLISSNet and OFormer. BLISSNet is more than 8 times faster on domains of size 512 and larger (a), and with precomputed bases it is up to 30 times faster (b). These results demonstrate a clear scalability advantage of BLISSNet for large domains.",
+      "page": 8,
+      "index": 7,
+      "width": 976,
+      "height": 331
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24228v1/fig-008.webp",
+      "caption": "Figure 1: BLISSNet uses a two-stage architecture. In stage one (panel a), the model is trained on fully observed data to learn a SIREN-based trunk that provides basis functions and a decoder that outputs the coefficients. The reconstruction is a weighted sum of these bases, with K denoting the number of coefficients and basis functions. In stage two (panel b), the model performs interpolation from sparse observations, with S denoting the number of available measurements, and it reuses the SIREN trunk and the decoder learned in stage one while training a Transformer encoder and crossattention to map sensor coordinates and values to features. We utilize the OFormer encoder (representative of the Transformer encoder) in stage two. However, any suitable encoder can be substituted, and more advanced designs may further enhance interpolation quality. Snowflake here denotes that the weights are frozen during the second stage of training.",
+      "page": 4,
+      "index": 8,
+      "width": 960,
+      "height": 796
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24228v1/fig-009.webp",
+      "caption": "Figure 11: Comparison of interpolators in an AOT-nudging DA setup using the QG equations as the propagation model for 150 sensors. OFormer and BLISSNet show comparable relative error. Bicubic and RBF interpolations are included for reference and perform much worse than the learned interpolators. All observed data include 10% noise.",
+      "page": 17,
+      "index": 9,
+      "width": 881,
+      "height": 552
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24228v1/fig-010.webp",
+      "caption": "Figure 6: Boxplot comparison between OFormer and BLISSNet across different sensor configurations and domain sizes for QG flow. (a) - 150 sensors for 64 × 64 domain, (b) - 200 sensors for 64 × 64 domain, (c) - 150 sensors for 128× 128 domain, (d) - 200 sensors for 128× 128 domain",
+      "page": 12,
+      "index": 10,
+      "width": 979,
+      "height": 826
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24228v1/fig-011.webp",
+      "caption": "Figure 3: Comparison of interpolation performance between the baseline OFormer and our BLISSNet model using 60 (top two rows) and 150 (bottom two rows) sensors with 10% Gaussian noise on the sensor values (first and third row are the same image, as well as second and fourth)",
+      "page": 9,
+      "index": 11,
+      "width": 882,
+      "height": 804
+    },
+    {
+      "url": "assets/figures/arxiv/2602.24228v1/fig-012.webp",
+      "caption": "Figure 10: Comparison of the error of BLISSNet and OFormer for AOT-nudging",
+      "page": 16,
+      "index": 12,
+      "width": 979,
+      "height": 798
+    }
+  ]
+}

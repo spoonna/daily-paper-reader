@@ -1,0 +1,214 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-001.webp",
+      "caption": "Figure 2: Temperature-dependent material properties utilized in this study.",
+      "page": 6,
+      "index": 1,
+      "width": 511,
+      "height": 342
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-002.webp",
+      "caption": "Figure 4: Domain and boundary conditions of the three examples. (a) Two-dimensional squared-domain problem, (b) three-dimensional RVE problem with varying material properties, and (c) casting example problem with varying boundary conditions.",
+      "page": 11,
+      "index": 2,
+      "width": 1015,
+      "height": 331
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-003.webp",
+      "caption": "Figure 5: Examples of training (left) and test samples (right) employed for the two-dimensional square-domain problem.",
+      "page": 11,
+      "index": 3,
+      "width": 1015,
+      "height": 344
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-004.webp",
+      "caption": "Figure 23: Comparison of the prediction with DeepONet-FOL and reference solution from NFEM in the threedimensional casting example problem for an unseen temperature case.",
+      "page": 25,
+      "index": 4,
+      "width": 965,
+      "height": 1308
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-005.webp",
+      "caption": "Figure 11: Relative L2 error statistics over 50 samples on four different test cases with three different network decomposition strategies.",
+      "page": 15,
+      "index": 5,
+      "width": 1015,
+      "height": 285
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-006.webp",
+      "caption": "Figure 10: Comparison of the three different network decomposition strategies for FNO-based multiphysics operator learning.",
+      "page": 15,
+      "index": 6,
+      "width": 913,
+      "height": 204
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-007.webp",
+      "caption": "Figure 19: Comparison of the prediction and reference solution from NFEM in the three-dimensional RVE problem for a representative case of the dual-phase structure test cases.",
+      "page": 21,
+      "index": 7,
+      "width": 913,
+      "height": 1352
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-008.webp",
+      "caption": "Figure A.2: Relative L2 error statistics over 50 samples on four different test cases on different numbers of FNO layers.",
+      "page": 29,
+      "index": 8,
+      "width": 1015,
+      "height": 285
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-009.webp",
+      "caption": "Table 2: List of boundary conditions for the three-dimensional nonlinear themo-mechanics on a casting geometry ; Here, T , Ux, Uy, Uz denote the prescribed temperature or displacements as Dirichlet boundary conditions in the x-, y-, and z-directions respectively, and \"free\" indicates natural boundary conditions are applied.",
+      "page": 22,
+      "index": 9,
+      "width": 765,
+      "height": 217
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-010.webp",
+      "caption": "Figure 9: Comparison of the prediction and reference solution from NFEM in the two-dimensional square domain problem for a representative case of the polycrystal and dualphase test samples.",
+      "page": 14,
+      "index": 10,
+      "width": 1015,
+      "height": 1106
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-011.webp",
+      "caption": "Figure 15: Comparison of average inference cost and calculation cost by NFEM over 50 cases on three different resolutions.",
+      "page": 18,
+      "index": 11,
+      "width": 811,
+      "height": 408
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-012.webp",
+      "caption": "Figure 20: Relative L2 error statistics over 10 uniformly sampled test temperature values on different operator learning backbones (DeepONet and iFOL) for the irregular casting example geometry.",
+      "page": 23,
+      "index": 12,
+      "width": 511,
+      "height": 321
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-013.webp",
+      "caption": "Figure 21: Cross-section comparison of the prediction with iFOL and DeepONet-FOL against the reference NFEM solution at z = 0.45 in the three-dimensional casting example problem for an unseen temperature case.",
+      "page": 23,
+      "index": 13,
+      "width": 1015,
+      "height": 712
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-014.webp",
+      "caption": "Table A.2: Network hyperparameters of DeepONet and iFOL for the three-dimensional casting example problem.",
+      "page": 28,
+      "index": 14,
+      "width": 998,
+      "height": 338
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-015.webp",
+      "caption": "Figure A.1: Relative L2 error statistics over 50 samples on four different test cases on different numbers of Fourier modes in FNO.",
+      "page": 28,
+      "index": 15,
+      "width": 1015,
+      "height": 285
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-016.webp",
+      "caption": "Table A.1: Network hyperparameters for the 2D and 3D regular domain problems with Fourier neural operators.",
+      "page": 28,
+      "index": 16,
+      "width": 977,
+      "height": 489
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-017.webp",
+      "caption": "Figure 8: Comparison of the prediction and reference solution from NFEM in the two-dimensional square domain problem for a representative case of the in-distribution and gyroid test samples.",
+      "page": 13,
+      "index": 17,
+      "width": 1015,
+      "height": 1104
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-018.webp",
+      "caption": "Figure 3: Schematic of the three operator learning backbones employed in this study: Fourier Neural Operator (FNO), Deep Operator Network (DeepONet), and implicit Finite Operator Learning (iFOL).",
+      "page": 8,
+      "index": 18,
+      "width": 1015,
+      "height": 660
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-019.webp",
+      "caption": "Figure 1: Overall idea of the present research: addressing multiphysics problems across scales with a novel and scalable physics-informed operator learning framework, where finite element residuals are directly used for parametric training of deep learning models. The final goal would be to enable strong coupling of multiphysics problems between macro and microscale as illustrated on the bottom. As a first step, the present work demonstrates the performance of the proposed framework on typical multiphysics problems on both scales.",
+      "page": 4,
+      "index": 19,
+      "width": 913,
+      "height": 340
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-020.webp",
+      "caption": "Figure 14: Relative L2 error statistics over 50 samples on four different test cases on two different training samples with different numbers of training samples.",
+      "page": 17,
+      "index": 20,
+      "width": 1015,
+      "height": 283
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-021.webp",
+      "caption": "Figure 13: Relative L2 error statistics over 50 samples on four different test cases on two different training samples with different frequency sets in the generation of training samples based on the Fourier series.",
+      "page": 17,
+      "index": 21,
+      "width": 1015,
+      "height": 285
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-022.webp",
+      "caption": "Figure 6: Comparison of the relative L2 errors over 50 samples on each test case.",
+      "page": 12,
+      "index": 22,
+      "width": 458,
+      "height": 287
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-023.webp",
+      "caption": "Figure 7: Comparison of the deformed states between prediction and reference solution from NFEM on a representative sample of all test cases.",
+      "page": 12,
+      "index": 23,
+      "width": 540,
+      "height": 452
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-024.webp",
+      "caption": "Figure 22: Comparison of the prediction with iFOL and reference solution from NFEM in the three-dimensional casting example problem for an unseen temperature case.",
+      "page": 24,
+      "index": 24,
+      "width": 965,
+      "height": 1308
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-025.webp",
+      "caption": "Figure 18: Comparison of the prediction and reference solution from NFEM in the three-dimensional RVE problem for a representative case of the in-distribution test cases.",
+      "page": 20,
+      "index": 25,
+      "width": 913,
+      "height": 1352
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01420v1/fig-026.webp",
+      "caption": "Figure 12: Relative L2 error statistics over 50 samples on four different test cases with the monolithic and staggered training schemes.",
+      "page": 16,
+      "index": 26,
+      "width": 1015,
+      "height": 285
+    }
+  ]
+}

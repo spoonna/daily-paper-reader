@@ -1,0 +1,166 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-001.webp",
+      "caption": "Table 5: Experiment 3 (Navier-Stokes) - Average performance of the models, with respect to five random seeds for weight initialization, varying the training set size. Results for the pressure solution p.",
+      "page": 25,
+      "index": 1,
+      "width": 950,
+      "height": 264
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-002.webp",
+      "caption": "Figure 14: Experiment 3 (Navier-Stokes) - Best, median, and worst prediction cases with respect to the test set Ξ, ranked with respect to mreL2 averaged on the three solutions. Magenta dots denote fixed homogeneous Dirichlet BCs, while red dots denote the homogeneous Dirichlet BC defined by the boundary parametrization of the problem.",
+      "page": 26,
+      "index": 2,
+      "width": 958,
+      "height": 920
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-003.webp",
+      "caption": "Figure 6: Experiment 1 (Diffusion) - Error statistics with respect to five random seeds for weight initialization, varying the training set size. In blue, the µBC-GINN performance, in orange the µBC-FCNN performance. Light colored areas represent the Min-Max range of values, the dark colored areas represent the values between fist and third quartiles. The continuous lines represent the average errors (same as Table 1), the dotted lines represent the medians.",
+      "page": 15,
+      "index": 3,
+      "width": 889,
+      "height": 587
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-004.webp",
+      "caption": "Table 4: Experiment 3 (Navier-Stokes) - Average performance of the models, with respect to five random seeds for weight initialization, varying the training set size. Results for the second component of solution u.",
+      "page": 21,
+      "index": 4,
+      "width": 950,
+      "height": 265
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-005.webp",
+      "caption": "Table 3: Experiment 3 (Navier-Stokes) - Average performance of the models, with respect to five random seeds for weight initialization, varying the training set size. Results for the first component of solution u.",
+      "page": 21,
+      "index": 5,
+      "width": 950,
+      "height": 265
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-006.webp",
+      "caption": "Figure 11: Experiment 3 (Navier-Stokes) - Error statistics with respect to five random seeds for weight initialization, varying the training set size. In blue, the µBC-GINN performance, in orange the µBC-FCNN performance. Light colored areas represent the Min-Max range of values, the dark colored areas represent the values between fist and third quartiles. The continuous lines represent the average errors (same as Table 3), the dotted lines represent the medians. Results for the first component of solution u.",
+      "page": 22,
+      "index": 6,
+      "width": 887,
+      "height": 1026
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-007.webp",
+      "caption": "Figure 5: Experiment 1. Spatial domain Ω for a specific parametric instance: schematic representation. (A) The homogeneous Dirichlet boundary, the non-homogeneous and homogeneous Neumann boundaries are applied to ΓD (solid line), Γµb 1 (dashed line), and Γµb 0 Y ΓN (dash-dotted and dotted lines), respectively. (B) Example of selection of circle intervals. The summation only represents the detection of the start and the end node of the intervals.",
+      "page": 14,
+      "index": 7,
+      "width": 916,
+      "height": 378
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-008.webp",
+      "caption": "Table 1: Experiment 1 (Diffusion) - Average performance of the models, with respect to five random seeds for weight initialization, varying the training set size.",
+      "page": 14,
+      "index": 8,
+      "width": 871,
+      "height": 345
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-009.webp",
+      "caption": "Figure 9: Experiment 2 (Advection-Diffusion) - Error statistics with respect to five random seeds for weight initialization, varying the training set size. In blue, the µBC-GINN performance, in orange the µBC-FCNN performance. Light colored areas represent the Min-Max range of values, the dark colored areas represent the values between fist and third quartiles. The continuous lines represent the average errors (same as Table 2), the dotted lines represent the medians.",
+      "page": 18,
+      "index": 9,
+      "width": 887,
+      "height": 1026
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-010.webp",
+      "caption": "Figure 12: Experiment 3 (Navier-Stokes) - Error statistics with respect to five random seeds for weight initialization, varying the training set size. In blue, the µBC-GINN performance, in orange the µBC-FCNN performance. Light colored areas represent the Min-Max range of values, the dark colored areas represent the values between fist and third quartiles. The continuous lines represent the average errors (same as Table 4), the dotted lines represent the medians. Results for the second component of solution u.",
+      "page": 23,
+      "index": 10,
+      "width": 887,
+      "height": 1026
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-011.webp",
+      "caption": "Figure 3: Visual representation of (8). Example with i “ 1 and a non-directed graph of four nodes.",
+      "page": 8,
+      "index": 11,
+      "width": 621,
+      "height": 243
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-012.webp",
+      "caption": "Figure 1: Representation of a general domain Ω for two values of µb, i.e., µb “ µ˚ b (left) and µb “ µb (right). The solid, the dotted, and the dashed-dotted lines represent Γµb D , Γ µb N , and Γfix, respectively.",
+      "page": 4,
+      "index": 12,
+      "width": 787,
+      "height": 183
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-013.webp",
+      "caption": "Table 2: Experiment 2 (Advection-Diffusion) - Average performance of the models, with respect to five random seeds for weight initialization, varying the training set size.",
+      "page": 19,
+      "index": 13,
+      "width": 950,
+      "height": 268
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-014.webp",
+      "caption": "Figure 8: (Experiments 2 and 3) Spatial domainΩ for a specific parametric instance: schematic representation. (A) Γsides (dash-dotted line) and Γtop (dashed line) form the fixed boundary Γfix. The boundary parameter µb characterizes Γµb N (dotted line) and Γµb D “ Γµb zΓ µb N (solid line), respectively. (B) Example of selection of circle intervals. The summation only represents the detection of the start and the end node of the intervals.",
+      "page": 17,
+      "index": 14,
+      "width": 925,
+      "height": 406
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-015.webp",
+      "caption": "Figure 15: Statistics of the average training time per mini-batch (in seconds), varying the experiments (Experiment 1, 2 and 3 are denoted by (D), (AD), and (NS), respectively); i.e., varying the number Nh of mesh nodes. In blue the training times of µBC-GINNs, in orange the training times of µBC-FCNNs.",
+      "page": 27,
+      "index": 15,
+      "width": 733,
+      "height": 560
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-016.webp",
+      "caption": "Figure 13: Experiment 3 (Navier-Stokes) - Error statistics with respect to five random seeds for weight initialization, varying the training set size. In blue, the µBC-GINN performance, in orange the µBC-FCNN performance. Light colored areas represent the Min-Max range of values, the dark colored areas represent the values between fist and third quartiles. The continuous lines represent the average errors (same as Table 5), the dotted lines represent the medians. Results for the pressure solution p.",
+      "page": 24,
+      "index": 16,
+      "width": 887,
+      "height": 1026
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-017.webp",
+      "caption": "Figure 4: Visual representation of a GI layer as a “constrained” FC layer (subfigure (A)), with weight matrix defined by (10) (subfigure (B)). This figure is based on the same graph illustrated in Figure 3.",
+      "page": 9,
+      "index": 17,
+      "width": 739,
+      "height": 286
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-018.webp",
+      "caption": "Figure 10: Experiment 2 (Advection-Diffusion) - Best, median, and worst prediction cases with respect to the test set Ξ, ranked with respect to mreL2 . Magenta dots denote fixed homogeneous Dirichlet BCs, while red dots denote the homogeneous Dirichlet BC defined by the boundary parametrization of the problem.",
+      "page": 20,
+      "index": 18,
+      "width": 958,
+      "height": 922
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-019.webp",
+      "caption": "Figure 2: Schematic representation of a mesh discretization on a square domainΩ with a portion of the boundary under the action of the parameters µb and µv. This portion is Γµb , the continuous, grey, and thick line. The nodes that may change features are denoted with square and circle dots, while the nodes of the boundary with fixed features are denoted with black crosses. the color of the square and circle dotes denote the value of the BCs described by µv.",
+      "page": 5,
+      "index": 19,
+      "width": 490,
+      "height": 314
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08304v1/fig-020.webp",
+      "caption": "Figure 7: Experiment 1 (Diffusion) - Best, median, and worst prediction cases with respect to the test set Ξ, ranked with respect to mreL2 . Black, empty circle dots denote the boundary nodes with Neumann BC of value µ1 P p0, 1s; magenta crosses denote boundary nodes with fixed homogeneous Dirichlet BCs.",
+      "page": 16,
+      "index": 20,
+      "width": 958,
+      "height": 920
+    }
+  ]
+}

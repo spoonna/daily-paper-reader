@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.01406v1/fig-001.webp",
+      "caption": "Figure 3: Boundary extrapolation via increased Dirichlet bandwidth. Performance degrades monotonically as higher-frequency boundary components are introduced beyond the training support.",
+      "page": 8,
+      "index": 1,
+      "width": 582,
+      "height": 438
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01406v1/fig-002.webp",
+      "caption": "Figure 2: Boundary extrapolation via Dirichlet mean shifts. Relative L2 error increases smoothly and symmetrically as boundary conditions move away from the training distribution, despite unchanged forcing distribution, resolution, and PDE operator.",
+      "page": 7,
+      "index": 2,
+      "width": 582,
+      "height": 438
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01406v1/fig-003.webp",
+      "caption": "Figure 1: Training dynamics for boundary-aware Fourier Neural Operators trained on µB0 (left) and µB1 (right). Relative L2 error decreases smoothly and stabilizes in both cases, indicating that subsequent generalization failures are not due to optimization instability or lack of convergence.",
+      "page": 6,
+      "index": 3,
+      "width": 829,
+      "height": 299
+    },
+    {
+      "url": "assets/figures/arxiv/2603.01406v1/fig-004.webp",
+      "caption": "Figure 4: Conditional expectation behavior under boundary ablation. For a fixed forcing f∗, the boundary-ablated model output (left) closely matches the Monte Carlo estimate of E[u | f∗] (center), with the absolute difference shown on the right. This provides empirical evidence that training via empirical risk minimization leads to conditional averaging when boundary information is unavailable.",
+      "page": 9,
+      "index": 4,
+      "width": 748,
+      "height": 242
+    }
+  ]
+}

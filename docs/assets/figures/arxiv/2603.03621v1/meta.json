@@ -1,0 +1,94 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.03621v1/fig-001.webp",
+      "caption": "Figure 4: Kernel Integration: Methods for Improving Performance. In neural operators a major computational cost during both training and evaluation is to compute the kernel integral operations K[v]. An edge-conditioned convolution is widely used for this approximation, but scales as O(N2) becoming prohibitively expensive as the density of points increases within the support of the kernel, (top). We develop more computationally efficient alternatives using node-conditioned convolutions based on factoring kernels into a separable form k(x, y) = k1(x)k2(y). The node-based methods scale as O(N) allowing for approximations using efficient gathering and scattering operations greatly reducing computational costs, (bottom).",
+      "page": 15,
+      "index": 1,
+      "width": 786,
+      "height": 473
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03621v1/fig-002.webp",
+      "caption": "Table 6: L2-norm Relative Errors for ∇ũ. We show the accuracy of approximating ∇ũ when solving equation 27. We show in bold errors larger than 1.0. The accuracy of these results indicates that the gradients are the dominant source of approximation error in the Sobolev-norm in Table 2.",
+      "page": 30,
+      "index": 2,
+      "width": 672,
+      "height": 1061
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03621v1/fig-003.webp",
+      "caption": "Table 5: L2-norm Relative Errors for ũ. We show the accuracy of approximating ũ when solving equation 27. We show in bold errors larger than 1.0. The accuracy of these results indicates that the main source of error in the Sobolev-norm in Table 2 likely arises from approximation of the gradients. We report these results in Table 6.",
+      "page": 29,
+      "index": 3,
+      "width": 672,
+      "height": 1060
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03621v1/fig-004.webp",
+      "caption": "Table 3: Coefficient ℓ1-norms and C2. We show the ∥α∥ℓ1 of the coefficients {αi} in equation 6 when solving equation 27. Results are averaged over all functions and manifolds. This gives an indication of the size of C2 = ∥α∥ℓ1 in the accuracy bounds in Theorem 1.2 in equation 16. We highlight in bold all values larger than 104. As the number of sample points increases, we see the Gaussian kernels have especially large values exceeding those of our other kernels by a few orders of magnitude. Relative to the other kernels, this indicates using Gaussians in the extension methods could be inefficient and sensitive to the accuracy of the trained neural operators, see equation 16.",
+      "page": 22,
+      "index": 4,
+      "width": 818,
+      "height": 416
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03621v1/fig-005.webp",
+      "caption": "Figure 3: Kernels. We show a few different kernels used in our approximations and comparison studies. For the Gaussian kernels, we use Φ(σ · r) with values for σ = ℓ−1 0 with ℓ0 = 0.2, 0.3, 0.4 for the cases labeled A, B, C. For the Matérn kernels, the A, B, C cases correspond to the Basic, Linear, and Quadratic kernels with the parameters shown in Table 1. For the Wendland kernels, we consider the cases with k = 0, k = 1, k = 2 with parameters in Table 1.",
+      "page": 10,
+      "index": 5,
+      "width": 968,
+      "height": 240
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03621v1/fig-006.webp",
+      "caption": "Table 4: Condition Numbers for the Gram Matrix. We show results for the Gram Matrix Kij = k(xi, xj) for the Gaussian, Matérn, and Wendland kernels. We highlight in bold conditions numbers larger than 106. We find as N increases the Gaussian kernels produce particularly ill-conditioned gram matrices which are orders of magnitude larger than the other kernels. The condition numbers are seen to grow much more slowly for the Matérn and Wendland kernels. The larger condition numbers can be seen to correspond to the less accurate cases in Table 3. These results further highlight importance of the choice of kernel when using the extension methods.",
+      "page": 28,
+      "index": 6,
+      "width": 826,
+      "height": 421
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03621v1/fig-007.webp",
+      "caption": "Figure 2: Kernels Restricted to Manifolds kM. We develop theory for kernel approximation based on restricting kernels from the bulk ambient space k(x, y) to a manifold surface kM(x, y). Even when the bulk kernel k has nice properties and symmetries, such as being a radial basis function, the restricted kernels kM may not inherit these attributes. The kM may no longer be radial symmetric kM(x, y) ̸= kM(|x − y|) or translation invariant kM(x, y) ̸= kM(x, y +∆).",
+      "page": 8,
+      "index": 7,
+      "width": 882,
+      "height": 240
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03621v1/fig-008.webp",
+      "caption": "Figure 5: Manifold Shapes and Kernel Restrictions. We show the manifolds used in our comparison studies. We also show how the Wendland kernel with parameter k = 0 behaves when restricted to the manifold surface to obtain kM. During training the different kernels are centered at a sampling of locations {xi} on the manifold providing a collection of functions kσ(·, xi) for use during training.",
+      "page": 17,
+      "index": 8,
+      "width": 979,
+      "height": 299
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03621v1/fig-009.webp",
+      "caption": "Table 1: Kernels and RKHS Equivalent Native Spaces. For the different kernels k(x, y) = Φ(|x− y|) and RKHS Hk generated by k, we give the equivalent native spaces. In the cases we consider, these are Sobolev spaces Hs, [38]. For an input x ∈ Rd, we take r = ∥x∥2. We also consider x ∈ M restricted to a manifold surface M ⊂ R3. For kernels obtained by restricting the free-space kernel k(x, y), we also give the corresponding Sobolev space Hs(M).",
+      "page": 9,
+      "index": 9,
+      "width": 819,
+      "height": 304
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03621v1/fig-010.webp",
+      "caption": "Table 2: Relative H1-norm Accuracy. We show results for the accuracy of the extended neural operators when used to obtain solutions of equation 51. We show in bold all relative errors above 100. The Gaussian kernels are found to perform poorly as N increases. The extension methods using the Matérn and Wendland kernels are found to perform well as N increases.",
+      "page": 20,
+      "index": 10,
+      "width": 672,
+      "height": 1060
+    },
+    {
+      "url": "assets/figures/arxiv/2603.03621v1/fig-011.webp",
+      "caption": "Figure 1: Operator Extension Methods. We develop methods for extending conventional neural operators and geometric neural operators to robustly handle inputs beyond the functions in the training data. We leverage properties of kernel approximations. Neural operators process an input function w(·) and geometric neural operators also process information from the geometry Φ(·). The operators use a combination of a featurizing lifting operator P, kernel operator layers, and a projection operator Q to obtain the output function u(·), (top). We obtain representations for input functions in terms of kernels kσ, (lower-left). The kernel constructions are shown for a subset of the points in the sum. The operator layer involves a combination of a kernel integration K[v] and a linear operation W [v] that is passed through a non-linear activation function σ(·), (lower-center). The kernel representations are then used to construct the output function ũ(·), (lower-right).",
+      "page": 5,
+      "index": 11,
+      "width": 968,
+      "height": 289
+    }
+  ]
+}
