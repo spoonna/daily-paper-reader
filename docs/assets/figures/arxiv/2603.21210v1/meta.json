@@ -1,0 +1,166 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-001.webp",
+      "caption": "Table 2: Results of baseline models and all WinDiNet variants on the test set. All metrics computed on fluid pixels only.",
+      "page": 6,
+      "index": 1,
+      "width": 830,
+      "height": 304
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-002.webp",
+      "caption": "Figure 3: Representative samples from the training dataset. Each tile shows the RGB-encoded velocity field at frame 100 for a distinct simulation.",
+      "page": 6,
+      "index": 2,
+      "width": 829,
+      "height": 280
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-003.webp",
+      "caption": "Figure 11: Multi-inlet rigid optimization with left inlet (15, 0)m/s (target comfort band 1–3 m/s) and top inlet (0, 15)m/s (target comfort band 3–5 m/s). A single layout is co-optimized for both inlets and evaluated under each direction separately.",
+      "page": 11,
+      "index": 3,
+      "width": 829,
+      "height": 484
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-004.webp",
+      "caption": "Figure 16: Predicted velocity fields at frame 56 for four real-world urban configurations (left to right): Barcelona, Berlin, Paris, and Zurich. The model was trained exclusively on synthetic layouts.",
+      "page": 25,
+      "index": 4,
+      "width": 826,
+      "height": 183
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-005.webp",
+      "caption": "Figure 18: Per-timestep VRMSE for rollout lengths 1× (T=112), 2× (2T=224), and 4× (4T=448) the training horizon. Shaded regions indicate frames beyond each model’s generation length.",
+      "page": 26,
+      "index": 5,
+      "width": 498,
+      "height": 360
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-006.webp",
+      "caption": "Figure 17: Temporal extrapolation beyond the T=112-frame training horizon. Rows show predictions at rollout lengths T , 2T , and 4T . The bottom row is ground-truth CFD. All predictions use a single forward pass with no autoregressive chaining.",
+      "page": 26,
+      "index": 6,
+      "width": 818,
+      "height": 746
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-007.webp",
+      "caption": "Table 6: Ground-truth wind speed distribution (%) within the objective region, before and after layout optimization with WinDiNet.",
+      "page": 21,
+      "index": 7,
+      "width": 740,
+      "height": 336
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-008.webp",
+      "caption": "Figure 13: Multi-inlet layout optimization: left (15, 0)m/s (comfort band 1–3 m/s) and top (0, 15)m/s (comfort band 3–5 m/s). Rigid mode (a–f) translates buildings, morph mode (g–l) additionally deforms them.",
+      "page": 22,
+      "index": 8,
+      "width": 830,
+      "height": 1002
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-009.webp",
+      "caption": "Figure 10: Single-inlet morph optimization (15 m/s, left to right). Buildings are subdivided into independently movable sub-blocks that can deform the overall shape, targeting the 1–5 m/s band.",
+      "page": 10,
+      "index": 9,
+      "width": 829,
+      "height": 235
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-010.webp",
+      "caption": "Figure 1: Overview of the proposed framework. (a) Procedurally generated urban layouts are simulated with a 2D incompressible Euler solver to produce training data. (b) A latent diffusion model with a physics-informed VAE is trained to generate wind field sequences conditioned on building footprint, inlet speed uin, and domain size L. (c) At inference, the model generates horizontal and vertical velocity fields (u, v) and enables gradient-based inverse optimization of building layouts.",
+      "page": 3,
+      "index": 10,
+      "width": 829,
+      "height": 361
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-011.webp",
+      "caption": "Figure 14: Inverse optimization using OFormer as surrogate (single inlet, rigid mode, Fig. 9).",
+      "page": 23,
+      "index": 11,
+      "width": 821,
+      "height": 225
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-012.webp",
+      "caption": "Figure 21: VRMSE and spectral divergence as a function of L (uin = 18m/s). Shaded blue regions indicate out-of-distribution conditioning values beyond the training range.",
+      "page": 28,
+      "index": 12,
+      "width": 498,
+      "height": 348
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-013.webp",
+      "caption": "Figure 5: VAE reconstruction quality at t=90 for a sample from the test set.",
+      "page": 8,
+      "index": 13,
+      "width": 826,
+      "height": 182
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-014.webp",
+      "caption": "Figure 7: Grid search over CFG scale and number of denoising steps on the validation set (Scalar conditioning, Dec. FT Physics). Cyan outline shows the best configuration.",
+      "page": 8,
+      "index": 14,
+      "width": 417,
+      "height": 293
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-015.webp",
+      "caption": "Figure 2: Channel decomposition of a single simulation frame. From left to right: encoded RGB composite, red channel encoding horizontal velocity u, green channel encoding vertical velocity v, and blue channel encoding the fluid mask (1: fluid, 0: building). Velocity values are linearly rescaled to [−1, 1] using the dataset-wide maximum speed umax.",
+      "page": 4,
+      "index": 15,
+      "width": 829,
+      "height": 183
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-016.webp",
+      "caption": "Figure 19: VRMSE and spectral divergence as a function of uin (L = 1100m). The shaded blue region indicates out-of-distribution conditioning values beyond the training range.",
+      "page": 27,
+      "index": 16,
+      "width": 498,
+      "height": 347
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-017.webp",
+      "caption": "Figure 20: Wind speed magnitude at t = 24 for inlet speeds from 5 to 29 m/s (left to right). Top row: ground truth; bottom row: model prediction. Out-of-distribution inlet speeds (uin > 20m/s) are highlighted with a cyan border.",
+      "page": 27,
+      "index": 17,
+      "width": 829,
+      "height": 308
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-018.webp",
+      "caption": "Figure 15: Surrogate vs. ground-truth comfort loss over optimization steps for all five inverse design experiments. At each step, the CFD solver is run on the current layout and the comfort loss is evaluated on both the surrogate prediction and the true flow field.",
+      "page": 24,
+      "index": 18,
+      "width": 752,
+      "height": 963
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-019.webp",
+      "caption": "Figure 9: Single-inlet rigid optimization (15 m/s, left to right). Buildings translate to shelter the objective region (green rectangle), targeting wind speeds within the 1–5 m/s comfort band.",
+      "page": 9,
+      "index": 19,
+      "width": 829,
+      "height": 236
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21210v1/fig-020.webp",
+      "caption": "Figure 12: Marginal distributions of horizontal (u) and vertical (v) velocity components across the training set.",
+      "page": 16,
+      "index": 20,
+      "width": 414,
+      "height": 293
+    }
+  ]
+}

@@ -6,73 +6,73 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-02-27 ~ 2026-03-28
-- 运行时间：2026-03-28 12:47:00 UTC
+- 最新运行日期：2026-03-28
+- 运行时间：2026-03-28 19:34:05 UTC
 - 运行状态：成功
 - 本次总论文数：17
 - 精读区：6
 - 速读区：11
 
 ### 今日简报（AI）
-本期深度解析 17 篇 PINN 与 PDE 学习前沿论文，重点攻克流体力学建模中的谱偏置与变工况预测难题。
-核心突破在于利用马赫数引导缩放优化压缩流求解，以及通过元学习增强叶轮机械在复杂工况下的泛化能力。
-建议关注有限元引导的算子学习与 DynFormer 等新架构，探索物理规律与深度学习的高效融合路径。
-- 详情：[/20260227-20260328/README](/20260227-20260328/README)
+今日深度解析 17 篇前沿论文，聚焦物理信息神经网络（PINN）与传统流体数值算法的跨界融合。
+重点关注 SIMPLE-PINN 与 FFV-PINN，它们通过引入经典压力修正与有限体积离散格式，显著提升了复杂流场模拟的收敛速度。
+建议关注 AI 物理模型从“纯数据驱动”向“数值格式增强”的演进，这是提升工程仿真可靠性的关键路径。
+- 详情：[/202603/28/README](/202603/28/README)
 
 ### 精读区论文标签
-1. [Data-Free PINNs for Compressible Flows: Mitigating Spectral Bias and Gradient Pathologies via Mach-Guided Scaling and Hybrid Convolutions](/20260227-20260328/2603.01001v1-data-free-pinns-for-compressible-flows-mitigating-spectral-bias-and-gradient-pathologies-via-mach-guided-scaling-and-hybrid-convolutions)  
+1. [Bridging Computational Fluid Dynamics Algorithm and Physics-Informed Learning: SIMPLE-PINN for Incompressible Navier-Stokes Equations](/202603/28/2603.24013v1-bridging-computational-fluid-dynamics-algorithm-and-physics-informed-learning-simple-pinn-for-incompressible-navier-stokes-equations)  
    标签：评分：9.0/10、query:dl-pde
-   evidence：用于求解高达15马赫可压缩无粘流的无数据PINN
-2. [Meta-PINNs: Meta-Learning Enhanced Physics-Informed Machine Learning Framework for Turbomachinery Flow Predictions under Varying Operation Conditions](/20260227-20260328/2603.07740v1-meta-pinns-meta-learning-enhanced-physics-informed-machine-learning-framework-for-turbomachinery-flow-predictions-under-varying-operation-conditions)  
+   evidence：用于不可压缩纳维-斯托克斯方程的PINN框架
+2. [FFV-PINN: A Fast Physics-Informed Neural Network with Simplified Finite Volume Discretization and Residual Correction](/202603/28/2603.24114v1-ffv-pinn-a-fast-physics-informed-neural-network-with-simplified-finite-volume-discretization-and-residual-correction)  
    标签：评分：9.0/10、query:dl-pde
-   evidence：用于变工况下叶轮机械流动预测的Meta-PINN
-3. [Physics-informed neural operator for predictive parametric phase-field modelling](/20260227-20260328/2603.09693v1-physics-informed-neural-operator-for-predictive-parametric-phase-field-modelling)  
+   evidence：利用有限体积法离散化解决复杂流体动力学问题的快速 PINN 框架
+3. [Linear-Nonlinear Fusion Neural Operator for Partial Differential Equations](/202603/28/2603.24143v1-linear-nonlinear-fusion-neural-operator-for-partial-differential-equations)  
    标签：评分：9.0/10、query:dl-pde
-   evidence：用于参数化偏微分方程的物理信息神经算子
-4. [UniFluids: Unified Neural Operator Learning with Conditional Flow-matching](/20260227-20260328/2603.22309v1-unifluids-unified-neural-operator-learning-with-conditional-flow-matching)  
-   标签：评分：9.0/10、query:dl-pde
-   evidence：针对多种PDE模拟的统一神经算子学习
-5. [Linear-Nonlinear Fusion Neural Operator for Partial Differential Equations](/20260227-20260328/2603.24143v1-linear-nonlinear-fusion-neural-operator-for-partial-differential-equations)  
-   标签：评分：9.0/10、query:dl-pde
-   evidence：用于PDE映射和推理的新型神经算子结构
-6. [One Operator to Rule Them All? On Boundary-Indexed Operator Families in Neural PDE Solvers](/20260227-20260328/2603.01406v1-one-operator-to-rule-them-all-on-boundary-indexed-operator-families-in-neural-pde-solvers)  
+   evidence：用于高效PDE推理的线性-非线性融合神经算子
+4. [SLE-FNO: Single-Layer Extensions for Task-Agnostic Continual Learning in Fourier Neural Operators](/202603/28/2603.20410v1-sle-fno-single-layer-extensions-for-task-agnostic-continual-learning-in-fourier-neural-operators)  
    标签：评分：8.0/10、query:dl-pde
-   evidence：在不同边界条件下学习解算子的神经PDE求解器
+   evidence：用于流体动力学和几何变化的傅里叶神经算子持续学习
+5. [Generalization Limits of In-Context Operator Networks for Higher-Order Partial Differential Equations](/202603/28/2603.21534v1-generalization-limits-of-in-context-operator-networks-for-higher-order-partial-differential-equations)  
+   标签：评分：8.0/10、query:dl-pde
+   evidence：用于高阶PDE的上下文算子网络
+6. [NeuralFVM: Neural-physics-based Finite Volume Method for Turbulent Flows Using the $k$-$ω$ Model](/202603/28/2603.21869v1-neuralfvm-neural-physics-based-finite-volume-method-for-turbulent-flows-using-the-k--model)  
+   标签：评分：8.0/10、query:dl-pde
+   evidence：使用k-omega模型的湍流神经物理求解器
 
 ### 速读区论文标签
-1. [Tackling multiphysics problems via finite element-guided physics-informed operator learning](/20260227-20260328/2603.01420v1-tackling-multiphysics-problems-via-finite-element-guided-physics-informed-operator-learning)  
+1. [Utilising a learned forward operator in the inverse problem of photoacoustic tomography](/202603/28/2603.21655v1-utilising-a-learned-forward-operator-in-the-inverse-problem-of-photoacoustic-tomography)  
    标签：评分：8.0/10、query:dl-pde
-   evidence：用于耦合PDE的物理增强算子学习
-2. [DGNet: Discrete Green Networks for Data-Efficient Learning of Spatiotemporal PDEs](/20260227-20260328/2603.01762v1-dgnet-discrete-green-networks-for-data-efficient-learning-of-spatiotemporal-pdes)  
+   evidence：用于波传播的傅里叶神经算子
+2. [SPINONet: Scalable Spiking Physics-informed Neural Operator for Computational Mechanics Applications](/202603/28/2603.21674v1-spinonet-scalable-spiking-physics-informed-neural-operator-for-computational-mechanics-applications)  
    标签：评分：8.0/10、query:dl-pde
-   evidence：用于时空PDE高效数据学习的神经PDE求解器
-3. [From Complex Dynamics to DynFormer: Rethinking Transformers for PDEs](/20260227-20260328/2603.03112v1-from-complex-dynamics-to-dynformer-rethinking-transformers-for-pdes)  
+   evidence：用于计算力学的物理信息神经算子
+3. [Residual Attention Physics-Informed Neural Networks for Robust Multiphysics Simulation of Steady-State Electrothermal Energy Systems](/202603/28/2603.23578v1-residual-attention-physics-informed-neural-networks-for-robust-multiphysics-simulation-of-steady-state-electrothermal-energy-systems)  
    标签：评分：8.0/10、query:dl-pde
-   evidence：用于复杂偏微分方程系统的动力学信息神经算子
-4. [Shape Derivative-Informed Neural Operators with Application to Risk-Averse Shape Optimization](/20260227-20260328/2603.03211v1-shape-derivative-informed-neural-operators-with-application-to-risk-averse-shape-optimization)  
+   evidence：用于耦合速度场和压力场的物理信息神经网络
+4. [Project and Generate: Divergence-Free Neural Operators for Incompressible Flows](/202603/28/2603.24500v1-project-and-generate-divergence-free-neural-operators-for-incompressible-flows)  
    标签：评分：8.0/10、query:dl-pde
-   evidence：用于可变几何形状和形状优化的神经算子
-5. [Extending Neural Operators: Robust Handling of Functions Beyond the Training Set](/20260227-20260328/2603.03621v1-extending-neural-operators-robust-handling-of-functions-beyond-the-training-set)  
+   evidence：用于不可压缩流体的无散度神经算子
+5. [Incorporating Continuous Dependence Qualifies Physics-Informed Neural Networks for Operator Learning](/202603/28/2603.25122v1-incorporating-continuous-dependence-qualifies-physics-informed-neural-networks-for-operator-learning)  
    标签：评分：8.0/10、query:dl-pde
-   evidence：扩展神经算子以稳健处理PDE解中的函数
-6. [LegONet: Plug-and-Play Structure-Preserving Neural Operator Blocks for Compositional PDE Learning](/20260227-20260328/2603.07882v1-legonet-plug-and-play-structure-preserving-neural-operator-blocks-for-compositional-pde-learning)  
+   evidence：通过连续依赖性扩展PINN以进行算子学习
+6. [Physics-Informed Neural Operator for Electromagnetic Inverse Scattering Problems](/202603/28/2603.25404v1-physics-informed-neural-operator-for-electromagnetic-inverse-scattering-problems)  
    标签：评分：8.0/10、query:dl-pde
-   evidence：用于PDE学习的组合式神经算子框架
-7. [A Boundary Integral-based Neural Operator for Mesh Deformation](/20260227-20260328/2602.23703v2-a-boundary-integral-based-neural-operator-for-mesh-deformation)  
+   evidence：用于求解逆问题和偏微分方程的物理信息神经算子 (PINO)
+7. [Deep Hilbert--Galerkin Methods for Infinite-Dimensional PDEs and Optimal Control](/202603/28/2603.19463v1-deep-hilbert--galerkin-methods-for-infinite-dimensional-pdes-and-optimal-control)  
    标签：评分：7.0/10、query:dl-pde
-   evidence：用于边界值问题和网格变形的神经算子
-8. [A neural operator framework for solving inverse scattering problems](/20260227-20260328/2602.24147v1-a-neural-operator-framework-for-solving-inverse-scattering-problems)  
+   evidence：用于无限维PDE的神经算子
+8. [Pretrained Video Models as Differentiable Physics Simulators for Urban Wind Flows](/202603/28/2603.21210v1-pretrained-video-models-as-differentiable-physics-simulators-for-urban-wind-flows)  
    标签：评分：7.0/10、query:dl-pde
-   evidence：用于解决逆散射问题的神经算子框架
-9. [BLISSNet: Deep Operator Learning for Fast and Accurate Flow Reconstruction from Sparse Sensor Measurements](/20260227-20260328/2602.24228v1-blissnet-deep-operator-learning-for-fast-and-accurate-flow-reconstruction-from-sparse-sensor-measurements)  
+   evidence：用于风流的可微物理模拟器
+9. [PICS: A Partition-of-unity Information-geometric Certified Solver for Coupled Partial Differential Equations](/202603/28/2603.21271v1-pics-a-partition-of-unity-information-geometric-certified-solver-for-coupled-partial-differential-equations)  
    标签：评分：7.0/10、query:dl-pde
-   evidence：用于流场重建的深度算子学习
-10. [Graph-Instructed Neural Networks for parametric problems with varying boundary conditions](/20260227-20260328/2603.08304v1-graph-instructed-neural-networks-for-parametric-problems-with-varying-boundary-conditions)  
+   evidence：用于耦合多物理场系统和局部区域的神经PDE求解器
+10. [Adversarial Vulnerabilities in Neural Operator Digital Twins: Gradient-Free Attacks on Nuclear Thermal-Hydraulic Surrogates](/202603/28/2603.22525v1-adversarial-vulnerabilities-in-neural-operator-digital-twins-gradient-free-attacks-on-nuclear-thermal-hydraulic-surrogates)  
    标签：评分：7.0/10、query:dl-pde
-   evidence：用于具有变化边界条件的参数化偏微分方程的神经网络
-11. [A level-wise training scheme for learning neural multigrid smoothers with application to integral equations](/20260227-20260328/2603.01064v1-a-level-wise-training-scheme-for-learning-neural-multigrid-smoothers-with-application-to-integral-equations)  
-   标签：评分：6.0/10、query:dl-pde
-   evidence：在PDE多重网格方案中用神经算子取代经典平滑算子
+   evidence：用于热工水力代理模型的神经算子架构
+11. [Weak-PDE-Net: Discovering Open-Form PDEs via Differentiable Symbolic Networks and Weak Formulation](/202603/28/2603.22951v1-weak-pde-net-discovering-open-form-pdes-via-differentiable-symbolic-networks-and-weak-formulation)  
+   标签：评分：7.0/10、query:dl-pde
+   evidence：通过可微网络发现开放形式的PDE
 
 
 <div class="dpr-home-promo-card">

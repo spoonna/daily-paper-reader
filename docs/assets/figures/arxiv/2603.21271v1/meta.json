@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.21271v1/fig-001.webp",
+      "caption": "Table 1 Aggregate fieldwise error metrics of PICS, PINN, DGM, and DRM across the three benchmark cases. For each case and each physical field, the reported quantities are the root-mean-square error (RMSE), mean-square error (MSE), mean absolute error (MAE), and relative L2 error (relL2). Panel (a) reports RMSE and MAE, while panel (b) reports MSE and relL2.",
+      "page": 7,
+      "index": 1,
+      "width": 985,
+      "height": 774
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21271v1/fig-002.webp",
+      "caption": "Fig. 1 The framework of the proposed PICS solver. PICS organizes PDE solving as a closed solver loop rather than a residual-fitting pipeline. Starting from a gate-structured admissible state, the solver induces the case-level physical fields, retains only the closure-essential differential coordinates through a restricted jet prolongation, evaluates a normalized residual section and its composite residual geometry, extracts a certificate field that identifies fieldwise and global high-risk regions, transports the empirical training measure toward those regions, and then updates the parameter state on the transported measure. This common loop serves as the solver backbone for all benchmark systems studied in Figs. 2–4 and Tables 1–2.",
+      "page": 4,
+      "index": 2,
+      "width": 891,
+      "height": 350
+    }
+  ]
+}

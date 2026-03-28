@@ -1,0 +1,118 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.20410v1/fig-001.webp",
+      "caption": "Table 2: Stage-wise accuracies and average accuracy, as defined in Eq. (59), for each method. Best values per stage are highlighted in bold. Each row (A–D) corresponds to a training stage, while each column represents the task accuracy after sequentially fine-tuning the model up to that task.",
+      "page": 25,
+      "index": 1,
+      "width": 802,
+      "height": 1171
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20410v1/fig-002.webp",
+      "caption": "Table 3: Forgetting measure F (lower is better) defined in Eq. (60) and average forgetting measure (MeanF) defined in Eq. (61) for each method and stage. MeanF is averaged over the available tasks at that stage. Each row (B, C, D) corresponds to a training stage after sequential fine-tuning up to that task.",
+      "page": 26,
+      "index": 2,
+      "width": 690,
+      "height": 1006
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20410v1/fig-003.webp",
+      "caption": "Figure 8: TAWSS results at the third stage (Fine-Tuning on C). A random sample from task A is shown. All units are in dynes/cm2.",
+      "page": 30,
+      "index": 3,
+      "width": 679,
+      "height": 534
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20410v1/fig-004.webp",
+      "caption": "Figure 7: TAWSS results at the third stage (Fine-Tuning on C). (a) Worst-case sample from task C. (b) Worst-case sample from task B. All units are in dynes/cm2.",
+      "page": 29,
+      "index": 4,
+      "width": 679,
+      "height": 1075
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20410v1/fig-005.webp",
+      "caption": "Figure 4: Single-Layer Extension with Fourier Neural Operator (SLE-FNO). (a) During training, only a single Fourier layer is trainable while the backbone remains frozen. (b) Kernel PCA is used for out-of-distribution (OOD) detection. (c) Complete framework at inference: the OOD detector selects the route, and the prediction is based on the frozen backbone and the SLE-FNO layer.",
+      "page": 18,
+      "index": 5,
+      "width": 786,
+      "height": 794
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20410v1/fig-006.webp",
+      "caption": "Figure 5: TAWSS results after the first stage (Training on A) for two randomly selected samples from task A. All units are in dynes/cm2.",
+      "page": 23,
+      "index": 6,
+      "width": 979,
+      "height": 275
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20410v1/fig-007.webp",
+      "caption": "Figure 2: The overall Fourier neural operator (FNO) architecture. (a) FNO lifts the input to a higher-dimensional channel space through a neural lifting, applies a stack of Fourier operator layers with nonlinear activations, then projects back to the target dimension with a neural projection to obtain the output. (b) Fourier layer overview: Given input in the feature space, the upper branch applies a Fourier transform F , a learned linear map R on the retained low-frequency modes while discarding higher modes, then applying an inverse transform F−1. The lower branch applies a local linear transform W and acts as a residual connection.",
+      "page": 8,
+      "index": 7,
+      "width": 979,
+      "height": 469
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20410v1/fig-008.webp",
+      "caption": "Figure 10: TAWSS results at the fourth stage (Fine-Tuning on task D). (a) Worst-case sample from task B. (b) Random sample from task A. All units are in dynes/cm2.",
+      "page": 32,
+      "index": 8,
+      "width": 786,
+      "height": 1215
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20410v1/fig-009.webp",
+      "caption": "Figure 6: TAWSS results at the second stage (Fine-Tuning at task B). (a) Results for the worstperforming sample from task B. (b) Results for a representative sample from task A. All units are in dynes/cm2.",
+      "page": 27,
+      "index": 9,
+      "width": 786,
+      "height": 1219
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20410v1/fig-010.webp",
+      "caption": "Figure 3: Regularization-based: (a) Elastic Weight Consolidation (EWC) constrains updates using a Fisher-weighted penalty; (b) Learning without Forgetting (LwF) applies distillation from a frozen previous model. Replay-based: (c) Random reservoir sampling; (d) K-means exemplar replay. Optimization-based: (e) Orthogonal Gradient Descent (OGD) projects gradients to avoid interference with past tasks (recreated from [32]). (f) Gradient Episodic Memory (GEM) constrains updates to prevent increases in past-task loss. Architecture-based: (g) PiggyBack learns task-specific masks over a frozen backbone; (h) Low-Rank Adaptation (LoRA) trains per-layer lowrank adapters on a frozen backbone.",
+      "page": 9,
+      "index": 10,
+      "width": 882,
+      "height": 1067
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20410v1/fig-011.webp",
+      "caption": "Table 4: Hyperparameters for each CL algorithm. All methods are trained for 1500 epochs. “NA” denotes that the method does not use the corresponding parameter. LR: learning rate; λ: weight of the auxiliary loss.",
+      "page": 37,
+      "index": 11,
+      "width": 732,
+      "height": 338
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20410v1/fig-012.webp",
+      "caption": "Figure 11: Classification accuracy percentage for task A as a function of the number of retained KPCA modes. The x-axis denotes the number of retained modes, while the y-axis reports task A identification accuracy on the test set.",
+      "page": 37,
+      "index": 12,
+      "width": 492,
+      "height": 369
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20410v1/fig-013.webp",
+      "caption": "Figure 9: TAWSS results at the fourth stage (Fine-Tuning on task D). (a) Worst-case sample from task D. (b) Worst-case sample from task C. All units are in dynes/cm2.",
+      "page": 31,
+      "index": 13,
+      "width": 786,
+      "height": 1215
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20410v1/fig-014.webp",
+      "caption": "Figure 1: (a) Geometry sketch with four spatial parameters W, D, N, R. We fix D and vary three non-dimensional ratios W/D, N/D, and R/D. (b) Polyhedral mesh of the geometry with a zoom on the inflation layers. (c) The transient boundary conditions used. (d) Extracted results: a 2D slice of concentration at five time steps from 3.15 s to 3.95 s (within the last cardiac cycle), and the corresponding TAWSS projected onto the same slice. (e) Mean spatial parameters for each dataset with the associated inlet flow profiles. (f) Table of parameter ranges and flow rates for each dataset/task. (g) Training/finetuning sequence used throughout the study based on the four datasets/tasks.",
+      "page": 5,
+      "index": 14,
+      "width": 786,
+      "height": 907
+    }
+  ]
+}

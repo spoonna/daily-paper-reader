@@ -1,0 +1,134 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-001.webp",
+      "caption": "Figure 11 Comparison of velocity magnitude and temperature profiles of simulation of the staggered blocks case between NeuralFVM and Fluent",
+      "page": 25,
+      "index": 1,
+      "width": 777,
+      "height": 246
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-002.webp",
+      "caption": "Figure 12 Comparison of velocity magnitude and temperature profiles of simulation of the array of blocks case between NeuralFVM and Fluent",
+      "page": 26,
+      "index": 2,
+      "width": 777,
+      "height": 244
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-003.webp",
+      "caption": "Table 1: Time taken using CPU/GPU and using CNN/shift operation for the NeuralFVM solver to simulate 100 steps of the flow in the open-channel of different streamwise lengths.",
+      "page": 29,
+      "index": 3,
+      "width": 688,
+      "height": 188
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-004.webp",
+      "caption": "Figure 16 Comparison between the results from NeuralFVM and experimental results presented in [39] in the symmetry plane at (a) x = 3.0m and (b) x = 6.0m",
+      "page": 29,
+      "index": 4,
+      "width": 708,
+      "height": 282
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-005.webp",
+      "caption": "Figure 8 Comparison between the (a) velocity magnitude V , (b) temperature T , (c) turbulent kinetic energy k, and (d) specific dissipation rate ω, between the NeuralFVM solver and the Fluent simulations for the open channel verification case. From top to bottom, the results are for the streamwise direction at 0.08m, 0.16m, and 0.24m from the center of the bottom wall, and the center of the outlet.",
+      "page": 22,
+      "index": 5,
+      "width": 840,
+      "height": 684
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-006.webp",
+      "caption": "Figure 2 Illustration of convolutional operations implemented through simple addition or subtraction of shifted tensors.",
+      "page": 10,
+      "index": 6,
+      "width": 792,
+      "height": 288
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-007.webp",
+      "caption": "Figure 5 External BCs are implemented by padding the tensor with values that enforce the specified boundary conditions.",
+      "page": 18,
+      "index": 7,
+      "width": 745,
+      "height": 249
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-008.webp",
+      "caption": "Figure 9 Comparison between the (a) velocity magnitude V , (b) temperature T , (c) turbulent kinetic energy k, and (d) specific dissipation rate ω, between the NeuralFVM solver and the Fluent simulations for the blocked channel verification case. From top to bottom, the results are for the streamwise direction at 0.08m, 0.16m, and 0.24m from the center of the bottom wall, and the center of the outlet.",
+      "page": 23,
+      "index": 8,
+      "width": 807,
+      "height": 645
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-009.webp",
+      "caption": "Figure 15 Results for the Annex 20 test case (a) Streamlines from the velocity field predicted by NeuralFVM (b) Experimental results from PhD thesis by Nielsen [42] (c) Streamlines from ANSYS CFX 11.0 using the standard k-ω model [40] (d) Streamlines from StarCCM+ using the standard k-ω model [41]",
+      "page": 28,
+      "index": 9,
+      "width": 805,
+      "height": 297
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-010.webp",
+      "caption": "Figure 3 Pressure correction using the Jacobi method coupled with a multigrid approach. Red and blue arrows indicate restriction and prolongation respectively. ⊗ indicate the left multiplication of a matrix, which can be implemented using convolutional layer.",
+      "page": 13,
+      "index": 10,
+      "width": 776,
+      "height": 349
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-011.webp",
+      "caption": "Figure 4 Flow chart showing the sequence of computation in one time advancement step",
+      "page": 17,
+      "index": 11,
+      "width": 727,
+      "height": 1037
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-012.webp",
+      "caption": "Figure 14 Sketch of 2D geometry used by the Annex 20 benchmark test",
+      "page": 27,
+      "index": 12,
+      "width": 793,
+      "height": 298
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-013.webp",
+      "caption": "Figure 13 A sequence of plots showing the iso-contours of λ2 = −0.1 obtained from the transient NeuralFVM simulation extracted at (1) t = 0.5s, (2) t = 3.0s, (3) t = 5.5s, (4) 8.0s, (5) 10.5s, and (6) 13.0s",
+      "page": 27,
+      "index": 13,
+      "width": 814,
+      "height": 473
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-014.webp",
+      "caption": "Figure 10 Comparison between the velocity magnitude V , temperature T , turbulent kinetic energy k, and specific dissipation ω, between the NeuralFVM simulation and the Fluent simulations for the staggered blocks case",
+      "page": 24,
+      "index": 14,
+      "width": 777,
+      "height": 244
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-015.webp",
+      "caption": "Figure 1 Illustrations of the neural-physics to be applied in CFD (a) convolutional kernels used for simulation of face-centered values from cell-centered values, (b) linear interploation and spatial derivative kernels.",
+      "page": 9,
+      "index": 15,
+      "width": 783,
+      "height": 251
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21869v1/fig-016.webp",
+      "caption": "Figure 7 Channel flow scenario used for the verification of our NeuralFVM solver. The red lines indicate the locations where results are extracted for comparison with ANSYS Fluent.",
+      "page": 20,
+      "index": 16,
+      "width": 788,
+      "height": 310
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.24500v1/fig-001.webp",
+      "caption": "Figure 7. Short-term Stability (Extrapolation). Snapshots at T = 100. Top: Velocity drift in baseline. Middle: Conservation failure. Bottom: Topological degradation.",
+      "page": 21,
+      "index": 1,
+      "width": 1017,
+      "height": 1288
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24500v1/fig-002.webp",
+      "caption": "Figure 1. Motivation for the PROJECT & GENERATE framework illustrated using numerical solvers. (a) Visual comparison. Velocity streamlines (top, colored by error magnitude), divergence fields (middle), and recovered physical pressure (bottom). The Baseline approach (middle), which enforces only the momentum equation, exhibits severe violations of mass conservation with nonzero divergence and noisy pressure fields. A Leray-projected solution (right) enforces incompressibility via a spectral Leray projection, yielding a divergence-free velocity field (∇ · u = 0) with machine precision and recovering a smooth, physically consistent pressure field. The result is visually indistinguishable from the Ground Truth numerical solution (left). (b) Computational paradigms. Left: Classical numerical solvers (CFD) enforce incompressibility through iterative Poisson solves, which require accessing the pressure variable and are computationally expensive. Middle: Unconstrained end-to-end learning approaches typically violate the continuity constraint. Right: We leverage Leray projection to decouple dynamics from constraint enforcement, enabling hard physical constraints to be imposed via a fast, differentiable spectral operator.",
+      "page": 2,
+      "index": 2,
+      "width": 1017,
+      "height": 524
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24500v1/fig-003.webp",
+      "caption": "Figure 3. Flow Field Visualization. Top Row: Snapshot of velocity components (u, v). Bottom Row: Streamlines and Pressure field. The pressure is reconstructed from the predicted velocity field via the pressure Poisson equation, serving as a proxy for the dynamical consistency of the flow structure.",
+      "page": 7,
+      "index": 3,
+      "width": 1017,
+      "height": 899
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24500v1/fig-004.webp",
+      "caption": "Figure 8. Stationarity and Error Growth (Short-term). Top: Enstrophy spectrum remains stable. Rows 2-4: Significant divergence errors appear in the baseline.",
+      "page": 22,
+      "index": 4,
+      "width": 1017,
+      "height": 1363
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24500v1/fig-005.webp",
+      "caption": "Figure 9. Long-term Stability (Extrapolation). Snapshots at T = 300. Top: Complete decoherence in baseline. Middle: Continued physical validity in ours. Bottom: Stationarity of topological features.",
+      "page": 23,
+      "index": 5,
+      "width": 1017,
+      "height": 1287
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24500v1/fig-006.webp",
+      "caption": "Table 1. Quantitative Comparison on Re = 1000. We report Mean ± Std over the test set. Bold indicates best performance. Gray values indicate model divergence. Prediction and Short-term metrics are scaled by 10−3 and 10−2 respectively.",
+      "page": 8,
+      "index": 6,
+      "width": 1012,
+      "height": 240
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24500v1/fig-007.webp",
+      "caption": "Figure 4. Enstrophy Spectrum Analysis. Comparison of energy spectra. Our method accurately recovers the inertial range scalings, preserving the correct energy cascade across scales.",
+      "page": 8,
+      "index": 7,
+      "width": 1013,
+      "height": 304
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24500v1/fig-008.webp",
+      "caption": "Figure 2. Schematic of the proposed Projective Framework. The grey surface represents the divergence-free subspace V (the physical manifold). (a) Projective Regression: The framework takes an input and uses a base neural operator fθ to produce an intermediate prediction in the ambient space (shown hovering above the manifold). This unconstrained prediction is then strictly mapped onto V via the spectral Leray projection P . The composite system constitutes a Divergence-Free Neural Operator, ensuring the final output is physically consistent. (b) Projective Generative Model: The generation process is initialized with a sample from a divergence-free noise distribution (bottom left) constrained to V . During the probability flow evolution (τ ∈ [0, 1]), the vector field predicted by fθ is continuously projected via P (red arrows) back onto the manifold. This enforces hard constraints at every step of the flow matching process, ensuring the entire trajectory stays within the physically admissible subspace.",
+      "page": 4,
+      "index": 8,
+      "width": 1017,
+      "height": 323
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24500v1/fig-009.webp",
+      "caption": "Figure 5. Physical Field Reconstruction (Prediction). A unified view of the kinematic and topological state. Top: Velocity fields. Middle: Conservation metrics showing baseline failure. Bottom: Topology.",
+      "page": 19,
+      "index": 9,
+      "width": 1017,
+      "height": 1287
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24500v1/fig-010.webp",
+      "caption": "Table 3. Quantitative Comparison on Re = 1000 (Generative Models). We report the Mean ± Std computed across all windows and realizations (20×). Bold indicates best performance. Note the astronomical error values for the Base model in Short-term Extrapolation, indicating model blow-up.",
+      "page": 17,
+      "index": 10,
+      "width": 1012,
+      "height": 246
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24500v1/fig-011.webp",
+      "caption": "Table 2. Summary of notation. We distinguish between data samples, probability measures, and vector fields used in divergence-free flow matching.",
+      "page": 12,
+      "index": 11,
+      "width": 791,
+      "height": 325
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24500v1/fig-012.webp",
+      "caption": "Figure 10. Long-term Stability (Extrapolation). Top: Enstrophy spectrum. Rows 2-4: Baseline errors saturate, while ours remain bounded.",
+      "page": 24,
+      "index": 12,
+      "width": 1017,
+      "height": 1375
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24500v1/fig-013.webp",
+      "caption": "Figure 6. Spectral Fidelity and Error Distributions (Prediction). Top: Enstrophy Spectrum showing partial alignment with ground truth. Rows 2-4: Squared error distributions for primitive and derived variables.",
+      "page": 20,
+      "index": 13,
+      "width": 1017,
+      "height": 1360
+    }
+  ]
+}

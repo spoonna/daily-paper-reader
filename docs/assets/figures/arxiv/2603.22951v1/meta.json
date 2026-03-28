@@ -1,0 +1,158 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-001.webp",
+      "caption": "Figure 3: The forward propagation of the symbolic network during the searching phase. The left panel illustrates the overall",
+      "page": 11,
+      "index": 1,
+      "width": 950,
+      "height": 396
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-002.webp",
+      "caption": "Table 9",
+      "page": 25,
+      "index": 2,
+      "width": 974,
+      "height": 306
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-003.webp",
+      "caption": "Table 5",
+      "page": 21,
+      "index": 3,
+      "width": 897,
+      "height": 700
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-004.webp",
+      "caption": "Table 12",
+      "page": 30,
+      "index": 4,
+      "width": 977,
+      "height": 1258
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-005.webp",
+      "caption": "Figure 1: The overall architecture of Weak-PDE-Net.",
+      "page": 7,
+      "index": 5,
+      "width": 967,
+      "height": 281
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-006.webp",
+      "caption": "Table 11",
+      "page": 29,
+      "index": 6,
+      "width": 849,
+      "height": 719
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-007.webp",
+      "caption": "Table 10",
+      "page": 29,
+      "index": 7,
+      "width": 855,
+      "height": 304
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-008.webp",
+      "caption": "Table 7",
+      "page": 22,
+      "index": 8,
+      "width": 897,
+      "height": 369
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-009.webp",
+      "caption": "Table 6",
+      "page": 22,
+      "index": 9,
+      "width": 897,
+      "height": 379
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-010.webp",
+      "caption": "Figure 2: Overview of the training process, exemplified by the Burgers equation. The training progress through two parallel",
+      "page": 10,
+      "index": 10,
+      "width": 948,
+      "height": 384
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-011.webp",
+      "caption": "Table 2",
+      "page": 18,
+      "index": 11,
+      "width": 897,
+      "height": 414
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-012.webp",
+      "caption": "Table 8",
+      "page": 23,
+      "index": 12,
+      "width": 974,
+      "height": 335
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-013.webp",
+      "caption": "Table 4",
+      "page": 19,
+      "index": 13,
+      "width": 974,
+      "height": 564
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-014.webp",
+      "caption": "Table 3",
+      "page": 19,
+      "index": 14,
+      "width": 944,
+      "height": 398
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-015.webp",
+      "caption": "Table 1",
+      "page": 17,
+      "index": 15,
+      "width": 974,
+      "height": 530
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-016.webp",
+      "caption": "Table 15",
+      "page": 32,
+      "index": 16,
+      "width": 977,
+      "height": 559
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-017.webp",
+      "caption": "Table 14",
+      "page": 32,
+      "index": 17,
+      "width": 976,
+      "height": 619
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-018.webp",
+      "caption": "Figure 4: The results of the ablation studies. (a) A radar chart illustrating the True Positive Rate TPR. (b) and (c)",
+      "page": 24,
+      "index": 18,
+      "width": 967,
+      "height": 214
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22951v1/fig-019.webp",
+      "caption": "Table 13",
+      "page": 31,
+      "index": 19,
+      "width": 977,
+      "height": 1243
+    }
+  ]
+}

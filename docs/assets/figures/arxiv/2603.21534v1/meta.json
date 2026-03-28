@@ -1,0 +1,78 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.21534v1/fig-001.webp",
+      "caption": "Figure 1: Two samples from a single operator defined by (a, ..., f). In this case (a, b, c, d, e, f) = (0.4563, 0.1500,−0.4341,−0.0525,−0.0457, 0.1578). These were generated from a Gaussian process with an RBF kernel with length scale 0.2 (one fifth of the domain) and variance 2.0.",
+      "page": 6,
+      "index": 1,
+      "width": 756,
+      "height": 223
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21534v1/fig-002.webp",
+      "caption": "Figure 7: Relative error on the forward homogeneous and nonhomogeneous heat equation.",
+      "page": 11,
+      "index": 2,
+      "width": 394,
+      "height": 375
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21534v1/fig-003.webp",
+      "caption": "Figure 9: Model loss for the icon_lm model during training and initial inference. The upper curve shows the test loss, while the lower curve shows the training loss over the 50-hour, 1,000,000-step run (100 epochs, with 10,000 steps per epoch). The black curve represents the total loss during a continuous 90-epoch training run. The cyan curve is shown separately from the black curve to highlight the point at which training and test loss began to increase after 90 epochs.",
+      "page": 15,
+      "index": 3,
+      "width": 818,
+      "height": 501
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21534v1/fig-004.webp",
+      "caption": "Figure 2: We achieve similar average error as the original paper on inference across context sizes. Left: average across all 19 problems of the average testing error for each problem (i.e., the average of the averages), with similarly defined error bars. This can be compared to the original experiment’s error [4] on the right.",
+      "page": 7,
+      "index": 4,
+      "width": 770,
+      "height": 242
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21534v1/fig-005.webp",
+      "caption": "Figure 3: Average error in inference vs. the number of samples provided, split into three panels for visibility. See A.2 for full forms. We see that forward problems tend to achieve higher accuracy than their inverse counterparts. In the ICON setting, accuracy is uncorrelated with the complexity of the relationship: intricate MFC problems achieve similar or lower error as simpler ODEs, while intermediate PDEs have a wide range.",
+      "page": 7,
+      "index": 5,
+      "width": 805,
+      "height": 531
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21534v1/fig-006.webp",
+      "caption": "Figure 6: Inference on homogeneous (left) and nonhomogeneous (right) heat equations ut = k · uxx +αu for timestep τ=0.1 is directionally correct in 5 of 6 randomly selected examples. Boundary conditions u0, uL are uniformly chosen in [−1.0, 1.0], k in [0.001, 0.01], and (in the nonhomogeneous case) α in [−0.01,−0.001] for stability.",
+      "page": 10,
+      "index": 6,
+      "width": 823,
+      "height": 391
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21534v1/fig-007.webp",
+      "caption": "Figure 8: Comparison of Poisson equation solutions for different domain sizes. (a) shows how inference time compares with domain length, while (b-g) show solutions for increasing domain lengths.",
+      "page": 13,
+      "index": 7,
+      "width": 786,
+      "height": 1246
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21534v1/fig-008.webp",
+      "caption": "Figure 4: The model is kept from making entirely random predictions by the transformer’s accurate detection of global patterns, sometimes at the expense of local shapes. The model input is shown on the left, where individual input points are randomly selected (black squares). The model is expected to infer on future points based on this context. While the model fails to discern individual features (third panel), its average predictions follow those of the ground truths they aim to predict. The mean-squared difference between the averages of the prediction and the ground truth (bottom right) is much lower than the error in individual tokens (bottom left), computed as a Frobenius norm of the element-wise difference between the prediction and ground-truth matrices.",
+      "page": 8,
+      "index": 8,
+      "width": 868,
+      "height": 625
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21534v1/fig-009.webp",
+      "caption": "Figure 5: Inference on several problems: (a) forward damped-oscillator, where the model is supplied with example conditions and quantities of interest (light colors) and the question condition (bright red) and is expected to predict the question quantity of interest (dark blue), with ground-truth QoI shown in black; (b) forward mean-field control problem; (c) forward ordinary differential equation; (d) backward ordinary differential equation.",
+      "page": 9,
+      "index": 9,
+      "width": 790,
+      "height": 644
+    }
+  ]
+}

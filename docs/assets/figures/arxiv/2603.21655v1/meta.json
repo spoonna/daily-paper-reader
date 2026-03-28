@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.21655v1/fig-001.webp",
+      "caption": "Figure 1: Neural network architecture of the FNO. The numbers in the parentheses indicate the tensor dimensions. One complete Fourier layer is indicated using a dashed box.",
+      "page": 7,
+      "index": 1,
+      "width": 720,
+      "height": 254
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21655v1/fig-002.webp",
+      "caption": "Figure 5: The MAP estimates computed from a vessel phantom data in different sensor geometries: full-view (FV, first row), two-side limited view (LV2, second row) and one-side limited view (LV1, third row). Columns from left to right: the true initial pressure distribution p0 (first column), MAP estimates calculated using the reference method (second column), MAP estimates calculated using the FNO and automatic differentation (third column), the difference between the true and the estimated initial pressure for the reference method (fourth column), and the difference between true and estimated initial pressure for the FNO approach (fifth column). Sensor locations are marked with the red line in the second column.",
+      "page": 10,
+      "index": 2,
+      "width": 720,
+      "height": 454
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21655v1/fig-003.webp",
+      "caption": "Figure 7: Objective function values against iteration during the BFGS algorithm when the reference method (black line) and the FNO (red dashed line) are used for the vessel data (first row) and for the Shepp-Logan (second row) using three different sensor geometries: full-view (FV, first column), two-sided limited view (LV2, second column), and one-sided limited view (LV1, third column).",
+      "page": 13,
+      "index": 3,
+      "width": 720,
+      "height": 433
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21655v1/fig-004.webp",
+      "caption": "Figure 2: Simulated photoacoustic wave-field for a vessel phantom with an initial pressure distribution p0 (first column) using the pseudospectral k-space method (k-Wave, first row) and the FNO (second row), and their difference (third row). Location used for illustration of photoacoustic data in Figure 4 is indicated with a red dot in the first column.",
+      "page": 8,
+      "index": 4,
+      "width": 720,
+      "height": 319
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21655v1/fig-005.webp",
+      "caption": "Figure 3: Simulated photoacoustic wave-field for the Shepp-Logan phantom with an initial pressure distribution p0 (first column) using the pseudospectral k-space method (k-Wave, first row) and the FNO (second row), and their difference (third row). Location used for illustration of photoacoustic data in Figure 4 is indicated with a red dot in the first column.",
+      "page": 8,
+      "index": 5,
+      "width": 720,
+      "height": 319
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21655v1/fig-006.webp",
+      "caption": "Figure 6: The MAP estimates computed from the Shepp-Logan phantom data in different sensor geometries: full-view (FV, first row), two-side limited view (LV2, second row) and one-side limited view (LV1, third row). Columns from left to right: the true initial pressure distribution p0 (first column), MAP estimates calculated using the reference method (second column), MAP estimates calculated using the FNO and automatic differentation (third column), the difference between the true and the estimated initial pressure for the reference method (fourth column), and the difference between true and estimated initial pressure for the FNO approach (fifth column). Sensor locations are marked with the red line in the second column.",
+      "page": 12,
+      "index": 6,
+      "width": 720,
+      "height": 454
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21655v1/fig-007.webp",
+      "caption": "Figure 4: Photoacoustic data simulated using the pseudospectral k-space method (k-Wave, black line) and the FNO (red dashed line) for the vessel (left image) and Shepp-Logan (right image) on a boundary pixel illustrated in Figures 2 and 3.",
+      "page": 9,
+      "index": 7,
+      "width": 743,
+      "height": 273
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.25122v1/fig-001.webp",
+      "caption": "Table 1: Summary on the setup and results of diffusion, wave, Poisson, and diffusionreaction equations",
+      "page": 6,
+      "index": 1,
+      "width": 760,
+      "height": 575
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25122v1/fig-002.webp",
+      "caption": "Fig. 9: Patient-specific modeling of tau protein aggregation using real clinical data. (A)Schematic of the cd-PINN framework. Top (Offline Training): Neural network are pre-trained over a wide range of parameters, whose weights θ∗ are saved for online tasks. Bottom (Online Inference): Frozen pretrained network enables fast estimation of α∗, β∗ from new observations without retraining. (B) Longitudinal SUVR predictions for patients across different disease stages (CN, EMCI, MCI, LMCI, AD). Stars: observed data; solid/dashed lines: PINN/cd-PINN predictions; shaded regions: ±1 standard deviation; vertical lines: last observation time. (C) Brain surface SUVR maps comparing CN (top) and AD (bottom) patients. Upper rows: observed PET data; lower rows: cd-PINN fitted/predicted values. “?” indicates unavailable future observations.",
+      "page": 21,
+      "index": 2,
+      "width": 806,
+      "height": 1056
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25122v1/fig-003.webp",
+      "caption": "Fig. 2: Results of the parameterized diffusion and wave equations. (A) The test MSE of cd-PINN, PINN, cd-PINN#, FNO, and DeepONet on the test dataset as the number of training epochs increases for the parameterized diffusion equation. (B) The NLMAE of predictions, (C) predictions on new configurations σ = 0.2, µ = 0.0 without labeled training data, and (D) the test MSE as a function of the number of training epochs. (E) The NLMAE, (F) predictions, and (H) absolute errors of cd-PINN, PI-DeepONet, DeepONet, and FNO for parameterized wave equation at c = 0.505, k = 0.505. (G) 20 labeled training data points randomly selected from the low-resolution with c = 0.505, k = 0.505.",
+      "page": 7,
+      "index": 3,
+      "width": 775,
+      "height": 671
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25122v1/fig-004.webp",
+      "caption": "Fig. 4: Results of the parameterized diffusion-reaction equation. (A), (B), and (C) show results for 2D, 5D, and 8D diffusion-reaction equations, respectively. For each dimension, from left to right: NLMAE of PINN and cd-PINN, test MSE, and Lcd versus training iterations.",
+      "page": 10,
+      "index": 4,
+      "width": 777,
+      "height": 510
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25122v1/fig-005.webp",
+      "caption": "Fig. 6: Results of the parameterized Navier-Stokes equation. The first row presents the reference solution computed using the spectral method. The second row displays the corresponding predictions obtained by the cd-PINN model, while the third row shows the point-wise absolute errors. From left to right, the viscosity coefficients are set to 1× 10−3, 3× 10−3, 5× 10−3, and 1× 10−2, respectively.",
+      "page": 14,
+      "index": 5,
+      "width": 777,
+      "height": 496
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25122v1/fig-006.webp",
+      "caption": "Fig. 1: Illustration of the idea, problem setup, and architecture of cd-PINN. (A) Schematic diagram of the input and output of neural operators. (B) MAD learns the solution of the equation under new configurations by fine-tuning the encoding c. (C) The objective function of cd-PINN is based on the continuity assumption. (D) Illustration of the labeled training data. For each output u(ti,xi), we require the same number of evaluations of a(ti,xi) and u0(xi) at the same scattered space-time point (ti,xi). (E) The flowchart for calculating residual loss. (F) The architecture of cdPINN.",
+      "page": 3,
+      "index": 6,
+      "width": 775,
+      "height": 748
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25122v1/fig-007.webp",
+      "caption": "Fig. 8: Evaluation of PINN and cd-PINN for Fisher-Kolmogorov equation in continuous and network settings. Continuous domain (synthetic data): (A–B) MAE and (C–D) NLMAE across diffusion-aggregation parameter space (D,α), with models trained at single configuration. (E) Test MSE convergence during training over 10,000 iterations. (F–G) Loss landscapes for the inverse problem with true parameters D = 0.15 and α = 1.3. ( H) Comparison of parameter estimation errors across all 99 test configurations. (I) Heatmap of error differences in the (D,α) space. Network domain (brain connectome): (J–K) MAE and (L–M) NLMAE heatmaps of PINN and cd-PINN. (N–O) Spatial distribution of prediction errors on the brain connectivity graph. Node colors represent absolute errors at each brain region. (P–Q) Scatter plots of true and predicted solutions for inverse parameter estimation across all test configurations.",
+      "page": 18,
+      "index": 7,
+      "width": 777,
+      "height": 884
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25122v1/fig-008.webp",
+      "caption": "Fig. 5: Results of the parameterized Burgers equation. (A) The NLMAE of predictions of the cd-PINN model under each set of (t, ν). (B) NRMSE and epochs per second v.s. number of residual points. The blue line represents the epochs per second, while the red line represents the NRMSE of the predicted results. (C) Comparison on the computational efficiency of cd-PINN and Newton-Implicit FDM. (D) The numerical solutions of Newton-Implicit FDM, (E) predicted solutions of cd-PINN as well as (F) absolute errors between the two methods at ν = 0.01, 0.03, 0.05, 0.07 and 0.10, respectively. (G) Comparison of cd-PINN predicted solutions and numerical solution obtained via the FDM at t = 0.0, 0.25, 0.50 for various values of ν.",
+      "page": 13,
+      "index": 8,
+      "width": 775,
+      "height": 835
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25122v1/fig-009.webp",
+      "caption": "Fig. 3: Results of the parameterized Poisson equation. (A) Comparison of the NRMSE between cd-PINN and PINN with respect to different numbers of residual points, where the vertical axis represents the number of 2N residual data points used. (B) The test MSE and (C) Lcd term of cd-PINN and PINN as the number of training epochs changes when the number of residual points is fixed as 211. (D) The NLMAE of predictions of cd-PINN and PINN. (E) 20 labeled training data points randomly selected from the low-resolution data when a = 2.45, b = 2.45. (F) The high-resolution true solution of the equation at new configurations a = 5.0, b = 5.0. (G) The predicted results and (H) absolute errors of cd-PINN and PINN at configurations a = 5.0, b = 5.0.",
+      "page": 9,
+      "index": 9,
+      "width": 775,
+      "height": 494
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25122v1/fig-010.webp",
+      "caption": "Fig. 7: Results of the parameterized diffusion equation with negative diffusion coefficients. The NLMAE of predictions of (A) PINN and (B) cd-PINN under each configuration. The total loss L, continuous dependence loss Lcd, and the test MSE of (C) PINN and (D) cd-PINN as the number of training epochs changes. (E) The true solution (left), and predicted solutions by PINN (middle) and cd-PINN (right) at µ = −5.0, σ = 0.1.",
+      "page": 16,
+      "index": 10,
+      "width": 777,
+      "height": 336
+    }
+  ]
+}
