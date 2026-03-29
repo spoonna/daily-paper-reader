@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.24196v1/fig-001.webp",
+      "caption": "Figure 5: Comparison of diffusion equation solutions (16 × 24 grid). Top four rows: Comparison of exact solutions, numerical solutions and absolute errors at different time steps; Bottom row: Evolution curves of L2 error and relative error over time.",
+      "page": 18,
+      "index": 1,
+      "width": 986,
+      "height": 771
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24196v1/fig-002.webp",
+      "caption": "Figure 4: Results of the Poisson equation solution. The first row shows the source term, the exact solution and the numerical solution of the Poisson equation. The second row displays the relative error, absolute error of the solution and the potential field distribution obtained by the solver. The grid size is 24× 40.",
+      "page": 17,
+      "index": 2,
+      "width": 986,
+      "height": 461
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24196v1/fig-003.webp",
+      "caption": "Figure 1: Schematic diagram of the multigrid W-Cycle iteration. The figure illustrates the recursive process from the fine grid Gh to the coarsest grid G4h. The operator operations correspond one-to-one with the symbols defined in the text and structurally present multi-scale Encoder-Decoder characteristics similar to U-Net.",
+      "page": 9,
+      "index": 3,
+      "width": 886,
+      "height": 513
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24196v1/fig-004.webp",
+      "caption": "Figure 6: Validation of the convection-diffusion equation (32 × 32 grid). Comparison of exact solutions, numerical solutions and relative errors at different time steps.",
+      "page": 20,
+      "index": 4,
+      "width": 986,
+      "height": 493
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24196v1/fig-005.webp",
+      "caption": "Figure 7: Validation of the convection-diffusion equation (32 × 32 grid). Profile comparison of exact and numerical solutions at the final time step; tracking of peak trajectories and comparison of peak attenuation throughout the entire process.",
+      "page": 20,
+      "index": 5,
+      "width": 986,
+      "height": 250
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24196v1/fig-006.webp",
+      "caption": "Figure 3: Comparison of linear system solving results. The first row displays results for a grid size of 16× 32 and the second row for 24× 48. From left to right, the figures show: the exact solution provided by the SciPy classical direct solver, the numerical solution obtained by the HQC-CNNMG solver and the spatial distribution of the relative error between the two.",
+      "page": 16,
+      "index": 6,
+      "width": 986,
+      "height": 340
+    }
+  ]
+}

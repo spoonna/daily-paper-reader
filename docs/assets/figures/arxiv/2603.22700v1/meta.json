@@ -1,0 +1,150 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-001.webp",
+      "caption": "Figure 6: Predictions for the 2D multi-band Poisson PDE by non-grid-based models (Vanilla and CP-PINN) and CELG, CELG-CP (R = 16) after (a) 1,000, (b) 5,000, and (c) 50,000 training epochs.",
+      "page": 11,
+      "index": 1,
+      "width": 485,
+      "height": 539
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-002.webp",
+      "caption": "Figure 7: Residual maps for the 2D multi-band Poisson PDE by non-grid-based models (Vanilla and CP-PINN) and CELG, CELG-CP (R = 16) after (a) 1,000, (b) 5,000, and (c) 50,000 training epochs.",
+      "page": 11,
+      "index": 2,
+      "width": 485,
+      "height": 539
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-003.webp",
+      "caption": "Figure 10: Prediction results for (a) Allen-Cahn, (b) Burgers, (c) Flow-Mixing, and (d) Helmholtz equations. The third rows in (a) and (b) show the prediction results and the analytical solutions (gray) at time t = 1. Predictions and residuals at (c) t = 8 and (d) x3 = 0.75.",
+      "page": 15,
+      "index": 3,
+      "width": 866,
+      "height": 231
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-004.webp",
+      "caption": "Figure 5: Learning curves for the 1D multi-band Poisson PDE. The grid parameters were set to (a) R = 4, (b) 8, (c) 16, and (d) 32.",
+      "page": 10,
+      "index": 4,
+      "width": 672,
+      "height": 556
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-005.webp",
+      "caption": "Table 4: Training time (ms./iter.) for benchmark PDEs.",
+      "page": 14,
+      "index": 5,
+      "width": 540,
+      "height": 319
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-006.webp",
+      "caption": "Figure 9: Learning curves for benchmark PDEs: (a) Allen-Cahn, (b) Burgers, (c) Flow-Mixing, and (d) Helmholtz equations.",
+      "page": 14,
+      "index": 6,
+      "width": 675,
+      "height": 442
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-007.webp",
+      "caption": "Figure 11: Interpolation kernels and their first and second derivative functions: (a) cosine and (b)–(d) Hermite interpolation kernels.",
+      "page": 18,
+      "index": 7,
+      "width": 670,
+      "height": 666
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-008.webp",
+      "caption": "Table 3: Number of parameters for benchmark PDEs.",
+      "page": 13,
+      "index": 8,
+      "width": 494,
+      "height": 321
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-009.webp",
+      "caption": "Table 2: Training settings for benchmark PDEs.",
+      "page": 13,
+      "index": 9,
+      "width": 540,
+      "height": 239
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-010.webp",
+      "caption": "Figure 2: Training results utilizing linear, cosine with/without multigrid (MG), Hermite and natural interpolations for 1D Poisson PDE. (a) Predictions of u(x), (b) first and (c) second derivatives. (d) Learning curves. In (a)–(c), the analytical solution is shown as a solid gray line.",
+      "page": 8,
+      "index": 10,
+      "width": 671,
+      "height": 498
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-011.webp",
+      "caption": "Figure 1: Schematic of the proposed method, coordinate encoding on linear grid (CELG).",
+      "page": 4,
+      "index": 11,
+      "width": 969,
+      "height": 326
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-012.webp",
+      "caption": "Table 8: Training Time (ms./iter.) for High-Dimensional Helmholtz equations.",
+      "page": 17,
+      "index": 12,
+      "width": 390,
+      "height": 319
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-013.webp",
+      "caption": "Table 9: Relative Errors for High-Dimensional Helmholtz equations.",
+      "page": 17,
+      "index": 13,
+      "width": 472,
+      "height": 320
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-014.webp",
+      "caption": "Figure 8: Learning curves for the 2D multi-band Poisson PDE. (a) Curves of CELG and CELG-CP with R = 16 and non-grid methods (Vanilla and CP-PINN), and those of grid-based methods with (b) R = 8, (c) R = 16, and (d) R = 32.",
+      "page": 12,
+      "index": 14,
+      "width": 672,
+      "height": 556
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-015.webp",
+      "caption": "Figure 4: Prediction results for the 1D multi-band Poisson PDE during training at (a) 100, (b) 1,000, (c) 5,000, and (d) 10,000 training epochs. The grid parameter was set to R = 16 in PIXEL, H-Spline, and CELG.",
+      "page": 9,
+      "index": 15,
+      "width": 671,
+      "height": 554
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-016.webp",
+      "caption": "Figure 3: Analytical solutions of (a) 1D and (b) 2D multi-band Poisson PDEs.",
+      "page": 9,
+      "index": 16,
+      "width": 664,
+      "height": 273
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-017.webp",
+      "caption": "Table 7: Number of parameters for High-Dimensional Helmholtz equations.",
+      "page": 16,
+      "index": 17,
+      "width": 502,
+      "height": 321
+    },
+    {
+      "url": "assets/figures/arxiv/2603.22700v1/fig-018.webp",
+      "caption": "Table 5: Relative errors for benchmark PDEs.",
+      "page": 16,
+      "index": 18,
+      "width": 522,
+      "height": 318
+    }
+  ]
+}
