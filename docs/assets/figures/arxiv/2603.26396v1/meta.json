@@ -1,0 +1,110 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.26396v1/fig-001.webp",
+      "caption": "Figure 1: a) Schematic of the 2D specimen clamped at the bottom and compressed by a predefined displacement at the top. b) Interpolation plot of the normalized horizontal displacement field of the specimen. c) Schematic view of possible split sampling domains (3) from top to bottom, in blue, red and yellow, with in green and black possible interface points.",
+      "page": 11,
+      "index": 1,
+      "width": 609,
+      "height": 400
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26396v1/fig-002.webp",
+      "caption": "Figure 5: Convergence times of a single iteration for different numbers of domains for the LMA and ALMA. The circles indicate domains split only horizontally, while the triangles are denoting runs for domain splits in both directions. For example for four domains, the circle is a run split into four by one domains and the triangle symbol run is two by two domains.",
+      "page": 15,
+      "index": 2,
+      "width": 954,
+      "height": 406
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26396v1/fig-003.webp",
+      "caption": "Figure 6: Final relative errors for different numbers of domains for the LMA and ALMA. The circles indicate one directional splits, while the triangles denote multi-directional splits. Multi-directional splits of the ALMA are left out since they have higher relative errors. The black x denotes a reference solution for a single NN trained on the whole domain.",
+      "page": 15,
+      "index": 3,
+      "width": 496,
+      "height": 387
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26396v1/fig-004.webp",
+      "caption": "Figure 12: Interpolation plots of the relative errors in mean and standard deviation of the displacement components u approximated by the NNs compared to data on a section through the cylinder. Values are normalized to allow optical comparison to the two-dimensional problem.",
+      "page": 21,
+      "index": 4,
+      "width": 950,
+      "height": 928
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26396v1/fig-005.webp",
+      "caption": "Figure 13: Interpolation plots of the relative errors in mean and standard deviation of the displacement components u approximated by the NNs compared to data on the interface. Values are normalized to allow optical comparison to the two-dimensional problem.",
+      "page": 22,
+      "index": 5,
+      "width": 989,
+      "height": 614
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26396v1/fig-006.webp",
+      "caption": "Figure 3: Full convergence times for different numbers of domains for the LMA and ALMA. The circles indicate domains split only horizontally, while the triangles are denoting runs for domain splits in both directions. For example for four domains, the circle is a run split into four by one domains and the triangle symbol run is two by two domains. The triangle symbol runs are left out in a) since they did not finish within the maximum time.",
+      "page": 14,
+      "index": 6,
+      "width": 954,
+      "height": 406
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26396v1/fig-007.webp",
+      "caption": "Figure 14: Kernel density estimator distributions of an interface point of the three-dimensional problem for each displacement component.",
+      "page": 23,
+      "index": 7,
+      "width": 571,
+      "height": 702
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26396v1/fig-008.webp",
+      "caption": "Figure 10: a) Schematic of the 3D Cylinder clamped at the bottom and compressed at the top. b) Resultant displacement field of the FEM simulation for one random set of material parameters. c) Data points on the cylinder split into two domains with the upper domain in blue, the lower domain in yellow and the interface in black.",
+      "page": 19,
+      "index": 8,
+      "width": 727,
+      "height": 370
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26396v1/fig-009.webp",
+      "caption": "Figure 8: Relative errors for ALMA approximations with different gap sizes between three vertical domains in which the interface constraints are enforced halfway across the gaps.",
+      "page": 17,
+      "index": 9,
+      "width": 950,
+      "height": 942
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26396v1/fig-010.webp",
+      "caption": "Table 1: Specimen properties for the finite element simulation.",
+      "page": 12,
+      "index": 10,
+      "width": 947,
+      "height": 497
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26396v1/fig-011.webp",
+      "caption": "Figure 2: Shows the convergence of the θi and dual updates of the ALMA and LMA methods. The subfigure captions indicate the iteration of the loop outside the given loops.",
+      "page": 12,
+      "index": 11,
+      "width": 947,
+      "height": 363
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26396v1/fig-012.webp",
+      "caption": "Figure 11: Shows the convergence of the θi and dual updates of ALMA for the three-dimensional problem. The subfigure captions indicate the iteration of the loop outside the given loops.",
+      "page": 20,
+      "index": 12,
+      "width": 952,
+      "height": 376
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26396v1/fig-013.webp",
+      "caption": "Figure 7: FEM solution and approximations of the solution split into three subdomains. One can view the FEM solution in a), the ALMA and LMA approximations in b) and c), the relative error of each of these methods in e) and f), and the relative error without continuity constraints enforced in d).",
+      "page": 16,
+      "index": 13,
+      "width": 947,
+      "height": 919
+    }
+  ]
+}

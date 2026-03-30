@@ -1,0 +1,150 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-001.webp",
+      "caption": "FIG. 1: We learn the mapping from relative position of particles within a local neighbourhood, to a local set of weights that approximate differential operators. The learned operator is physics-agnostic, and local to the computational stencil. The framework consists of a lifting the relative positions to a higher dimension with a neural network, followed by a stack of message-passing graph layers, and a final output head that maps latent representations to operator weights.",
+      "page": 6,
+      "index": 1,
+      "width": 744,
+      "height": 225
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-002.webp",
+      "caption": "FIG. 5: Resolving power of the x−derivative for LABFM, NeMDO, and SPH (with the Quintic Spline and Wendland C2). The left plot shows the real part of the modal response, and the right plot shows the imaginary part on disordered particle distributions with noise level ϵ. The horizontal axis shows the true wavenumber k normalised by the Nyquist wavenumber kNy, while the vertical axis shows the corresponding effective wavenumber keff/kNy. The dashed black line indicates the ideal response, corresponding to a spectral method. The inset on the left plot shows the absolute difference between the different operators and the ideal spectral response. The inset on the right plot shows zoomed in graph of ℑ{k̂eff} for range 0 ≤ k̂ ≤ 0.3. The full and dotted lines indicate ky/kx = 0 and ky/kx = 1, respectively.",
+      "page": 11,
+      "index": 2,
+      "width": 1013,
+      "height": 284
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-003.webp",
+      "caption": "TABLE VI: NeMDO architectures used in the cost–accuracy experiments.",
+      "page": 26,
+      "index": 3,
+      "width": 654,
+      "height": 205
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-004.webp",
+      "caption": "FIG. 9: Relative root mean squared error of different operators with respect to the analytical solution",
+      "page": 15,
+      "index": 4,
+      "width": 630,
+      "height": 259
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-005.webp",
+      "caption": "FIG. 16: Convergence of the discrete x-derivative operator on a smooth test function (Equation (22)) for LABFMp=2, SPH (with the quintic spline and Wendland C2 kernels) and NeMDO, with varying particle disorder ϵ. Full lines indicate inference with ϵ = 1.0, dashed lines indicate inference with ϵ = 0.5, and dotted lines indicate inference with ϵ = 0.1.",
+      "page": 21,
+      "index": 5,
+      "width": 840,
+      "height": 402
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-006.webp",
+      "caption": "FIG. 4: Normalised eigenvalue spectrum of the global x-derivative operator with node disturbance ϵ = 1.0 and 2500 nodes. Left : x-derivative operators; right : Laplacian operators.",
+      "page": 10,
+      "index": 6,
+      "width": 1002,
+      "height": 307
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-007.webp",
+      "caption": "FIG. 8: Velocity magnitude for the Taylor–Green vortex with different operators at different resolutions. Colour axis are rescaled at different time scales for better visualisation of the flow structures.",
+      "page": 14,
+      "index": 7,
+      "width": 898,
+      "height": 1353
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-008.webp",
+      "caption": "FIG. 7: Evaluation of the trade-off between parameter count, wall-clock forward time, and accuracy for NeMDO and baseline kernel methods when computing stencil weights. The vertical axis shows the L2 error of the x-derivative of the test function in Equation (22) at a different resolutions; horizontal lines mark the resolution at which each operator converges (i.e., further refinement does not reduce this error). All NeMDO models are trained with geometric noise ϵ = 1.0, while the convergence tests are performed at ϵ = 0.5.",
+      "page": 13,
+      "index": 8,
+      "width": 524,
+      "height": 262
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-009.webp",
+      "caption": "TABLE I: Moment residuals for learned NeMDO and SPH operators. Mean absolute error (MAE) and standard deviation are reported for each monomial moment, averaged over independently perturbed neighbourhood realisations. Residuals quantify the extent to which the learned discrete operators satisfy the imposed Taylor consistency constraints (smaller values are better). The superscripts in the learned operator identify the target operator.",
+      "page": 8,
+      "index": 9,
+      "width": 923,
+      "height": 428
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-010.webp",
+      "caption": "FIG. 2: Second-order normalised learned operators, colours indicate weight value. Models were trained with particle disturbance of ϵ = 1.0 and inferred with the same noise.",
+      "page": 8,
+      "index": 10,
+      "width": 870,
+      "height": 417
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-011.webp",
+      "caption": "FIG. 15: Resolving power of the gradient operator for increasing Taylor truncation included during training. The left plot shows the real part of the modal response, and the right plot shows the imaginary part on disordered particle distributions with noise level ϵ = 1.0. The horizontal axis shows the true wavenumber k normalised by the Nyquist wavenumber kNy, while the vertical axis shows the corresponding effective wavenumber keff/kNy. The dashed black line indicates the ideal response, corresponding to a spectral method. The inset on the left plot shows the absolute difference between the different operators and the ideal spectral response. The inset on the right plot shows zoomed in graph of ℑ{k̂eff} for range 0 ≤ k̂ ≤ 0.3. The full and dotted lines indicate ky/kx = 0 and ky/kx = 1, respectively.",
+      "page": 19,
+      "index": 11,
+      "width": 1014,
+      "height": 280
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-012.webp",
+      "caption": "FIG. 12: Resolving power of the gradient operator for varying number of particles in computational stencil. The left plot shows the real part of the modal response, and the right plot shows the imaginary part on disordered particle distributions with noise level ϵ = 1.0. The horizontal axis shows the true wavenumber k normalised by the Nyquist wavenumber kNy, while the vertical axis shows the corresponding effective wavenumber keff/kNy. The dashed black line indicates the ideal response, corresponding to a spectral method. The inset on the left plot shows the absolute difference between the different operators and the ideal spectral response. The inset on the right plot shows zoomed in graph of ℑ{k̂eff} for range 0 ≤ k̂ ≤ 0.3. The full and dotted lines indicate ky/kx = 0 and ky/kx = 1, respectively.",
+      "page": 17,
+      "index": 12,
+      "width": 1012,
+      "height": 279
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-013.webp",
+      "caption": "FIG. 11: Convergence of the discrete x-derivative operator on a smooth test function with ϵ = 1.0. Relative L2 norm versus particle spacing s for the learned NeMDO operator with varying stencil size. The superscript in the operator indicates the number of particles within the computational stencil.",
+      "page": 17,
+      "index": 13,
+      "width": 462,
+      "height": 276
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-014.webp",
+      "caption": "FIG. 6: Resolving power of the Laplacian operator, the left plot shows the real part of the modal response and the right plot shows the imaginary part on disordered particle distributions with noise level ϵ = 1.0. The horizontal axis shows the true wavenumber q normalised by the Nyquist wavenumber kNy, while the vertical axis shows the corresponding effective wavenumber. The dashed black line indicates the ideal response, corresponding to a spectral method. The inset on the left plot shows the absolute difference between the different operators and the ideal spectral response. The inset on the right plot shows zoomed in graph of ℑ{q̂2eff} for range 0 ≤ q̂ ≤ 0.3. The full and dotted lines indicate ky/kx = 0 and ky/kx = 1, respectively.",
+      "page": 12,
+      "index": 14,
+      "width": 1018,
+      "height": 283
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-015.webp",
+      "caption": "FIG. 3: Convergence of the discrete x-derivative (left) and Laplacian (right) on a smooth test function with ϵ = 0.5, noting that NeMDO was trained with ϵ = 1.0. Relative L2 error versus particle spacing s for the learned NeMDO operator, a second-order LABFM operator, and two uncorrected SPH kernels (quintic spline and Wendland C2).",
+      "page": 9,
+      "index": 15,
+      "width": 1005,
+      "height": 307
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-016.webp",
+      "caption": "TABLE IV: NeMDO moment residuals for x-derivative operators with varying particle disorder ϵ. Mean absolute error (MAE) and standard deviation are reported for each monomial moment, averaged over independently perturbed neighbourhood realisations. Residuals quantify the extent to which the learned discrete operators satisfy the imposed Taylor consistency constraints (smaller values are better). Trained ϵ denotes to the particle disorder during training, and inferred ϵ denotes the particle disorder during inference.",
+      "page": 20,
+      "index": 16,
+      "width": 1044,
+      "height": 773
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-017.webp",
+      "caption": "TABLE II: NeMDO moment residuals for x-derivative operators with varying stencil size |Ni|. Mean absolute error (MAE) and standard deviation are reported for each monomial moment, averaged over independently perturbed neighbourhood realisations. Residuals quantify the extent to which the learned discrete operators satisfy the imposed Taylor consistency constraints (smaller values are better).",
+      "page": 16,
+      "index": 17,
+      "width": 952,
+      "height": 237
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24641v1/fig-018.webp",
+      "caption": "FIG. 10: Parametric results for varying stencil size n for node disorder of ϵ = 1.0. Colours indicate value of weights. To generate the plots, multiple stencils with normalised relative positions have their weights predicted and plotted on top of each other.",
+      "page": 16,
+      "index": 18,
+      "width": 1059,
+      "height": 315
+    }
+  ]
+}
