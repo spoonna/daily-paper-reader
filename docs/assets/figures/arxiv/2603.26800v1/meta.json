@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.26800v1/fig-001.webp",
+      "caption": "Table 2: MSE comparison across methods for NS-Forced and NS-Decaying turbulence. “All-step” denotes the average error over all prediction steps, while “𝑖-step” indicates the error at the 𝑖-th specific prediction step. Lower MSE values indicate better performance, while \"nan\" indicates excessive model error or data overflow, suggesting model collapse.",
+      "page": 6,
+      "index": 1,
+      "width": 990,
+      "height": 346
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26800v1/fig-002.webp",
+      "caption": "Table 5: Model Parameters Configuration of NS-Forced",
+      "page": 11,
+      "index": 2,
+      "width": 456,
+      "height": 1031
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26800v1/fig-003.webp",
+      "caption": "Table 6: Model Parameters Configuration of NS-Decaying",
+      "page": 11,
+      "index": 3,
+      "width": 460,
+      "height": 1031
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26800v1/fig-004.webp",
+      "caption": "Figure 4: We selected predictions from selected models on the NS-Decaying dataset, computed and analyzed the mean and variance of their SSIM values.",
+      "page": 7,
+      "index": 4,
+      "width": 521,
+      "height": 397
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26800v1/fig-005.webp",
+      "caption": "Figure 8: Prediction visualization of selected models across various time steps for the NS-Decaying case, where the top row displays the ground truth values.",
+      "page": 13,
+      "index": 5,
+      "width": 829,
+      "height": 1290
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26800v1/fig-006.webp",
+      "caption": "Figure 5: Comparison of gradient and divergence errors of differentmethods on the NS-Decaying dataset. (a) Gradientmagnitude error quantifies the accuracy of capturing flow deformation features. (b) Divergence error measures physical consistency and mass conservation properties.",
+      "page": 8,
+      "index": 6,
+      "width": 1047,
+      "height": 344
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26800v1/fig-007.webp",
+      "caption": "Figure 6: Prediction visualization of selected models across various time steps for the NS-Decaying case, where the top row displays the ground truth values.",
+      "page": 8,
+      "index": 7,
+      "width": 983,
+      "height": 736
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26800v1/fig-008.webp",
+      "caption": "Figure 2: Temporal evolution of vortex dipole under close (top) vs. far (bottom) perturbations. The curve represents a streamline of the flow field. The red-blue vortex pair on the left represents the dipole, while the isolated vortex on the right is the perturbing vortex.",
+      "page": 4,
+      "index": 8,
+      "width": 1052,
+      "height": 409
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26800v1/fig-009.webp",
+      "caption": "Figure 7: Prediction visualization of selected models across various time steps for the NS-Forced case, where the top row displays the ground truth values.",
+      "page": 12,
+      "index": 9,
+      "width": 828,
+      "height": 1288
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26800v1/fig-010.webp",
+      "caption": "Figure 3: Overview of DSO architecture. The model consists of three components: (1) an encoder E that extracts multi-scale spatial features, (2) a translator T composed of stacked dual-pathway blocks, and (3) a decoderD that reconstructs the predicted field. Each block contains a Local Pathway (convolution) for fine-scale features and a Global Pathway (MLP-Mixer) for domainwide information aggregation. The curved arrows connecting the encoder and decoder represent skip connections.",
+      "page": 5,
+      "index": 10,
+      "width": 1056,
+      "height": 412
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.27496v1/fig-001.webp",
+      "caption": "FIG. 4. Reconstruction of the transverse velocity component v for the Kovasznay flow. In each row, from left to right: reference solution, prediction, and absolute error. The four rows correspond to (a) Nu_learn, (b) Nu_off, (c) ResAttn, and (d) GRU, respectively.",
+      "page": 6,
+      "index": 1,
+      "width": 412,
+      "height": 518
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27496v1/fig-002.webp",
+      "caption": "FIG. 2. Pressure-field reconstruction for the Kovasznay flow. In each row, from left to right: reference solution, prediction, and absolute error. The four rows correspond to (a) Nu_learn, (b) Nu_off, (c) ResAttn, and (d) GRU, respectively.",
+      "page": 6,
+      "index": 2,
+      "width": 412,
+      "height": 514
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27496v1/fig-003.webp",
+      "caption": "FIG. 3. Reconstruction of the streamwise velocity component u for the Kovasznay flow. In each row, from left to right: reference solution, prediction, and absolute error. The four rows correspond to (a) Nu_learn, (b) Nu_off, (c) ResAttn, and (d) GRU, respectively.",
+      "page": 6,
+      "index": 3,
+      "width": 412,
+      "height": 517
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27496v1/fig-004.webp",
+      "caption": "FIG. 8. Reconstruction of the transverse velocity component v for manufactured forcing flow I. In each row, from left to right: reference solution, prediction, and absolute error. The four rows correspond to (a) Nu_learn, (b) Nu_off, (c) ResAttn, and (d) GRU, respectively.",
+      "page": 7,
+      "index": 4,
+      "width": 412,
+      "height": 525
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27496v1/fig-005.webp",
+      "caption": "FIG. 6. Pressure-field reconstruction for manufactured forcing flow I. In each row, from left to right: reference solution, prediction, and absolute error. The four rows correspond to (a) Nu_learn, (b) Nu_off, (c) ResAttn, and (d) GRU, respectively.",
+      "page": 7,
+      "index": 5,
+      "width": 412,
+      "height": 523
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27496v1/fig-006.webp",
+      "caption": "FIG. 7. Reconstruction of the streamwise velocity component u for manufactured forcing flow I. In each row, from left to right: reference solution, prediction, and absolute error. The four rows correspond to (a) Nu_learn, (b) Nu_off, (c) ResAttn, and (d) GRU, respectively.",
+      "page": 7,
+      "index": 6,
+      "width": 412,
+      "height": 525
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27496v1/fig-007.webp",
+      "caption": "FIG. 12. Reconstruction of the transverse velocity component v for manufactured forcing flow II. In each row, from left to right: reference solution, prediction, and absolute error. The four rows correspond to (a) Nu_learn, (b) Nu_off, (c) ResAttn, and (d) GRU, respectively.",
+      "page": 9,
+      "index": 7,
+      "width": 462,
+      "height": 583
+    }
+  ]
+}
