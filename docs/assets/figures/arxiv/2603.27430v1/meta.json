@@ -1,0 +1,150 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-001.webp",
+      "caption": "Figure 2: (a) shows the chemical formula of polyurea. Here n is the number of repeating monomer units and m is the number of repeating soft segments within a monomer unit. (b) shows the multiscale nature polyurea composites. The polyurea chain, atomistic representative volume element, and continuum modeling is shown.",
+      "page": 6,
+      "index": 1,
+      "width": 1010,
+      "height": 765
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-002.webp",
+      "caption": "Figure 8: Comparison of the uniaxial stress in the 11 direction for the Clifton, RNO atomistic surrogate and Johnson-Cook material models at different times.",
+      "page": 11,
+      "index": 2,
+      "width": 1010,
+      "height": 231
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-003.webp",
+      "caption": "Figure 12: The evolution of (a) absorbed energy, (b) length of impactor, and (c) wall force with time during the Taylor impact test.",
+      "page": 15,
+      "index": 3,
+      "width": 1010,
+      "height": 291
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-004.webp",
+      "caption": "Figure 17: Stress prediction and convergence for RNO at 500K. The uniaxial stresses are shown in the top panel, and shear stresses are shown in the bottom panel.",
+      "page": 21,
+      "index": 4,
+      "width": 990,
+      "height": 540
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-005.webp",
+      "caption": "Figure 3: (a) shows the dependence of bulk modulus on the cell size of the RVE. (b) shows the dependence of stress on volumetric strain of polyurea at temperatures 300, 400, and 500 K.",
+      "page": 7,
+      "index": 5,
+      "width": 902,
+      "height": 359
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-006.webp",
+      "caption": "Table 2: Johnson–Cook constitutive parameters [81].",
+      "page": 22,
+      "index": 6,
+      "width": 976,
+      "height": 188
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-007.webp",
+      "caption": "Figure 7: The geometry of the dogbone specimen is shown on the left. The temperature calculated at different times during the simulation is shown on the right.",
+      "page": 10,
+      "index": 7,
+      "width": 1010,
+      "height": 594
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-008.webp",
+      "caption": "Figure 11: Comparison of von Mises stress for the three material models is shown at three different times for the Taylor impact test",
+      "page": 14,
+      "index": 8,
+      "width": 1010,
+      "height": 887
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-009.webp",
+      "caption": "Figure 10: The geometry of the Taylor impact test are schematically shown on the left. The evolution of temperature across the midplane of the cylinder during the simulation is shown on the right.",
+      "page": 13,
+      "index": 9,
+      "width": 1010,
+      "height": 637
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-010.webp",
+      "caption": "Figure 4: (a) Dependence of relative error on the number of internal variables for temperatures 300 K, 400 K, 500 K. (b) shows the convergence of relative error over the number of epochs for temperatures 300 K, 400 K, 500 K. Both training and testing errors are shown.",
+      "page": 8,
+      "index": 10,
+      "width": 908,
+      "height": 365
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-011.webp",
+      "caption": "Figure 15: The evolution of (a) absorbed energy, (b) deflection of the center of the plate, and (c) wall force with time during the plate impact test.",
+      "page": 17,
+      "index": 11,
+      "width": 1010,
+      "height": 291
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-012.webp",
+      "caption": "Figure 14: Comparison of von Mises stress for the three material models is shown at three different times for the plate impact test",
+      "page": 17,
+      "index": 12,
+      "width": 1010,
+      "height": 681
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-013.webp",
+      "caption": "Figure 9: Stress versus strain curve for three cycles of the cyclic loading. Clifton (solid line), RNO atomistic surrogate (dashed line) and Johnson-Cook (dotted line) are compared .",
+      "page": 12,
+      "index": 13,
+      "width": 756,
+      "height": 354
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-014.webp",
+      "caption": "Figure 5: Components of strain tensor shown for five trajectories. The normal strains are shown in the top panel, and shear strains are shown in the bottom panel.",
+      "page": 9,
+      "index": 14,
+      "width": 988,
+      "height": 537
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-015.webp",
+      "caption": "Figure 6: Stress prediction and convergence for RNO at 300K. The uniaxial stresses are shown in the top panel, and shear stresses are shown in the bottom panel.",
+      "page": 9,
+      "index": 15,
+      "width": 990,
+      "height": 541
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-016.webp",
+      "caption": "Figure 16: Stress prediction and convergence for RNO at 400K. The uniaxial stresses are shown in the top panel, and shear stresses are shown in the bottom panel.",
+      "page": 20,
+      "index": 16,
+      "width": 990,
+      "height": 541
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-017.webp",
+      "caption": "Figure 1: Neural network diagram of discretized RNO at the nth time step.",
+      "page": 5,
+      "index": 17,
+      "width": 756,
+      "height": 314
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27430v1/fig-018.webp",
+      "caption": "Figure 13: The geometry of the plate impact test are schematically shown on the left. The evolution of temperature across the midplane of the cylinder during the simulation is shown on the right.",
+      "page": 16,
+      "index": 18,
+      "width": 1010,
+      "height": 602
+    }
+  ]
+}
