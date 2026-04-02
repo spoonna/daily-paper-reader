@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.29264v1/fig-001.webp",
+      "caption": "Figure 1: LGN-KM architecture. Input nonlinear data is lifted to r channels via a spectral encoder, transformed to Fourier space, and propagated by the matrix exponential exp(𝐿𝑘 · 𝑡) of a per-mode generator 𝐿𝑘 = 𝑆 − 𝐷𝑘. The skew-symmetric component 𝑆 = (𝑃 − 𝑃𝑇)/2 is shared across all wavevectors. The positive-definite diagonal 𝐷𝑘 = 𝑑𝑖𝑎𝑔(𝑑 + 𝛼|𝑘|2/𝑘𝑚𝑎𝑥",
+      "page": 1,
+      "index": 1,
+      "width": 976,
+      "height": 440
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29264v1/fig-002.webp",
+      "caption": "Figure 3: Physics recovery and universality on 2D Navier-Stokes. (a) Generator Re(λ) vs |k|² recovers viscous dissipation scaling, (b) Normalized SVD profiles of S, and (c) Sorted base damping distribution match across viscosities, (d) Sorted Laplacian coefficient adapts to the flow regime as low viscosity demands higher wavenumber sensitivity. All quantities extracted directly from learned parameters. R² is computed on [0,1]-normalized profiles to compare shape independent of scale.",
+      "page": 6,
+      "index": 2,
+      "width": 976,
+      "height": 269
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29264v1/fig-003.webp",
+      "caption": "Table A.2: Structural ablation on ν = 10⁻⁵. All models share the same encoder, decoder, and training configuration (r=32, M=12, 500 epochs).",
+      "page": 15,
+      "index": 3,
+      "width": 979,
+      "height": 183
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29264v1/fig-004.webp",
+      "caption": "Figure A.3: Ablated eigenspectra (ν = 10⁻⁵). (a) Unconstrained L produces dispersion branches but 40% of eigenvalues are unstable (Re > 0, shaded). (b) S-only collapses to the imaginary axis, (c) D-only to the real axis. Only S−D yields stable, oscillatory, k-dependent structure simultaneously.",
+      "page": 15,
+      "index": 4,
+      "width": 937,
+      "height": 379
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29264v1/fig-005.webp",
+      "caption": "Figure 4: Long-horizon stability. (a) Per-step relative L₂ error on held-out test trajectories within the training horizon (𝑇𝑜𝑢𝑡 = 10), (b) Mean enstrophy ‖ω‖² over 200 steps (20× beyond training horizon). FNO energy diverges to ~10¹⁸; LGN-KM decays monotonically to 0.28, guaranteed by the contractive eigenspectrum of the S−D generator, (c) Wall time vs prediction horizon. LGN-KM evaluates any horizon via a single matrix exponential at O(1) cost; FNO requires T autoregressive steps.",
+      "page": 7,
+      "index": 5,
+      "width": 979,
+      "height": 306
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29264v1/fig-006.webp",
+      "caption": "Figure A.2: Generalization to 2D FitzHugh-Nagumo reaction-diffusion with no architecture modification. (a) Eigenspectra at diffusion coefficient, 𝐷𝑢 = 0.01, (b) 𝑅𝑒(𝜆𝑑𝑜𝑚) 𝑣𝑠 |𝑘|2 recovers diffusive scaling at both diffusion coefficients (R² > 0.93); higher 𝐷𝑢 produces steeper decay, (c) Normalized SVD profiles of S match across diffusion coefficients (R² = 0.994), replicating the universal coupling structure found in Navier–Stokes (Fig. 3b)",
+      "page": 14,
+      "index": 6,
+      "width": 976,
+      "height": 342
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29264v1/fig-007.webp",
+      "caption": "Table A.1: Cross-viscosity transfer (ν = 10⁻⁵ → 10⁻³) test L2 error. Δ = gap between freeze-S and transfer-all as % of transfer-all error.",
+      "page": 13,
+      "index": 7,
+      "width": 786,
+      "height": 185
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29264v1/fig-008.webp",
+      "caption": "Figure 5: Physics informed Cross-viscosity model transfer (ν = 10⁻⁵ → ν = 10⁻³). S is frozen from the pretrained model; encoder, decoder, and D are fine-tuned. (a) Learning curves at N = 50, (b) Test error across data budgets, (c) Convergence speedup (gray) and final accuracy gain (red) vs training sample size.",
+      "page": 8,
+      "index": 8,
+      "width": 976,
+      "height": 341
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29264v1/fig-009.webp",
+      "caption": "Figure A.1: Test error vs Channel dimension (r)",
+      "page": 12,
+      "index": 9,
+      "width": 377,
+      "height": 379
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29264v1/fig-010.webp",
+      "caption": "Figure 2: Eigenspectra of the learned Koopman generator. (a,b) All 4,608 eigenvalues of the Koopman generator on the complex plane, colored by wavenumber |𝑘|2. Each of the r (32) dispersion branches traces a continuous curve from the imaginary axis into the left half-plane and divides into conjugate pairs from skew-symmetric S. (c) 𝑅𝑒(𝜆) < 0 by construction shifts between regimes and 𝐼𝑚(𝜆) remains symmetric about zero. At 𝜈 = 10−3 the spectrum is compact relative to 𝜈 = 10−5.",
+      "page": 5,
+      "index": 10,
+      "width": 976,
+      "height": 343
+    }
+  ]
+}

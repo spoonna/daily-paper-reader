@@ -1,0 +1,78 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.28073v1/fig-001.webp",
+      "caption": "Figure 1: Overview of the SIMR-NO architecture as a composition of two hierarchical stage blocks corresponding to (25)–(26). Each stage combines a deterministic bicubic upsampling prior with a learned spectrally-informed residual correction scaled by learnable parameters α1 and α2. Stage 1 resolves large-scale coherent structures across the 32→ 64 resolution transition, while Stage 2 refines fine-scale turbulent features across the 64→ 128 transition. Both FNO and SIMR-NO receive the same pseudo high-resolution conditioning field ω̃128; SIMR-NO internally constructs a32 = U128→32(ω̃ 128) before applying the two-stage reconstruction defined in (22).",
+      "page": 10,
+      "index": 1,
+      "width": 1074,
+      "height": 435
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28073v1/fig-002.webp",
+      "caption": "Figure 5: The best-case sample shows enstrophy spectrum E(k) and energy spectrum E(k) and cumulative POD energy results. The SIMR-NO model tracks ground-truth spectral decay across all wavenumbers, while all baseline methods fail to accurately measure high-wavenumber energy content.",
+      "page": 18,
+      "index": 2,
+      "width": 976,
+      "height": 270
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28073v1/fig-003.webp",
+      "caption": "Figure 6: The reconstruction results show test sample results, which serve as the representative test sample. The baseline models show increasing oversmoothing, which results in their complete loss of intermediate-scale vortical structures. SIMR-NO maintains the correct vortical topology and fine-scale filamentary features with substantially lower reconstruction error.",
+      "page": 19,
+      "index": 3,
+      "width": 976,
+      "height": 304
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28073v1/fig-004.webp",
+      "caption": "Figure 7: The enstrophy spectrum E(k) and energy spectrum E(k) and cumulative POD energy for the representative sample provide the three main components of the research study. The SIMR-NO method exhibits better spectral stability than other methods, especially when analyzing high wavenumbers that connect to detailed vortex patterns.",
+      "page": 19,
+      "index": 4,
+      "width": 979,
+      "height": 270
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28073v1/fig-005.webp",
+      "caption": "Figure 4: The reconstruction results show the best results from the test sample. The first row shows input LR (8×8) and pseudo HR (LR8→ 128) and ground truth HR (128× 128) and model predictions. The second row displays absolute pointwise error maps. SIMR-NO achieves the lowest and most spatially uniform error while accurately reconstructing fine-scale vortical structures that all baseline reconstructions failed to detect.",
+      "page": 17,
+      "index": 5,
+      "width": 976,
+      "height": 306
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28073v1/fig-006.webp",
+      "caption": "Figure 3: The box plots display the distribution of relative ℓ2 error throughout all 201 held-out test samples. SIMR-NO demonstrates superior performance because it has the lowest median value 0.2383 together with its most compact interquartile range, which measures between 0.1990 and 0.3010 and its smallest number of high-error outliers.",
+      "page": 17,
+      "index": 6,
+      "width": 736,
+      "height": 419
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28073v1/fig-007.webp",
+      "caption": "Figure 8: The most difficult test sample shows reconstruction results that represent the most complex testing scenario. FNO exhibits its worst-case performance, which surpasses all other baseline systems through its higher MSE results. SIMR-NO maintains correct large-scale vortical topology and produces the most accurate reconstruction under these worst-case conditions.",
+      "page": 20,
+      "index": 7,
+      "width": 976,
+      "height": 304
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28073v1/fig-008.webp",
+      "caption": "Figure 9: The challenging sample shows three different measurements through its enstrophy spectrum, which is described by E(k) and its energy spectrum, which is represented by E(k) and its cumulative POD energy. Baseline methods show their first departure from ground truth between low wavenumber values. The spectral behavior of SIMR-NO maintains its physical consistency throughout all resolved frequency intervals.",
+      "page": 20,
+      "index": 8,
+      "width": 979,
+      "height": 270
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28073v1/fig-009.webp",
+      "caption": "Figure 2: Mean relative ℓ2 error of 201 held-out test samples by the standard deviation. SIMR-NO with the lowest mean error and standard deviation shows superiority in accuracy and consistency compared to all other baseline methods.",
+      "page": 16,
+      "index": 9,
+      "width": 736,
+      "height": 365
+    }
+  ]
+}
