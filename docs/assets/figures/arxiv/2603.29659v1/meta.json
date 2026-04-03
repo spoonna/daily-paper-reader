@@ -1,0 +1,166 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-001.webp",
+      "caption": "FIG. 2: Configurations of plane channel and periodic hill flows: (a) plane channel; and (b) periodic hill with varying hill steepness factor α.",
+      "page": 11,
+      "index": 1,
+      "width": 927,
+      "height": 441
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-002.webp",
+      "caption": "FIG. 12: Streamwise velocity profiles calculated by different turbulence models at untrained friction Reynolds numbers Reτ : (a) Reτ = 550, (b) 5200, and (c) 10000.",
+      "page": 26,
+      "index": 2,
+      "width": 943,
+      "height": 233
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-003.webp",
+      "caption": "FIG. 6: Correlation coefficients of modeled deviatoric Reynolds stress components in periodic hill flows across steepness (α): (a) Rd 11; (b) Rd 12; (c) Rd 22; (d) Rd 33.",
+      "page": 21,
+      "index": 3,
+      "width": 956,
+      "height": 678
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-004.webp",
+      "caption": "FIG. 1: Schematic diagram of the self-scaling tensor basis neural network (STBNN).",
+      "page": 7,
+      "index": 4,
+      "width": 686,
+      "height": 703
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-005.webp",
+      "caption": "FIG. 7: Relative errors of modeled deviatoric Reynolds stress components in periodic hill flows across across steepness (α): (a) Rd 11; (b) Rd 12; (c) Rd 22; (d) Rd 33.",
+      "page": 22,
+      "index": 5,
+      "width": 956,
+      "height": 683
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-006.webp",
+      "caption": "TABLE I: Overview of datasets and varying parameters used for training, testing, and validation in plane channel and periodic hill cases.",
+      "page": 14,
+      "index": 6,
+      "width": 1046,
+      "height": 198
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-007.webp",
+      "caption": "TABLE II: Parameters of the TBNN and STBNN models.",
+      "page": 14,
+      "index": 7,
+      "width": 1037,
+      "height": 241
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-008.webp",
+      "caption": "FIG. 4: Relative errors of modeled deviatoric Reynolds stress components in plane channel flow across friction Reynolds numbers (Reτ ): (a) Rd 11; (b) Rd 12; (c) Rd 22; (d) Rd 33.",
+      "page": 18,
+      "index": 8,
+      "width": 957,
+      "height": 700
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-009.webp",
+      "caption": "FIG. 8: Profiles of deviatoric Reynolds stress components in periodic hill flows at untrained steepness α = 0.8: (a) Rd 11; (b) Rd 12; (c) Rd 22; (d) Rd 33.",
+      "page": 23,
+      "index": 9,
+      "width": 878,
+      "height": 470
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-010.webp",
+      "caption": "FIG. 9: Profiles of deviatoric Reynolds stress components in periodic hill flows at untrained steepness α = 1.2: (a) Rd 11; (b) Rd 12; (c) Rd 22; (d) Rd 33.",
+      "page": 23,
+      "index": 10,
+      "width": 878,
+      "height": 470
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-011.webp",
+      "caption": "FIG. 15: Velocity profiles calculated by different turbulence models in periodic hill flows with varying geometries. The rows correspond to α = 0.8 and 1.2 (top to bottom), while the columns show ū1 and ū2 (left to right).",
+      "page": 28,
+      "index": 11,
+      "width": 877,
+      "height": 452
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-012.webp",
+      "caption": "FIG. 3: Correlation coefficients of modeled deviatoric Reynolds stress components in plane channel flow across friction Reynolds numbers (Reτ ): (a) Rd 11; (b) Rd 12; (c) Rd 22; (d) Rd 33.",
+      "page": 17,
+      "index": 12,
+      "width": 957,
+      "height": 700
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-013.webp",
+      "caption": "FIG. 14: Contours of streamwise velocity at untrained hill steepness α = 1.2 predicted by different turbulence models:(a) LEVM; (b) QEVM; (c) TBNN; (d) DNS; (e) STBNN.",
+      "page": 27,
+      "index": 13,
+      "width": 877,
+      "height": 391
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-014.webp",
+      "caption": "FIG. 13: Contours of streamwise velocity at untrained hill steepness α = 0.8 predicted by different turbulence models:(a) LEVM; (b) QEVM; (c) TBNN; (d) DNS; (e) STBNN.",
+      "page": 27,
+      "index": 14,
+      "width": 877,
+      "height": 389
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-015.webp",
+      "caption": "FIG. 11: Contours of the shear Reynolds stress component at untrained hill steepness α = 1.2: (a) LEVM; (b) QEVM; (c) TBNN; (d) DNS; (e) STBNN.",
+      "page": 24,
+      "index": 15,
+      "width": 877,
+      "height": 392
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-016.webp",
+      "caption": "FIG. 10: Contours of the normal Reynolds stress component at untrained hill steepness α = 1.2: (a) LEVM; (b) QEVM; (c) TBNN; (d) DNS; (e) STBNN.",
+      "page": 24,
+      "index": 16,
+      "width": 877,
+      "height": 389
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-017.webp",
+      "caption": "TABLE VI: Relative errors of the deviatoric Reynolds stress for periodic hill flows.",
+      "page": 20,
+      "index": 17,
+      "width": 620,
+      "height": 423
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-018.webp",
+      "caption": "TABLE V: Correlation coefficients of the deviatoric Reynolds stress for periodic hill flows.",
+      "page": 20,
+      "index": 18,
+      "width": 620,
+      "height": 454
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-019.webp",
+      "caption": "TABLE III: Correlation coefficients of the deviatoric Reynolds stress for plane channel flow.",
+      "page": 16,
+      "index": 19,
+      "width": 668,
+      "height": 454
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29659v1/fig-020.webp",
+      "caption": "TABLE IV: Relative errors of the deviatoric Reynolds stress for plane channel flow.",
+      "page": 16,
+      "index": 20,
+      "width": 677,
+      "height": 423
+    }
+  ]
+}

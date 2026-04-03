@@ -1,0 +1,102 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.00948v1/fig-001.webp",
+      "caption": "Table 3: Loss error and generalization error vs # of sampling points in Example 2 aided by observation points",
+      "page": 26,
+      "index": 1,
+      "width": 692,
+      "height": 342
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00948v1/fig-002.webp",
+      "caption": "Figure 7: The observation-point-aided PINNs outputs of Example 2 on the terminal planes of the outer and inner subdomains, respectively. Left: The horizontal velocity u; Middle: the vertical velocity v; Right: the pressure p; Upper: outside the five-fold-modulation cyclicharmonic interface; Lower: inside the five-fold-modulation cyclic-harmonic interface.",
+      "page": 26,
+      "index": 2,
+      "width": 712,
+      "height": 358
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00948v1/fig-003.webp",
+      "caption": "Table 1: Loss error and generalization error (gen-error) vs # of sampling points in Example 1",
+      "page": 21,
+      "index": 3,
+      "width": 692,
+      "height": 342
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00948v1/fig-004.webp",
+      "caption": "Figure 4: Error distributions between PINNs output and exact solution of Example 1 on the terminal planes of the outer and inner subdomains, respectively. Left: The horizontal velocity u; Middle: the vertical velocity v; Right: the pressure p; Upper: outside the elliptical interface; Lower: inside the elliptical interface.",
+      "page": 22,
+      "index": 4,
+      "width": 712,
+      "height": 359
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00948v1/fig-005.webp",
+      "caption": "Figure 3: PINNs outputs of Example 1 on the terminal planes of the outer and inner subdomains, respectively. Left: The horizontal velocity u; Middle: the vertical velocity v; Right: the pressure p; Upper: outside the elliptical interface; Lower: inside the elliptical interface.",
+      "page": 22,
+      "index": 5,
+      "width": 712,
+      "height": 358
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00948v1/fig-006.webp",
+      "caption": "Figure 11: Error distributions between PINNs output and exact solution of Example 3 at the terminal time. Left: The horizontal velocity u; Middle: the vertical velocity v; Right: the pressure p; Upper: outside the moving interface; Lower: inside the moving interface.",
+      "page": 34,
+      "index": 6,
+      "width": 712,
+      "height": 358
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00948v1/fig-007.webp",
+      "caption": "Figure 9: Training points distribution separated by a solution-driven interface tracked along the training epoches and classified as internal (red) and external (blue) subsets, where projections of interface onto the xy-plane, z = t ∈ {0.01, 0.12, 0.23, 0.34, 0.45, 0.56, 0.67, 0.78, 0.89, 1.00} are plotted as red curves. (a) In the beginning of training, the interface is initially set as a circular cylinder; (b) in the middle of training, the interface keep deforming due to the solution-driven mechanism by the PINNs output; (c) at the end of training, the interface is finally deformed as an irregular shape due to the dependency of PINNs output.",
+      "page": 33,
+      "index": 7,
+      "width": 704,
+      "height": 239
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00948v1/fig-008.webp",
+      "caption": "Figure 10: PINNs outputs of Example 3 at the terminal time. Left: The horizontal velocity u; Middle: the vertical velocity v; Right: the pressure p; Upper: outside the moving interface; Lower: inside the moving interface.",
+      "page": 33,
+      "index": 8,
+      "width": 712,
+      "height": 358
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00948v1/fig-009.webp",
+      "caption": "Table 4: Loss error and generalization error vs # of sampling points in Example 3 with adaptive interface tracking",
+      "page": 32,
+      "index": 9,
+      "width": 692,
+      "height": 342
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00948v1/fig-010.webp",
+      "caption": "Figure 8: Error distributions between the observation-point-aided PINNs output and exact solution of Example 2 on the terminal planes of the outer and inner subdomains, respectively. Left: The horizontal velocity u; Middle: the vertical velocity v; Right: the pressure p; Upper: outside the five-fold-modulation cyclic-harmonic interface; Lower: inside the fivefold-modulation cyclic-harmonic interface.",
+      "page": 27,
+      "index": 10,
+      "width": 712,
+      "height": 358
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00948v1/fig-011.webp",
+      "caption": "Table 2: Loss error and generalization error vs # of sampling points in Example 2 without the aid of observation points",
+      "page": 24,
+      "index": 11,
+      "width": 692,
+      "height": 340
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00948v1/fig-012.webp",
+      "caption": "Figure 6: Without the aid of observation points, error distributions between PINNs output and exact solution of Example 2 on the terminal planes of the outer and inner subdomains, respectively. Left: The horizontal velocity u; Middle: the vertical velocity v; Right: the pressure p; Upper: outside the five-fold-modulation cyclic-harmonic interface; Lower: inside the five-fold-modulation cyclic-harmonic interface.",
+      "page": 24,
+      "index": 12,
+      "width": 712,
+      "height": 359
+    }
+  ]
+}

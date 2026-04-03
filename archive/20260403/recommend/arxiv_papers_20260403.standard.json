@@ -1,0 +1,656 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-04-03T19:59:05.458587+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 13,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 15,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2603.26800v1",
+      "source": "arxiv",
+      "title": "DSO: Dual-Scale Neural Operators for Stable Long-term Fluid Dynamics Forecasting",
+      "abstract": "Long-term fluid dynamics forecasting is a critically important problem in science and engineering. While neural operators have emerged as a promising paradigm for modeling systems governed by partial differential equations (PDEs), they often struggle with long-term stability and precision. We identify two fundamental failure modes in existing architectures: (1) local detail blurring, where fine-scale structures such as vortex cores and sharp gradients are progressively smoothed, and (2) global trend deviation, where the overall motion trajectory drifts from the ground truth during extended rollouts. We argue that these failures arise because existing neural operators treat local and global information processing uniformly, despite their inherently different evolution characteristics in physical systems. To bridge this gap, we propose the Dual-Scale Neural Operator (DSO), which explicitly decouples information processing into two complementary modules: depthwise separable convolutions for fine-grained local feature extraction and an MLP-Mixer for long-range global aggregation. Through numerical experiments on vortex dynamics, we demonstrate that nearby perturbations primarily affect local vortex structure while distant perturbations influence global motion trends, providing empirical validation for our design choice. Extensive experiments on turbulent flow benchmarks show that DSO achieves state-of-the-art accuracy while maintaining robust long-term stability, reducing prediction error by over 88% compared to existing neural operators.",
+      "authors": [
+        "Huanshuo Dong",
+        "Hao Wu",
+        "Hong Wang",
+        "Qin-Yi Zhang",
+        "Zhezheng Hao"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "physics.flu-dyn"
+      ],
+      "published": "2026-03-26T03:03:12+00:00",
+      "link": "https://arxiv.org/pdf/2603.26800v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Dual-scale neural operators for stable fluid dynamics forecasting",
+      "llm_evidence_cn": "用于稳定流体动力学预测的双尺度神经算子",
+      "llm_evidence": "用于稳定流体动力学预测的双尺度神经算子",
+      "canonical_evidence": "用于稳定流体动力学预测的双尺度神经算子",
+      "llm_tldr_en": "Proposes DSO to improve long-term stability and detail preservation in neural operator fluid simulations.",
+      "llm_tldr_cn": "提出 DSO 架构，以提高神经算子流体模拟中的长期稳定性和细节保持。",
+      "llm_tldr": "提出 DSO 架构，以提高神经算子流体模拟中的长期稳定性和细节保持。",
+      "llm_tags": [
+        "query:dl-pde:composite"
+      ],
+      "matched_query_tag": "query:dl-pde:composite",
+      "matched_query_text": "Papers central to 深度学习 神经算子 飞机进气道，尾喷管 PDE求解, especially work that connects or combines: Deep learning neural operators for PDE solving; Deep learning simulation of aircraft engine intakes; Neural network modeling of aircraft exhaust nozzles; Physics-informed neural networks for partial differential equations; Neural operator applications in intake and nozzle flow simulation.",
+      "matched_requirement_id": "req-composite-dl-pde",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.26803v1",
+      "source": "arxiv",
+      "title": "A Comparative Investigation of Thermodynamic Structure-Informed Neural Networks",
+      "abstract": "Physics-informed neural networks (PINNs) offer a unified framework for solving both forward and inverse problems of differential equations, yet their performance and physical consistency strongly depend on how governing laws are incorporated. In this work, we present a systematic comparison of different thermodynamic structure-informed neural networks by incorporating various thermodynamics formulations, including Newtonian, Lagrangian, and Hamiltonian mechanics for conservative systems, as well as the Onsager variational principle and extended irreversible thermodynamics for dissipative systems. Through comprehensive numerical experiments on representative ordinary and partial differential equations, we quantitatively evaluate the impact of these formulations on accuracy, physical consistency, noise robustness, and interpretability. The results show that Newtonian-residual-based PINNs can reconstruct system states but fail to reliably recover key physical and thermodynamic quantities, whereas structure-preserving formulation significantly enhances parameter identification, thermodynamic consistency, and robustness. These findings provide practical guidance for principled design of thermodynamics-consistency model, and lay the groundwork for integrating more general nonequilibrium thermodynamic structures into physics-informed machine learning.",
+      "authors": [
+        "Guojie Li",
+        "Liu Hong"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-03-26T07:39:15+00:00",
+      "link": "https://arxiv.org/pdf/2603.26803v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Systematic comparison of physics-informed neural networks for solving differential equations",
+      "llm_evidence_cn": "系统性比较用于求解微分方程的物理信息神经网络方法",
+      "llm_evidence": "系统性比较用于求解微分方程的物理信息神经网络方法",
+      "canonical_evidence": "系统性比较用于求解微分方程的物理信息神经网络方法",
+      "llm_tldr_en": "This paper evaluates different thermodynamic structures in PINNs for solving forward and inverse PDE problems.",
+      "llm_tldr_cn": "该研究系统评估了不同热力学结构在物理信息神经网络（PINNs）中求解偏微分方程的效果。",
+      "llm_tldr": "该研究系统评估了不同热力学结构在物理信息神经网络（PINNs）中求解偏微分方程的效果。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Physics-informed neural networks for partial differential equations",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.29264v1",
+      "source": "arxiv",
+      "title": "Lie Generator Networks for Nonlinear Partial Differential Equations",
+      "abstract": "Linear dynamical systems are fully characterized by their eigenspectra, accessible directly from the generator of the dynamics. For nonlinear systems governed by partial differential equations, no equivalent theory exists. We introduce Lie Generator Network--Koopman (LGN-KM), a neural operator that lifts nonlinear dynamics into a linear latent space and learns the continuous-time Koopman generator ($L_k$) through a decomposition $L_k = S - D_k$, where $S$ is skew-symmetric representing conservative inter-modal coupling, and $D_k$ is a positive-definite diagonal encoding modal dissipation. This architectural decomposition enforces stability and enables interpretability through direct spectral access to the learned dynamics. On two-dimensional Navier--Stokes turbulence, the generator recovers the known dissipation scaling and a complete multi-branch dispersion relation from trajectory data alone with no physics supervision. Independently trained models at different flow regimes recover matched gauge-invariant spectral structure, exposing a gauge freedom in the Koopman lifting. Because the generator is provably stable, it enables guaranteed long-horizon stability, continuous-time evaluation at arbitrary time, and physics-informed cross-viscosity model transfer.",
+      "authors": [
+        "Shafayeth Jamil",
+        "Rehan Kapadia"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "physics.flu-dyn"
+      ],
+      "published": "2026-03-31T04:59:56+00:00",
+      "link": "https://arxiv.org/pdf/2603.29264v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Lie Generator Networks for nonlinear PDE and Navier-Stokes",
+      "llm_evidence_cn": "用于非线性 PDE 和纳维-斯托克斯方程的李生成器网络",
+      "llm_evidence": "用于非线性 PDE 和纳维-斯托克斯方程的李生成器网络",
+      "canonical_evidence": "用于非线性 PDE 和纳维-斯托克斯方程的李生成器网络",
+      "llm_tldr_en": "Learns continuous-time Koopman generators for nonlinear PDEs, ensuring stability and interpretability.",
+      "llm_tldr_cn": "学习非线性 PDE 的连续时间 Koopman 生成器，确保稳定性和可解释性。",
+      "llm_tldr": "学习非线性 PDE 的连续时间 Koopman 生成器，确保稳定性和可解释性。",
+      "llm_tags": [
+        "query:dl-pde:composite"
+      ],
+      "matched_query_tag": "query:dl-pde:composite",
+      "matched_query_text": "Papers central to 深度学习 神经算子 飞机进气道，尾喷管 PDE求解, especially work that connects or combines: Deep learning neural operators for PDE solving; Deep learning simulation of aircraft engine intakes; Neural network modeling of aircraft exhaust nozzles; Physics-informed neural networks for partial differential equations; Neural operator applications in intake and nozzle flow simulation.",
+      "matched_requirement_id": "req-composite-dl-pde",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.29264v2",
+      "source": "arxiv",
+      "title": "Lie Generator Networks for Nonlinear Partial Differential Equations",
+      "abstract": "Linear dynamical systems are fully characterized by their eigenspectra, accessible directly from the generator of the dynamics. For nonlinear systems governed by partial differential equations, no equivalent theory exists. We introduce Lie Generator Network-Koopman (LGN-KM), a neural operator that lifts nonlinear dynamics into a linear latent space and learns the continuous-time Koopman generator ($L_k$) through a decomposition $L_k = S - D_k$, where $S$ is skew-symmetric representing conservative inter-modal coupling, and $D_k$ is a positive-definite diagonal encoding modal dissipation. This architectural decomposition enforces stability and enables interpretability through direct spectral access to the learned dynamics. On two-dimensional Navier--Stokes turbulence, the generator recovers the known dissipation scaling and a complete multi-branch dispersion relation from trajectory data alone with no physics supervision. Independently trained models at different flow regimes recover matched gauge-invariant spectral structure, exposing a gauge freedom in the Koopman lifting. Because the generator is provably stable, it enables guaranteed long-horizon stability, continuous-time evaluation at arbitrary time, and physics-informed cross-viscosity model transfer.",
+      "authors": [
+        "Shafayeth Jamil",
+        "Rehan Kapadia"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "physics.flu-dyn"
+      ],
+      "published": "2026-03-31T04:59:56+00:00",
+      "link": "https://arxiv.org/pdf/2603.29264v2",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Neural operator for Navier-Stokes and nonlinear PDE dynamics",
+      "llm_evidence_cn": "用于纳维-斯托克斯方程和非线性 PDE 动力学的神经算子",
+      "llm_evidence": "用于纳维-斯托克斯方程和非线性 PDE 动力学的神经算子",
+      "canonical_evidence": "用于纳维-斯托克斯方程和非线性 PDE 动力学的神经算子",
+      "llm_tldr_en": "Introduces Lie Generator Networks to learn stable Koopman generators for nonlinear PDE systems like Navier-Stokes.",
+      "llm_tldr_cn": "引入李生成器网络，为纳维-斯托克斯等非线性 PDE 系统学习稳定的 Koopman 生成器。",
+      "llm_tldr": "引入李生成器网络，为纳维-斯托克斯等非线性 PDE 系统学习稳定的 Koopman 生成器。",
+      "llm_tags": [
+        "query:dl-pde:composite"
+      ],
+      "matched_query_tag": "query:dl-pde:composite",
+      "matched_query_text": "Papers central to 深度学习 神经算子 飞机进气道，尾喷管 PDE求解, especially work that connects or combines: Deep learning neural operators for PDE solving; Deep learning simulation of aircraft engine intakes; Neural network modeling of aircraft exhaust nozzles; Physics-informed neural networks for partial differential equations; Neural operator applications in intake and nozzle flow simulation.",
+      "matched_requirement_id": "req-composite-dl-pde",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.00948v1",
+      "source": "arxiv",
+      "title": "Physics-informed neural networks for solving two-phase flow problems with moving interfaces",
+      "abstract": "In this paper, a meshfree method using physics-informed neural networks (PINNs) is developed for solving two-phase flow problems with moving interfaces, where two immiscible fluids bearing different material properties, are separated by a dynamically evolving interface and interact with each other through interface conditions. Two kinds of distinct scenarios of interface motion are addressed: the prescribed interface motion whose moving velocity is explicitly given, and the solution-driven interface motion whose evolution is determined by the velocity field of two-phase flow. Based upon piecewise deep neural networks and spatiotemporal sampling points/training set in each fluid subdomain, the proposed PINNs framework reformulates the two-phase flow moving interface problem as a least-squares (LS) minimization problem, which involves all residuals of governing equations, interface conditions, boundary conditions and initial conditions. Furthermore, approximation properties of the proposed PINNs approach are analyzed rigorously for the presented two-phase flow model by employing the Reynolds transport theorem in evolving domains, moreover, a comprehensive error estimation is provided to account for additional complexities introduced by the moving interface and the coupling between fluid dynamics and interface evolution. Numerical experiments are carried out to illustrate the effectiveness of the proposed PINNs approach for various configurations of two-phase flow moving interface problems, and to validate the theoretical findings as well. A practical guidance is thus provided for an efficient training set distribution when applying the proposed PINNs approach to two-phase flow moving interface problems in practice.",
+      "authors": [
+        "Qijia Zhai",
+        "Pengtao Sun",
+        "Xiaoping Xie",
+        "Xingwen Zhu",
+        "Chen-Song Zhang"
+      ],
+      "primary_category": "math.NA",
+      "categories": [
+        "math.NA"
+      ],
+      "published": "2026-04-01T14:24:58+00:00",
+      "link": "https://arxiv.org/pdf/2604.00948v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "PINNs for solving two-phase flow PDEs",
+      "llm_evidence_cn": "用于求解两相流PDE的物理信息神经网络",
+      "llm_evidence": "用于求解两相流PDE的物理信息神经网络",
+      "canonical_evidence": "用于求解两相流PDE的物理信息神经网络",
+      "llm_tldr_en": "Develops a PINN framework for solving two-phase flow problems with moving interfaces and immiscible fluids.",
+      "llm_tldr_cn": "开发了一种PINN框架，用于求解具有移动界面和不混溶流体的两相流问题。",
+      "llm_tldr": "开发了一种PINN框架，用于求解具有移动界面和不混溶流体的两相流问题。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Physics-informed neural networks for partial differential equations",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.25122v1",
+      "source": "arxiv",
+      "title": "Incorporating Continuous Dependence Qualifies Physics-Informed Neural Networks for Operator Learning",
+      "abstract": "Physics-informed neural networks (PINNs) have been proven as a promising way for solving various partial differential equations, especially high-dimensional ones and those with irregular boundaries. However, their capabilities in real applications are highly restricted by their poor generalization performance. Inspired by the rigorous mathematical statements on the well-posedness of PDEs, we develop a novel extension of PINNs by incorporating the additional information on the continuous dependence of PDE solutions with respect to parameters and initial/boundary values (abbreviated as cd-PINN). Extensive numerical experiments demonstrate that, with limited labeled data, cd-PINN achieves 1-3 orders of magnitude lower in test MSE than DeepONet and FNO. Therefore, incorporating the continuous dependence of PDE solutions provides a simple way for qualifying PINNs for operator learning.",
+      "authors": [
+        "Guojie Li",
+        "Wuyue Yang",
+        "Liu Hong"
+      ],
+      "primary_category": "math.DS",
+      "categories": [
+        "math.DS",
+        "math.NA"
+      ],
+      "published": "2026-03-26T07:46:20+00:00",
+      "link": "https://arxiv.org/pdf/2603.25122v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "PINNs for operator learning and PDE solving",
+      "llm_evidence_cn": "用于算子学习和PDE求解的PINN",
+      "llm_evidence": "用于算子学习和PDE求解的PINN",
+      "canonical_evidence": "用于算子学习和PDE求解的PINN",
+      "llm_tldr_en": "Enhances PINNs by incorporating continuous dependence on parameters to improve generalization in PDE solving.",
+      "llm_tldr_cn": "通过引入对参数的连续依赖性来增强PINN，提高其在PDE求解中的泛化性能。",
+      "llm_tldr": "通过引入对参数的连续依赖性来增强PINN，提高其在PDE求解中的泛化性能。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Physics-informed neural networks for partial differential equations",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2603.27496v1",
+      "source": "arxiv",
+      "title": "Learnable Viscosity Modulation in Physics-Informed Neural Networks for Incompressible Flow Reconstruction",
+      "abstract": "Accurately and stably solving the incompressible Navier--Stokes equations with physics-informed neural networks (PINNs) remains challenging, particularly for sparse or noisy observations and for flow regimes in which the local balance among convection, diffusion, and pressure is difficult to capture. To address this issue, we propose a framework, denoted as LVM-PINN, which incorporates a learnable viscosity modulation (LVM) mechanism into the PINN residual. Specifically, the model predicts a spatiotemporal scalar field that is embedded directly into the viscous diffusion term of the momentum equations, thereby enabling adaptive modulation of the local dissipation strength during training. This modification improves optimization stability while enhancing the representation of complex flow structures. The effect of the proposed mechanism is further examined through a controlled ablation setting with an otherwise unchanged network architecture, as well as through comparisons with GRU- and residual-attention-based backbone baselines. Numerical experiments on two-dimensional benchmark problems, including the Kovasznay flow and two manufactured forcing flows, show that the proposed framework yields more stable training behavior and more accurate flow reconstruction under sparse and noisy data conditions.",
+      "authors": [
+        "Ke Xu",
+        "Ze Tao",
+        "Fujun Liu"
+      ],
+      "primary_category": "physics.flu-dyn",
+      "categories": [
+        "physics.flu-dyn"
+      ],
+      "published": "2026-03-29T03:23:28+00:00",
+      "link": "https://arxiv.org/pdf/2603.27496v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "PINNs for incompressible Navier-Stokes equations",
+      "llm_evidence_cn": "用于不可压缩NS方程的PINN",
+      "llm_evidence": "用于不可压缩NS方程的PINN",
+      "canonical_evidence": "用于不可压缩NS方程的PINN",
+      "llm_tldr_en": "Improves PINN stability for Navier-Stokes equations using a learnable viscosity modulation mechanism.",
+      "llm_tldr_cn": "通过可学习的粘度调节机制，提高了PINN在求解纳维-斯托克斯方程时的稳定性。",
+      "llm_tldr": "通过可学习的粘度调节机制，提高了PINN在求解纳维-斯托克斯方程时的稳定性。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Physics-informed neural networks for partial differential equations",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2603.25404v1",
+      "source": "arxiv",
+      "title": "Physics-Informed Neural Operator for Electromagnetic Inverse Scattering Problems",
+      "abstract": "This paper proposes a physics-informed neural operator (PINO) framework for solving inverse scattering problems, enabling rapid and accurate reconstructions under diverse measurement conditions. In the proposed approach, the dielectric property is represented as a learnable tensor, while a neural operator is employed to predict the induced current distribution. A hybrid loss function, consisting of the state loss, data loss and total-variation (TV) regularization, is constructed to establish a fully differentiable formulation for a joint optimization of network parameters and dielectric property. To demonstrate the framework's generality and flexibility, PINO is implemented using three representative neural operators, i.e., the Fourier Neural Operator (FNO), the enhanced Fourier Neural Operator (U-FNO) and the Factorized Fourier Neural Operator (F-FNO). Compared with conventional approaches, the proposed framework offers a simpler formulation and universal modeling capability, making it readily applicable to various measurement scenarios, including multi-frequency and phaseless inversion. Numerical simulations demonstrate that the proposed PINO achieves high accuracy and robust reconstruction across samples with and without phase information, under single-frequency and multi-frequency settings in the presence of noise. The results demonstrate that PINO consistently outperforms conventional contrast-source inversion (CSI) methods and provides an efficient, unified solution to complex electromagnetic inverse-scattering problems.",
+      "authors": [
+        "Q. C. Dong",
+        "Zi-Xuan Su",
+        "Qing Huo Liu",
+        "Wen Chen",
+        "Zhizhang",
+        "Chen"
+      ],
+      "primary_category": "physics.comp-ph",
+      "categories": [
+        "physics.comp-ph"
+      ],
+      "published": "2026-03-26T12:53:54+00:00",
+      "link": "https://arxiv.org/pdf/2603.25404v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Physics-informed neural operator for inverse problems",
+      "llm_evidence_cn": "用于反问题的物理信息神经算子",
+      "llm_evidence": "用于反问题的物理信息神经算子",
+      "canonical_evidence": "用于反问题的物理信息神经算子",
+      "llm_tldr_en": "Proposes a PINO framework for solving electromagnetic inverse scattering problems using neural operators.",
+      "llm_tldr_cn": "提出了一种PINO框架，利用神经算子解决电磁逆散射问题。",
+      "llm_tldr": "提出了一种PINO框架，利用神经算子解决电磁逆散射问题。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.29119v1",
+      "source": "arxiv",
+      "title": "Sampling-Horizon Neural Operator Predictors for Nonlinear Control under Delayed Inputs",
+      "abstract": "Modern control systems frequently operate under input delays and sampled state measurements. A common delay-compensation strategy is predictor feedback; however, practical implementations require solving an implicit ODE online, resulting in intractable computational cost. Moreover, predictor formulations typically assume continuously available state measurements, whereas in practice measurements may be sampled, irregular, or temporarily missing due to hardware faults. In this work, we develop two neural-operator predictor-feedback designs for nonlinear systems with delayed inputs and sampled measurements. In the first design, we introduce a sampling-horizon prediction operator that maps the current measurement and input history to the predicted state trajectory over the next sampling interval. In the second design, the neural operator approximates only the delay-compensating predictor, which is then composed with the closed-loop flow between measurements. The first approach requires uniform sampling but yields residual bounds that scale directly with the operator approximation error. In contrast, the second accommodates non-uniform, but bounded sampling schedules at the cost of amplified approximation error, revealing a practical tradeoff between sampling flexibility and approximation sensitivity for the control engineer. For both schemes, we establish semi-global practical stability with explicit neural operator error-dependent bounds. Numerical experiments on a 6-link nonlinear robotic manipulator demonstrate accurate tracking and substantial computational speedup of 25$\\times$ over a baseline approach.",
+      "authors": [
+        "Luke Bhan",
+        "Peter Quawas",
+        "Miroslav Krstic",
+        "Yuanyuan Shi"
+      ],
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.LG",
+        "math.OC"
+      ],
+      "published": "2026-03-31T01:14:34+00:00",
+      "link": "https://arxiv.org/pdf/2603.29119v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Neural operator predictors for nonlinear system control",
+      "llm_evidence_cn": "用于非线性系统控制的神经算子预测器",
+      "llm_evidence": "用于非线性系统控制的神经算子预测器",
+      "canonical_evidence": "用于非线性系统控制的神经算子预测器",
+      "llm_tldr_en": "Develops neural-operator-based predictors for nonlinear systems with input delays and sampled measurements.",
+      "llm_tldr_cn": "为具有输入延迟和采样测量的非线性系统开发了基于神经算子的预测器。",
+      "llm_tldr": "为具有输入延迟和采样测量的非线性系统开发了基于神经算子的预测器。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.28073v1",
+      "source": "arxiv",
+      "title": "SIMR-NO: A Spectrally-Informed Multi-Resolution Neural Operator for Turbulent Flow Super-Resolution",
+      "abstract": "Reconstructing high-resolution turbulent flow fields from severely under-resolved observations is a fundamental inverse problem in computational fluid dynamics and scientific machine learning. Classical interpolation methods fail to recover missing fine-scale structures, while existing deep learning approaches rely on convolutional architectures that lack the spectral and multiscale inductive biases necessary for physically faithful reconstruction at large upscaling factors. We introduce the Spectrally-Informed Multi-Resolution Neural Operator (SIMR-NO), a hierarchical operator learning framework that factorizes the ill-posed inverse mapping across intermediate spatial resolutions, combines deterministic interpolation priors with spectrally gated Fourier residual corrections at each stage, and incorporates local refinement modules to recover fine-scale spatial features beyond the truncated Fourier basis. The proposed method is evaluated on Kolmogorov-forced two-dimensional turbulence, where $128\\times128$ vorticity fields are reconstructed from extremely coarse $8\\times8$ observations representing a $16\\times$ downsampling factor. Across 201 independent test realizations, SIMR-NO achieves a mean relative $\\ell_2$ error of $26.04\\%$ with the lowest error variance among all methods, reducing reconstruction error by $31.7\\%$ over FNO, $26.0\\%$ over EDSR, and $9.3\\%$ over LapSRN. Beyond pointwise accuracy, SIMR-NO is the only method that faithfully reproduces the ground-truth energy and enstrophy spectra across the full resolved wavenumber range, demonstrating physically consistent super-resolution of turbulent flow fields.",
+      "authors": [
+        "Muhammad Abid",
+        "Omer San"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "physics.flu-dyn"
+      ],
+      "published": "2026-03-30T06:17:27+00:00",
+      "link": "https://arxiv.org/pdf/2603.28073v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Neural operator for turbulent flow super-resolution",
+      "llm_evidence_cn": "用于湍流超分辨率的神经算子",
+      "llm_evidence": "用于湍流超分辨率的神经算子",
+      "canonical_evidence": "用于湍流超分辨率的神经算子",
+      "llm_tldr_en": "Introduces SIMR-NO, a hierarchical neural operator for high-resolution turbulent flow field reconstruction.",
+      "llm_tldr_cn": "引入了SIMR-NO，一种用于高分辨率湍流场重建的分层神经算子框架。",
+      "llm_tldr": "引入了SIMR-NO，一种用于高分辨率湍流场重建的分层神经算子框架。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2603.26418v1",
+      "source": "arxiv",
+      "title": "Kantorovich--Kernel Neural Operators: Approximation Theory, Asymptotics, and Neural Network Interpretation",
+      "abstract": "This paper studies a class of multivariate Kantorovich-kernel neural network operators, including the deep Kantorovich-type neural network operators studied by Sharma and Singh. We prove density results, establish quantitative convergence estimates, derive Voronovskaya-type theorems, analyze the limits of partial differential equations for deep composite operators, prove Korovkin-type theorems, and propose inversion theorems. This paper studies a class of multivariate Kantorovich-kernel neural network operators, including the deep Kantorovich-type neural network operators studied by Sharma and Singh. We prove density results, establish quantitative convergence estimates, derive Voronovskaya-type theorems, analyze the limits of partial differential equations for deep composite operators, prove Korovkin-type theorems, and propose inversion theorems. Furthermore, this paper discusses the connection between neural network architectures and the classical positive operators proposed by Chui, Hsu, He, Lorentz, and Korovkin.",
+      "authors": [
+        "Tian-Xiao He"
+      ],
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.FA"
+      ],
+      "published": "2026-03-27T13:46:37+00:00",
+      "link": "https://arxiv.org/pdf/2603.26418v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Approximation theory and PDE limits for deep neural network operators",
+      "llm_evidence_cn": "深度神经网络算子的逼近理论与 PDE 极限分析",
+      "llm_evidence": "深度神经网络算子的逼近理论与 PDE 极限分析",
+      "canonical_evidence": "深度神经网络算子的逼近理论与 PDE 极限分析",
+      "llm_tldr_en": "Provides theoretical analysis and convergence estimates for Kantorovich-kernel neural operators in PDE contexts.",
+      "llm_tldr_cn": "为 PDE 背景下的 Kantorovich 核神经算子提供理论分析和收敛估计。",
+      "llm_tldr": "为 PDE 背景下的 Kantorovich 核神经算子提供理论分析和收敛估计。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.01961v1",
+      "source": "arxiv",
+      "title": "Generalization Bounds and Statistical Guarantees for Multi-Task and Multiple Operator Learning with MNO Networks",
+      "abstract": "Multiple operator learning concerns learning operator families $\\{G[α]:U\\to V\\}_{α\\in W}$ indexed by an operator descriptor $α$. Training data are collected hierarchically by sampling operator instances $α$, then input functions $u$ per instance, and finally evaluation points $x$ per input, yielding noisy observations of $G[α][u](x)$. While recent work has developed expressive multi-task and multiple operator learning architectures and approximation-theoretic scaling laws, quantitative statistical generalization guarantees remain limited. We provide a covering-number-based generalization analysis for separable models, focusing on the Multiple Neural Operator (MNO) architecture: we first derive explicit metric-entropy bounds for hypothesis classes given by linear combinations of products of deep ReLU subnetworks, and then combine these complexity bounds with approximation guarantees for MNO to obtain an explicit approximation-estimation tradeoff for the expected test error on new (unseen) triples $(α,u,x)$. The resulting bound makes the dependence on the hierarchical sampling budgets $(n_α,n_u,n_x)$ transparent and yields an explicit learning-rate statement in the operator-sampling budget $n_α$, providing a sample-complexity characterization for generalization across operator instances. The structure and architecture can also be viewed as a general purpose solver or an example of a \"small'' PDE foundation model, where the triples are one form of multi-modality.",
+      "authors": [
+        "Adrien Weihs",
+        "Hayden Schaeffer"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-04-02T12:23:35+00:00",
+      "link": "https://arxiv.org/pdf/2604.01961v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Generalization analysis for Multiple Neural Operator (MNO) architectures",
+      "llm_evidence_cn": "多神经算子 (MNO) 架构的泛化性分析",
+      "llm_evidence": "多神经算子 (MNO) 架构的泛化性分析",
+      "canonical_evidence": "多神经算子 (MNO) 架构的泛化性分析",
+      "llm_tldr_en": "Provides statistical guarantees and generalization bounds for multi-task operator learning architectures.",
+      "llm_tldr_cn": "为多任务算子学习架构提供统计保证和泛化界限分析。",
+      "llm_tldr": "为多任务算子学习架构提供统计保证和泛化界限分析。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.29237v1",
+      "source": "arxiv",
+      "title": "Stochastic Dimension Implicit Functional Projections for Exact Integral Conservation in High-Dimensional PINNs",
+      "abstract": "Enforcing exact macroscopic conservation laws, such as mass and energy, in neural partial differential equation (PDE) solvers is computationally challenging in high dimensions. Traditional discrete projections rely on deterministic quadrature that scales poorly and restricts mesh-free formulations like PINNs. Furthermore, high-order operators incur heavy memory overhead, and generic optimization often lacks convergence guarantees for non-convex conservation manifolds. To address this, we propose the Stochastic Dimension Implicit Functional Projection (SDIFP) framework. Instead of projecting discrete vectors, SDIFP applies a global affine transformation to the continuous network output. This yields closed-form solutions for integral constraints via detached Monte Carlo (MC) quadrature, bypassing spatial grid dependencies. For scalable training, we introduce a doubly-stochastic unbiased gradient estimator (DS-UGE). By decoupling spatial sampling from differential operator subsampling, the DS-UGE reduces memory complexity from $\\mathcal{O}(M \\times N_{\\mathcal{L}})$ to $\\mathcal{O}(N \\times |\\mathcal{I}|)$. SDIFP mitigates sampling variance, preserves solution regularity, and maintains $\\mathcal{O}(1)$ inference efficiency, providing a scalable, mesh-free approach for solving conservative high-dimensional PDEs.",
+      "authors": [
+        "Zhangyong Liang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "math.NA"
+      ],
+      "published": "2026-03-31T04:07:51+00:00",
+      "link": "https://arxiv.org/pdf/2603.29237v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Exact conservation laws in high-dimensional PINN solvers",
+      "llm_evidence_cn": "高维 PINN 求解器中的精确守恒律实现",
+      "llm_evidence": "高维 PINN 求解器中的精确守恒律实现",
+      "canonical_evidence": "高维 PINN 求解器中的精确守恒律实现",
+      "llm_tldr_en": "Proposes SDIFP to enforce exact integral conservation laws in neural PDE solvers via functional projections.",
+      "llm_tldr_cn": "提出 SDIFP 框架，通过函数投影在神经 PDE 求解器中强制执行精确的积分守恒律。",
+      "llm_tldr": "提出 SDIFP 框架，通过函数投影在神经 PDE 求解器中强制执行精确的积分守恒律。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Physics-informed neural networks for partial differential equations",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2603.27430v1",
+      "source": "arxiv",
+      "title": "Neural operator accelerated atomistic to continuum concurrent multiscale simulations of viscoelasticity",
+      "abstract": "We present a neural-operator-accelerated concurrent multiscale framework that couples atomistic simulations with continuum finite-element analysis for history-dependent materials, thereby making atomistic-continuum multiscale simulations of viscoelastic materials tractable. The approach replaces direct molecular dynamics (MD) evaluation of the constitutive response with a Recurrent Neural Operator (RNO) surrogate trained on atomistic simulations. The surrogate learns the strain-history-to-stress operator from molecular dynamics simulations and provides a discretization-independent approximation of the atomistic constitutive mapping, enabling efficient evaluation of stresses and latent internal variables at each quadrature point. The framework is implemented within an explicit finite-element solver, where the constitutive update reduces to inexpensive operator evaluations rather than repeated MD solves. Memory effects are represented through learned internal states, and transfer learning across temperature enables the surrogate to capture thermally dependent viscoelastic behavior. The method is assessed using polyurea through cyclic loading, Taylor impact, and plate impact simulations and compared with an experimentally calibrated viscoelastic polyurea model and a Johnson-Cook model. The neural-operator surrogate reproduces correct viscoelastic response while enabling atomistically informed dynamic simulations at scales that are not tractable with direct MD-FEM coupling.",
+      "authors": [
+        "Tanvir Sohail",
+        "Burigede Liu",
+        "Swarnava Ghosh"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.comp-ph"
+      ],
+      "published": "2026-03-28T22:10:25+00:00",
+      "link": "https://arxiv.org/pdf/2603.27430v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Recurrent Neural Operator for accelerating continuum simulations",
+      "llm_evidence_cn": "用于加速连续介质模拟的循环神经算子",
+      "llm_evidence": "用于加速连续介质模拟的循环神经算子",
+      "canonical_evidence": "用于加速连续介质模拟的循环神经算子",
+      "llm_tldr_en": "Uses Recurrent Neural Operators to replace expensive MD evaluations in multiscale continuum simulations.",
+      "llm_tldr_cn": "使用循环神经算子在多尺度连续介质模拟中替代昂贵的分子动力学计算。",
+      "llm_tldr": "使用循环神经算子在多尺度连续介质模拟中替代昂贵的分子动力学计算。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.29249v1",
+      "source": "arxiv",
+      "title": "A Unified Weighted-Loss Physics-Informed Neural Network for Boundary Layer Problems in Singularly Perturbed PDEs",
+      "abstract": "Singularly perturbed partial differential equations arise in many applications, including magnetohydrodynamic duct flows, chemical reaction transport systems, and Poisson Boltzmann electrostatics. These problems are characterized by sharp boundary layers and pronounced multiscale behavior, posing significant challenges for numerical methods. Existing approaches, particularly machine learning based methods, often rely on explicit asymptotic decompositions or specialized architectures, increasing implementation complexity and leading to optimization imbalance in stiff regimes. In this work, we propose a unified learning framework based on a weighted loss formulation within the standard physics informed neural network setting. The proposed method requires only prior knowledge of the boundary layer thickness, while the boundary layer locations are automatically identified during training. The resulting formulation avoids problem specific architectural modifications and remains applicable across different equation types. Numerical experiments on both scalar and coupled reaction diffusion and convection diffusion reaction systems, defined on regular and irregular domains, demonstrate robust performance for boundary layer thickness as small as $10^{-10}$ while maintaining high solution accuracy.",
+      "authors": [
+        "Wei-Fan Hu",
+        "Shi-Xiang Zhong",
+        "Po-Wen Hsieh",
+        "Chung-Kai Chen",
+        "Te-Sheng Lin"
+      ],
+      "primary_category": "math.NA",
+      "categories": [
+        "math.NA"
+      ],
+      "published": "2026-03-31T04:18:26+00:00",
+      "link": "https://arxiv.org/pdf/2603.29249v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Weighted-loss PINN for boundary layer problems in fluid-like PDEs",
+      "llm_evidence_cn": "用于流体类 PDE 边界层问题的加权损失 PINN",
+      "llm_evidence": "用于流体类 PDE 边界层问题的加权损失 PINN",
+      "canonical_evidence": "用于流体类 PDE 边界层问题的加权损失 PINN",
+      "llm_tldr_en": "Proposes a unified PINN framework with weighted loss to handle sharp boundary layers in singular PDEs.",
+      "llm_tldr_cn": "提出一种统一的加权损失 PINN 框架，用于处理奇异 PDE 中的尖锐边界层。",
+      "llm_tldr": "提出一种统一的加权损失 PINN 框架，用于处理奇异 PDE 中的尖锐边界层。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Physics-informed neural networks for partial differential equations",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2603.29659v1",
+      "source": "arxiv",
+      "title": "Self-scaling tensor basis neural network for Reynolds stress modeling of wall-bounded turbulence",
+      "abstract": "Recent advances in data-driven turbulence modeling have established tensor basis neural networks (TBNN) as a physically grounded framework for Reynolds-stress closure in Reynolds-averaged Navier-Stokes (RANS) simulations. However, their robustness in wall-bounded turbulent flows remains limited across Reynolds numbers and geometries due to the lack of an intrinsic scaling mechanism. In this work, we propose a self-scaling tensor basis neural network (STBNN) for Reynolds-stress modeling of wall-bounded turbulence. The model incorporates an invariant velocity-gradient normalization derived from the first two invariants of the velocity-gradient tensor, providing an intrinsic and geometry-independent scale that balances strain and rotation effects without relying on empirical coefficients or wall-distance inputs. Owing to its frame-indifferent formulation, the approach preserves Galilean and rotational invariance while maintaining a physically interpretable representation of Reynolds-stress anisotropy. STBNN is evaluated through a priori and a posteriori studies using direct numerical simulation (DNS) data of canonical wall-bounded flows, including plane channel and periodic hill flows. In a priori tests, the model accurately reproduces Reynolds-stress anisotropy, with correlation coefficients exceeding 99% and relative errors below 10%, while capturing near-wall scaling and logarithmic-layer behavior. In a posteriori RANS simulations, STBNN predicts mean velocity profiles in close agreement with DNS and improves prediction of separation and reattachment compared with linear and quadratic eddy-viscosity models and the baseline TBNN. Notably, a model trained at low Reynolds numbers generalizes to higher Reynolds numbers and unseen geometries. These results demonstrate the effectiveness of the proposed framework for data-driven Reynolds-stress modeling in wall-bounded turbulent flows.",
+      "authors": [
+        "Zelong Yuan",
+        "Yuzhu Pearl Li"
+      ],
+      "primary_category": "physics.flu-dyn",
+      "categories": [
+        "physics.flu-dyn"
+      ],
+      "published": "2026-03-31T12:21:38+00:00",
+      "link": "https://arxiv.org/pdf/2603.29659v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Neural network for turbulence modeling in wall-bounded flows",
+      "llm_evidence_cn": "壁面约束流动中湍流建模的神经网络",
+      "llm_evidence": "壁面约束流动中湍流建模的神经网络",
+      "canonical_evidence": "壁面约束流动中湍流建模的神经网络",
+      "llm_tldr_en": "Proposes a self-scaling neural network for Reynolds-stress modeling in wall-bounded turbulent flows.",
+      "llm_tldr_cn": "提出了一种自缩放神经网络，用于壁面约束湍流中的雷诺应力建模。",
+      "llm_tldr": "提出了一种自缩放神经网络，用于壁面约束湍流中的雷诺应力建模。",
+      "llm_tags": [
+        "query:dl-pde:composite"
+      ],
+      "matched_query_tag": "query:dl-pde:composite",
+      "matched_query_text": "Papers central to 深度学习 神经算子 飞机进气道，尾喷管 PDE求解, especially work that connects or combines: Deep learning neural operators for PDE solving; Deep learning simulation of aircraft engine intakes; Neural network modeling of aircraft exhaust nozzles; Physics-informed neural networks for partial differential equations; Neural operator applications in intake and nozzle flow simulation.",
+      "matched_requirement_id": "req-composite-dl-pde",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.00689v1",
+      "source": "arxiv",
+      "title": "Performance of Neural and Polynomial Operator Surrogates",
+      "abstract": "We consider the problem of constructing surrogate operators for parameter-to-solution maps arising from parametric partial differential equations, where repeated forward model evaluations are computationally expensive. We present a systematic empirical comparison of neural operator surrogates, including a reduced-basis neural operator trained with $L^2_μ$ and $H^1_μ$ objectives and the Fourier neural operator, against polynomial surrogate methods, specifically a reduced-basis sparse-grid surrogate and a reduced-basis tensor-train surrogate. All methods are evaluated on a linear parametric diffusion problem and a nonlinear parametric hyperelasticity problem, using input fields with algebraically decaying spectral coefficients at varying rates of decay $s$. To enable fair comparisons, we analyze ensembles of surrogate models generated by varying hyperparameters and compare the resulting Pareto frontiers of cost versus approximation accuracy, decomposing cost into contributions from data generation, setup, and evaluation. Our results show that no single method is universally superior. Polynomial surrogates achieve substantially better data efficiency for smooth input fields ($s \\geq 2$), with convergence rates for the sparse-grid surrogate in agreement with theoretical predictions. For rough inputs ($s \\leq 1$), the Fourier neural operator displays the fastest convergence rates. Derivative-informed training consistently improves data efficiency over standard $L^2_μ$ training, providing a competitive alternative for rough inputs in the low-data regime when Jacobian information is available at reasonable cost. These findings highlight the importance of matching the surrogate methodology to the regularity of the problem as well as accuracy demands and computational constraints of the application.",
+      "authors": [
+        "Josephine Westermann",
+        "Benno Huber",
+        "Thomas O'Leary-Roseberry",
+        "Jakob Zech"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "math.NA"
+      ],
+      "published": "2026-04-01T09:46:25+00:00",
+      "link": "https://arxiv.org/pdf/2604.00689v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Comparison of neural operator surrogates for PDEs",
+      "llm_evidence_cn": "PDE神经算子代理模型的性能比较",
+      "llm_evidence": "PDE神经算子代理模型的性能比较",
+      "canonical_evidence": "PDE神经算子代理模型的性能比较",
+      "llm_tldr_en": "Systematically compares neural operators like FNO against polynomial surrogates for parametric PDE solutions.",
+      "llm_tldr_cn": "系统地比较了FNO等神经算子与多项式代理模型在参数化PDE求解中的性能。",
+      "llm_tldr": "系统地比较了FNO等神经算子与多项式代理模型在参数化PDE求解中的性能。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    }
+  ]
+}
