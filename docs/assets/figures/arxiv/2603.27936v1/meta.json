@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.27936v1/fig-001.webp",
+      "caption": "Figure 1: Architecture of the Deflation-PINN.",
+      "page": 5,
+      "index": 1,
+      "width": 829,
+      "height": 402
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27936v1/fig-002.webp",
+      "caption": "Figure 2: Vector field plots of one diagonal and two rotated solutions, denoted by D1, R1 and R3 in suffix, with Deflation PINNs and FEM.",
+      "page": 9,
+      "index": 2,
+      "width": 660,
+      "height": 498
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27936v1/fig-003.webp",
+      "caption": "Figure 3: Diagonally stable molecular alignments: (a) D1, (b) D2 states and rotated stable molecular alignments: (c) R1, (d) R2, (e) R3, (f) R4 states. See Maity et al. (2021a) for more details.",
+      "page": 15,
+      "index": 3,
+      "width": 694,
+      "height": 637
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27936v1/fig-004.webp",
+      "caption": "Figure 4: Vector field plots of one diagonal and two rotated solutions, denoted by D1, R1 and R3 in suffix, with Deflation PINNs and FEM.",
+      "page": 16,
+      "index": 4,
+      "width": 660,
+      "height": 500
+    }
+  ]
+}

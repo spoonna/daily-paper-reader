@@ -1,0 +1,94 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.02124v1/fig-001.webp",
+      "caption": "Figure 11: The trend of some chosen points of FEM solution and VarMiON prediction for the velocity along x− and y directions and pressure, on left, center, and right, respectively. The pressure is the pressure perturbation with respect to the initial value.",
+      "page": 15,
+      "index": 1,
+      "width": 900,
+      "height": 233
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02124v1/fig-002.webp",
+      "caption": "Figure 10: The comparison between the FEM solution and VarMiON prediction at t = 0.005 (s) for the velocity along x− and y directions and pressure, on top, center and bottom, respectively. The pressure is the pressure perturbation with respect to the initial value.",
+      "page": 15,
+      "index": 2,
+      "width": 829,
+      "height": 555
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02124v1/fig-003.webp",
+      "caption": "Figure 2: VarMiON scheme for the time-dependent Stokes equation. The network prediction N̂ is given as a dot product between the outcome of the trunks and the outcome of the branches starting from the input data (ρ, µ, F̂ , Û0, P̂0, Ĝ).",
+      "page": 7,
+      "index": 3,
+      "width": 911,
+      "height": 868
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02124v1/fig-004.webp",
+      "caption": "Figure 3: The meshes used for the FEM solution of (a) the cavity flow, (b) the flow past a cylinder, and (c) the contraction flow.",
+      "page": 10,
+      "index": 4,
+      "width": 927,
+      "height": 325
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02124v1/fig-005.webp",
+      "caption": "Figure 8: The comparison between the FEM solution and VarMiON prediction at t = 0.005 (s) for the velocity along x− and y directions and pressure, on top, center and bottom, respectively. The pressure is the pressure perturbation with respect to the initial value.",
+      "page": 14,
+      "index": 5,
+      "width": 829,
+      "height": 549
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02124v1/fig-006.webp",
+      "caption": "Figure 9: The trend of some chosen points of FEM solution and VarMiON prediction for the velocity along x− and y directions and pressure, on left, center, and right, respectively. The pressure is the pressure perturbation with respect to the initial value.",
+      "page": 14,
+      "index": 6,
+      "width": 917,
+      "height": 233
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02124v1/fig-007.webp",
+      "caption": "Figure 5: The probability density of the relative L2-error computed on the testing set. The panels are related to the cavity flow, the flow past a cylinder, and the contraction flow, on the left (a), center (b) and right (c), respectively.",
+      "page": 13,
+      "index": 7,
+      "width": 845,
+      "height": 234
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02124v1/fig-008.webp",
+      "caption": "Figure 6: The comparison between the FEM solution and VarMiON prediction for the velocity along x− and y directions and pressure, on left, center and right, respectively. The plots correspond to t = 0.21, 0.31, 0.42, 0.52, 0.63 (s).",
+      "page": 13,
+      "index": 8,
+      "width": 904,
+      "height": 537
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02124v1/fig-009.webp",
+      "caption": "Figure 7: The trend of some chosen points of FEM solution and VarMiON prediction for the velocity along x− and y directions and pressure, on left, center, and right, respectively.",
+      "page": 13,
+      "index": 9,
+      "width": 913,
+      "height": 233
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02124v1/fig-010.webp",
+      "caption": "Table 1: FEM and VarMiON correspondence. Each sub-network learns the matrix in red.",
+      "page": 8,
+      "index": 10,
+      "width": 933,
+      "height": 773
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02124v1/fig-011.webp",
+      "caption": "Figure 4: The loss function computed on the training set (red line) and the validation one (blue line), respectively. On the left, the behaviour of the losses, on the right, their semi-log. The panels are related to the cavity flow, the flow past a cylinder, and the contraction flow, on the top (a)-(b), center (c)-(d) and bottom (e)-(f), respectively.",
+      "page": 12,
+      "index": 11,
+      "width": 758,
+      "height": 910
+    }
+  ]
+}
