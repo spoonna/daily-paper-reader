@@ -1,0 +1,222 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-001.webp",
+      "caption": "Figure 3: The overall computational workflow of MConv operator based on the simplified local weight. The tensor shape [bs, c, h,w] represents the feature map dimensions, corresponding to batch size, the number of channel, height, and width.",
+      "page": 6,
+      "index": 1,
+      "width": 967,
+      "height": 239
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-002.webp",
+      "caption": "Table 2: The computational time and wall-time acceleration ratio for solving the PPE using HyDEA over 20,000∆t for 2D lid-driven cavity flow with an embedded stationary circular cylinder.",
+      "page": 11,
+      "index": 2,
+      "width": 993,
+      "height": 776
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-003.webp",
+      "caption": "Figure 8: Velocity fields for 2D lid-driven cavity flow with an embedded stationary circular cylinder by ICPCG and HyDEA (ICPCG + DLSM-1MConv). (a)-(d) u and v at the 1500th time step. (e)-(h) u and v at the 6000th time step.",
+      "page": 11,
+      "index": 3,
+      "width": 993,
+      "height": 270
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-004.webp",
+      "caption": "Figure 12: Schematic diagram of 2D flow past an elliptical cylinder.",
+      "page": 15,
+      "index": 4,
+      "width": 567,
+      "height": 379
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-005.webp",
+      "caption": "Figure 13: Iterative residuals of solving the PPE for 2D flow past an elliptical cylinder. (a) 10th time step. (b) 100th time step. (c) 10,000th time step.",
+      "page": 15,
+      "index": 5,
+      "width": 972,
+      "height": 282
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-006.webp",
+      "caption": "Figure 24: Schematic diagram of 2D flapping elliptical wing at Re = 75. (a) Flow boundary conditions and geometric configuration. (b) Computational grid.",
+      "page": 21,
+      "index": 6,
+      "width": 955,
+      "height": 492
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-007.webp",
+      "caption": "Figure 25: Iterative residuals of solving the PPE for 2D flapping elliptical wing at Re = 75. (a) 10th time step. (b) 100th time step. (c) 3000th time step.",
+      "page": 21,
+      "index": 7,
+      "width": 971,
+      "height": 281
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-008.webp",
+      "caption": "Figure 4: Schematic illustration of the multi-level distance vector map construction strategy.",
+      "page": 7,
+      "index": 8,
+      "width": 966,
+      "height": 547
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-009.webp",
+      "caption": "Figure 5: Architecture of deep operator network.",
+      "page": 7,
+      "index": 9,
+      "width": 983,
+      "height": 558
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-010.webp",
+      "caption": "Figure 27: Vorticity fields for 2D flapping elliptical wing at Re = 75 by ICPCG and HyDEA (ICPCG + DLSM-3-MConv). (a)-(b) 2600th time step. (c)-(d) 2800th time step. (e)-(f) 3000th time step. (g)-(h) 3200th time step.",
+      "page": 22,
+      "index": 10,
+      "width": 997,
+      "height": 456
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-011.webp",
+      "caption": "Figure 7: Iterative residuals of solving the PPE for 2D lid-driven cavity flow with an embedded stationary circular cylinder at the 10th, 100th and 1000th time steps. (a)-(c) HyDEA (CG + DLSM-1-Conv/MConv). (d)-(f) HyDEA (ICPCG + DLSM-1-Conv/MConv). (g)-(i) HyDEA (JPCG + DLSM-1Conv/MConv). (j)-(l) HyDEA (MGPCG-4 + DLSM-1-Conv/MConv).",
+      "page": 10,
+      "index": 11,
+      "width": 972,
+      "height": 1197
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-012.webp",
+      "caption": "Figure 11: Vorticity fields for 2D flow past a circular cylinder at Re = 100 by ICPCG and HyDEA (ICPCG + DLSM-2-MConv). (a)-(b) 10,000th time step. (c)-(d) 12,000th time step. (e)-(f) 14,000th time step.",
+      "page": 14,
+      "index": 12,
+      "width": 927,
+      "height": 929
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-013.webp",
+      "caption": "Figure 19: Vorticity fields for 2D flow past the DARPA SUBOFF profile by ICPCG and HyDEA (ICPCG + DLSM-2-MConv). (a) 10,000th time step. (b) 12,000th time step. (c) 14,000th time step.",
+      "page": 18,
+      "index": 13,
+      "width": 929,
+      "height": 930
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-014.webp",
+      "caption": "Figure 28: The temporal evolution of the CL and CD for 2D flapping elliptical wing at Re = 75. T = 1 f represents the flapping period.",
+      "page": 23,
+      "index": 14,
+      "width": 711,
+      "height": 520
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-015.webp",
+      "caption": "Table 4: Some global coefficients of flow past a circular cylinder at Re = 100.",
+      "page": 13,
+      "index": 15,
+      "width": 812,
+      "height": 194
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-016.webp",
+      "caption": "Figure 10: Iterative residuals of solving the PPE at 1st, 100th and 10,000th time steps for 2D flow past a circular cylinder at Re = 100. (a)-(c) HyDEA (ICPCG + DLSM-2-Conv/MConv). (d)-(f) HyDEA (MGPCG-4 + DLSM-2-Conv/MConv).",
+      "page": 13,
+      "index": 16,
+      "width": 967,
+      "height": 586
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-017.webp",
+      "caption": "Figure 1: The workflow of HyDEA.",
+      "page": 4,
+      "index": 17,
+      "width": 850,
+      "height": 581
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-018.webp",
+      "caption": "Figure 20: Schematic diagram of 2D flow past an inline oscillating cylinder.",
+      "page": 19,
+      "index": 18,
+      "width": 567,
+      "height": 380
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-019.webp",
+      "caption": "Figure 21: Iterative residuals of solving the PPE for 2D flow past an inline oscillating cylinder. (a) 10th time step. (b) 100th time step. (c) 10,000th time step.",
+      "page": 19,
+      "index": 19,
+      "width": 971,
+      "height": 282
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-020.webp",
+      "caption": "Figure 16: Schematic diagram of 2D flow past the DARPA SUBOFF profile.",
+      "page": 17,
+      "index": 20,
+      "width": 567,
+      "height": 380
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-021.webp",
+      "caption": "Figure 17: Iterative residuals of solving the PPE for 2D flow past the DARPA SUBOFF profile. (a) 10th time step. (b) 100th time step. (c) 10,000th time step.",
+      "page": 17,
+      "index": 21,
+      "width": 972,
+      "height": 282
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-022.webp",
+      "caption": "Figure 9: Schematic diagram of 2D flow past a circular cylinder at Re = 100. (a) Flow boundary conditions and geometric configuration. (b) Computational grid.",
+      "page": 12,
+      "index": 22,
+      "width": 988,
+      "height": 384
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-023.webp",
+      "caption": "Figure A.29: Computational time required to solve the PPE over 20,000∆t in the simulation of 2D flow past a circular cylinder at Re = 100, using different NumDLSM values.",
+      "page": 24,
+      "index": 23,
+      "width": 431,
+      "height": 356
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-024.webp",
+      "caption": "Figure A.30: Computational time required to solve the PPE over 20,000∆t in the simulation of 2D flow past a circular cylinder at Re = 100, using different NumCG−type values.",
+      "page": 24,
+      "index": 24,
+      "width": 431,
+      "height": 356
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-025.webp",
+      "caption": "Figure 6: Schematic diagram of 2D lid-driven cavity flow with an embedded stationary circular cylinder. (a) Flow boundary conditions and geometric configuration. (b) Computational grid.",
+      "page": 9,
+      "index": 25,
+      "width": 889,
+      "height": 465
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-026.webp",
+      "caption": "Figure 23: Vorticity fields for 2D flow past an inline oscillating cylinder by ICPCG and HyDEA (ICPCG + DLSM-2-MConv). (a) 10,000th time step. (b) 11,500th time step. (c) 14,500th time step.",
+      "page": 20,
+      "index": 26,
+      "width": 927,
+      "height": 930
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01800v1/fig-027.webp",
+      "caption": "Figure 15: Vorticity fields for 2D flow past an elliptical cylinder by ICPCG and HyDEA (ICPCG + DLSM-2-MConv). (a) 10,000th time step. (b) 12,000th time step. (c) 14,000th time step.",
+      "page": 16,
+      "index": 27,
+      "width": 929,
+      "height": 930
+    }
+  ]
+}

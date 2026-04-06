@@ -1,0 +1,94 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.02483v1/fig-001.webp",
+      "caption": "Figure 9: Feature transformation results for Case 4: longitudinal slice density + velocity components to longitudinal projected density + velocity components in longitudinal direction.",
+      "page": 15,
+      "index": 1,
+      "width": 979,
+      "height": 463
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02483v1/fig-002.webp",
+      "caption": "Figure 10: Feature transformation results for Case 5: transverse slice density at z = 2 mm to transverse slice density at z = 10 mm.",
+      "page": 15,
+      "index": 2,
+      "width": 976,
+      "height": 211
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02483v1/fig-003.webp",
+      "caption": "Figure 1: Schematic of the SwinV2-UNet architecture used for spatiotemporal prediction.",
+      "page": 7,
+      "index": 3,
+      "width": 976,
+      "height": 352
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02483v1/fig-004.webp",
+      "caption": "Figure 4: Spatiotemporal prediction results for density on transverse planes at z = 2 mm and z = 10 mm. Columns show input, target, baseline model prediction, and local prediction error.",
+      "page": 10,
+      "index": 4,
+      "width": 976,
+      "height": 368
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02483v1/fig-005.webp",
+      "caption": "Figure 8: Feature transformation results for Case 3: longitudinal projected density + velocity components to longitudinal slice density + velocity components.",
+      "page": 14,
+      "index": 5,
+      "width": 979,
+      "height": 465
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02483v1/fig-006.webp",
+      "caption": "Figure 7: Feature transformation results for Case 2: longitudinal projected density to transverse slice density reconstruction.",
+      "page": 13,
+      "index": 6,
+      "width": 976,
+      "height": 398
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02483v1/fig-007.webp",
+      "caption": "Table 1: Curated simulation datasets for argon (35 bar) injection into nitrogen (5 bar). Each case label encodes grid resolution (C/F), turbulence model, equation of state, and Schmidt number (if applicable).",
+      "page": 4,
+      "index": 7,
+      "width": 798,
+      "height": 246
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02483v1/fig-008.webp",
+      "caption": "Figure 5: Feature transformation results for Case 1: longitudinal projected density to velocity components (u, v, w) using Euclidean loss.",
+      "page": 12,
+      "index": 8,
+      "width": 976,
+      "height": 456
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02483v1/fig-009.webp",
+      "caption": "Figure 6: Feature transformation results for Case 1: longitudinal slice density to velocity components (u, v, w) using Euclidean loss.",
+      "page": 12,
+      "index": 9,
+      "width": 976,
+      "height": 456
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02483v1/fig-010.webp",
+      "caption": "Figure 2: Spatiotemporal prediction results for longitudinal projected flow variables. Each row corresponds to a physical variable (ρ, u, v, w). Columns show: input at t = 1.00 s, ground-truth target at t = 1.01 s, baseline model (trained with single-step rollout) prediction at t = 1.01 s, and local prediction error at t = 1.01 s.",
+      "page": 9,
+      "index": 10,
+      "width": 976,
+      "height": 552
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02483v1/fig-011.webp",
+      "caption": "Figure 3: Spatiotemporal prediction results for longitudinal slice variables. Layout as in Figure 2, with rows for density and velocity components (u, v, w) on planar slices.",
+      "page": 9,
+      "index": 11,
+      "width": 976,
+      "height": 552
+    }
+  ]
+}
