@@ -1,0 +1,134 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-001.webp",
+      "caption": "Figure 1: Visualization over the square (−1, 1)2 of a sample hidden-layer neuron ψm(x) in TransNet associated with B1.5(0) in two dimensions, where the dashed line indicates the corresponding partition hyperplane. From left to right: γ = 2, 6, 14.",
+      "page": 6,
+      "index": 1,
+      "width": 932,
+      "height": 271
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-002.webp",
+      "caption": "Figure 2: Distribution histograms of the hidden-layer neuron activation values in TransNet associated with B1.5(0) in two dimensions. Activation values are collected from 500 input points over the unit square (−1, 1)2, with each point corresponding to 1000 different hidden-layer neurons, illustrating how the response pattern and concentration vary along with the shape parameter γ. From left to right: γ = 2, 6, 14.",
+      "page": 6,
+      "index": 2,
+      "width": 882,
+      "height": 282
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-003.webp",
+      "caption": "Figure 5: Distribution histograms of the hidden-layer neuron activation values in the proposed GTransNet associated with B1.5(0) in two dimensions. Activation values are collected from 500 input points over the unit square (−1, 1)2, with each point corresponding to 2000 different neurons in the first hidden layer and 1000 neurons in the second and third hidden layers. From left to right: γ = 2, 6, 14. First row: the first hidden layer ψ1; Second and third rows: the second and third hidden layers ψ2 and ψ3 of the GTransNet with δ = 0.5; Fourth and fifth rows: the second and third hidden layers ψ2 and ψ3 of the GTransNet with δ = 0.8.",
+      "page": 11,
+      "index": 3,
+      "width": 881,
+      "height": 1222
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-004.webp",
+      "caption": "Figure 8: Average running times (in seconds) of the TransNet method and the GTransNet method with two and three hidden layers in Section 4.1, where N denotes the number of neurons in the last hidden layer. From left to right: (S1), (S2) and (S3).",
+      "page": 15,
+      "index": 4,
+      "width": 866,
+      "height": 270
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-005.webp",
+      "caption": "Figure 7: Plots of relative L2 errors of numerical solutions produced by the TransNet method and the GTransNet method with two and three hidden layers in Section 4.1, where N denotes the number of last hidden-layer neurons. Top-left: (S1); Top-right: (S2); Bottom row: (S3).",
+      "page": 15,
+      "index": 5,
+      "width": 624,
+      "height": 568
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-006.webp",
+      "caption": "Figure 15: Plots of the relative L2 errors of numerical solutions produced by the GTransNet method (left) and the TransNet method (right) method with different values of the last hidden-layer neurons N and the shape parameter γ for the 3D steady-state Allen-Cahn equation in Section 4.2.4.",
+      "page": 21,
+      "index": 6,
+      "width": 626,
+      "height": 306
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-007.webp",
+      "caption": "Figure 16: Numerical solution (left) and the corresponding absolute point-wise error (right) at the three cross sections x = 0.5, y = 0.5 and z = 0.5 produced by the GTransNet method with N = 7000 and γ = 6 for the 3D steady-state Allen-Cahn equation in Section 4.2.4.",
+      "page": 21,
+      "index": 7,
+      "width": 706,
+      "height": 286
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-008.webp",
+      "caption": "Figure 3: Numerical results of fitting the high-frequency function f(x) = sin(30πx) in the interval (−1, 1) by using a TransNet associated with B1.1(0) in one dimension. 1000 uniformly distributed collocation points are used. From Left to right: γ = 2, 14; From top to bottom: M = 200, 1000.",
+      "page": 7,
+      "index": 8,
+      "width": 638,
+      "height": 590
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-009.webp",
+      "caption": "Figure 12: Numerical solutions (top row) and the corresponding absolute point-wise errors (bottom row) produced by the GTransNet method for the 2D Helmholtz equation in Section 4.2.2. Left column: ν = 4000 Hz, N = 4000, γ = 6; middle column: ν = 6000 Hz, N = 4000, γ = 10; right column: ν = 8000 Hz, N = 4000, γ = 10.",
+      "page": 18,
+      "index": 9,
+      "width": 881,
+      "height": 502
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-010.webp",
+      "caption": "Figure 11: Plots of the relative L2 errors of numerical solutions produced by the GTransNet method (top row) and the TransNet method (bottom row) with different values of the last hidden-layer neurons N and the shape parameter γ for the 2D Helmholtz equation in Section 4.2.2. From left to right: ν = 4000, 6000, and 8000 Hz.",
+      "page": 18,
+      "index": 10,
+      "width": 870,
+      "height": 545
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-011.webp",
+      "caption": "Figure 4: Network architecture of the proposed GTransNet (16) with L hidden layers.",
+      "page": 8,
+      "index": 11,
+      "width": 775,
+      "height": 417
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-012.webp",
+      "caption": "Figure 10: Numerical solutions (top row) and the corresponding absolute point-wise errors (bottom row) produced by the GTransNet method for the three cases of the Poisson equation in Section 4.2.1. Left column: Case 1 (2D), N = 4000, γ = 8; Middle column: Case 2 (2D), N = 4000, γ = 10; Right column: Case 3 (3D), N = 7000, γ = 4, at the two cross sections x = 0 and y = 0.",
+      "page": 17,
+      "index": 12,
+      "width": 881,
+      "height": 442
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-013.webp",
+      "caption": "Figure 6: Visualization of some typical second and third hidden-layer neurons, ψ (2) m (x) and ψ (3) m (x), in the proposed GTransNet. From left to right: γ = 2, 6, 14. Top row: ψ (2) m (x) with W2 ∼ N (0, 1); Middle row: ψ (2) m (x) with W2 ∼ N (0, σ2 2) and δ = 0.5; Bottom row: ψ (3) m (x) with W3 ∼ N (0, σ2 3) and δ = 0.5.",
+      "page": 12,
+      "index": 13,
+      "width": 882,
+      "height": 468
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-014.webp",
+      "caption": "Figure 14: Numerical solutions uNN − up (top row) and the corresponding absolute point-wise errors of numerical solutions (bottom row) produced by the GTransNet method for the 2D multiscale elliptic problem (43) in Section 4.2.3. Left column: ε = 0.5, N = 4000, γ = 6; Middle column: ε = 0.2, N = 4000, γ = 8; Right column: ε = 0.1, N = 4000, γ = 8.",
+      "page": 20,
+      "index": 14,
+      "width": 881,
+      "height": 479
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-015.webp",
+      "caption": "Figure 13: Plots of the relative L2 errors of numerical solutions produced by the GTransNet method (top row) and the TransNet method (bottom row) with different values of the last hidden-layer neurons N and the shape parameter γ for the 2D multiscale elliptic problem in Section 4.2.3. From left to right: ε = 0.5, 0.2, and 0.1.",
+      "page": 20,
+      "index": 15,
+      "width": 870,
+      "height": 543
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03020v1/fig-016.webp",
+      "caption": "Figure 9: Plots of the relative L2 errors of numerical solutions produced by the GTransNet method (top row) and the TransNet method (bottom row) with different values of the last hidden-layer neurons N and the shape parameter γ for the three cases of the Poisson equation in Section 4.2.1. From left to right: Cases 1 (2D), Case 2 (2D), and Case 3 (3D).",
+      "page": 16,
+      "index": 16,
+      "width": 871,
+      "height": 514
+    }
+  ]
+}
