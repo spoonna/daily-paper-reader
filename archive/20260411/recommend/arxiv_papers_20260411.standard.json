@@ -1,0 +1,671 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-04-11T19:46:57.344208+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 12,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 15,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2604.03582v1",
+      "source": "arxiv",
+      "title": "Simple yet Effective: Low-Rank Spatial Attention for Neural Operators",
+      "abstract": "Neural operators have emerged as data-driven surrogates for solving partial differential equations (PDEs), and their success hinges on efficiently modeling the long-range, global coupling among spatial points induced by the underlying physics. In many PDE regimes, the induced global interaction kernels are empirically compressible, exhibiting rapid spectral decay that admits low-rank approximations. We leverage this observation to unify representative global mixing modules in neural operators under a shared low-rank template: compressing high-dimensional pointwise features into a compact latent space, processing global interactions within it, and reconstructing the global context back to spatial points. Guided by this view, we introduce Low-Rank Spatial Attention (LRSA) as a clean and direct instantiation of this template. Crucially, unlike prior approaches that often rely on non-standard aggregation or normalization modules, LRSA is built purely from standard Transformer primitives, i.e., attention, normalization, and feed-forward networks, yielding a concise block that is straightforward to implement and directly compatible with hardware-optimized kernels. In our experiments, such a simple construction is sufficient to achieve high accuracy, yielding an average error reduction of over 17\\% relative to second-best methods, while remaining stable and efficient in mixed-precision training.",
+      "authors": [
+        "Zherui Yang",
+        "Haiyang Xin",
+        "Tao Du",
+        "Ligang Liu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-04-04T04:15:01+00:00",
+      "link": "https://arxiv.org/pdf/2604.03582v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Low-rank spatial attention for neural operators in PDE solving",
+      "llm_evidence_cn": "用于PDE求解的神经算子低秩空间注意力机制",
+      "llm_evidence": "用于PDE求解的神经算子低秩空间注意力机制",
+      "canonical_evidence": "用于PDE求解的神经算子低秩空间注意力机制",
+      "llm_tldr_en": "Introduces a low-rank spatial attention mechanism to improve the efficiency of neural operators for solving PDEs.",
+      "llm_tldr_cn": "引入低秩空间注意力机制，提高了神经算子求解偏微分方程的效率。",
+      "llm_tldr": "引入低秩空间注意力机制，提高了神经算子求解偏微分方程的效率。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.05187v1",
+      "source": "arxiv",
+      "title": "FNO$^{\\angle θ}$: Extended Fourier neural operator for learning state and optimal control of distributed parameter systems",
+      "abstract": "We propose an extended Fourier neural operator (FNO) architecture for learning state and linear quadratic additive optimal control of systems governed by partial differential equations. Using the Ehrenpreis-Palamodov fundamental principle, we show that any state and optimal control of linear PDEs with constant coefficients can be represented as an integral in the complex domain. The integrand of this representation involves the same exponential term as in the inverse Fourier transform, where the latter is used to represent the convolution operator in FNO layer. Motivated by this observation, we modify the FNO layer by extending the frequency variable in the inverse Fourier transform from the real to complex domain to capture the integral representation from the fundamental principle. We illustrate the performance of FNO in learning state and optimal control for the nonlinear Burgers' equation, showing order of magnitude improvements in training errors and more accurate predictions of non-periodic boundary values over FNO.",
+      "authors": [
+        "Zhexian Li",
+        "Ketan Savla"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "eess.SY"
+      ],
+      "published": "2026-04-06T21:33:30+00:00",
+      "link": "https://arxiv.org/pdf/2604.05187v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Extended Fourier neural operator for learning states of systems governed by PDEs",
+      "llm_evidence_cn": "用于学习由偏微分方程控制的系统状态的扩展傅里叶神经算子",
+      "llm_evidence": "用于学习由偏微分方程控制的系统状态的扩展傅里叶神经算子",
+      "canonical_evidence": "用于学习由偏微分方程控制的系统状态的扩展傅里叶神经算子",
+      "llm_tldr_en": "Proposes an extended FNO architecture to learn states and optimal control for systems governed by linear PDEs.",
+      "llm_tldr_cn": "提出一种扩展的傅里叶神经算子架构，用于学习线性偏微分方程系统的状态和最优控制。",
+      "llm_tldr": "提出一种扩展的傅里叶神经算子架构，用于学习线性偏微分方程系统的状态和最优控制。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.03034v1",
+      "source": "arxiv",
+      "title": "Learning Contractive Integral Operators with Fredholm Integral Neural Operators",
+      "abstract": "We generalize the framework of Fredholm Neural Networks, to learn non-expansive integral operators arising in Fredholm Integral Equations (FIEs) of the second kind in arbitrary dimensions. We first present the proposed Fredholm Integral Neural Operators (FREDINOs), for FIEs and prove that they are universal approximators of linear and non-linear integral operators and corresponding solution operators. We furthermore prove that the learned operators are guaranteed to be contractive, thereby strictly satisfying the mathematical property required for the convergence of the fixed point scheme. Finally, we also demonstrate how FREDINOs can be used to learn the solution operator of non-linear elliptic PDEs, via a Boundary Integral Equation (BIE) formulation. We assess the proposed methodology numerically, via several benchmark problems: linear and non-linear FIEs in arbitrary dimensions, as well as a non-linear elliptic PDE in 2D. Built on tailored mathematical/numerical analysis theory, FREDINOs offer high-accuracy approximations and interpretable schemes, making them well suited for scientific machine learning/numerical analysis computations.",
+      "authors": [
+        "Kyriakos C. Georgiou",
+        "Constantinos Siettos",
+        "Athanasios N. Yannacopoulos"
+      ],
+      "primary_category": "math.NA",
+      "categories": [
+        "math.NA",
+        "cs.LG"
+      ],
+      "published": "2026-04-03T13:42:59+00:00",
+      "link": "https://arxiv.org/pdf/2604.03034v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Fredholm Integral Neural Operators for solving non-linear elliptic PDEs",
+      "llm_evidence_cn": "用于求解非线性椭圆偏微分方程的 Fredholm 积分神经算子",
+      "llm_evidence": "用于求解非线性椭圆偏微分方程的 Fredholm 积分神经算子",
+      "canonical_evidence": "用于求解非线性椭圆偏微分方程的 Fredholm 积分神经算子",
+      "llm_tldr_en": "Introduces FREDINOs to learn integral operators for solving PDEs via boundary integral equations.",
+      "llm_tldr_cn": "引入 FREDINOs 通过边界积分方程学习积分算子以求解偏微分方程。",
+      "llm_tldr": "引入 FREDINOs 通过边界积分方程学习积分算子以求解偏微分方程。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.04061v1",
+      "source": "arxiv",
+      "title": "A Geometry-Aware Operator Learning Framework for Interface Problems on Varying Domains",
+      "abstract": "Solving Partial Differential Equation (PDE) interface problems on varying domains is a critical task in design and optimization, yet it remains computationally prohibitive for traditional solvers. Although operator learning has shown promise on fixed geometries, its potential for geometry-dependent interface problems has been largely unexplored. To bridge this gap, we propose an extension-based neural operator framework applicable to general linear interface problems. A key innovation of our method is the integration of the Tailored Finite Point Method (TFPM) with our base network, which reduces memory consumption and effectively alleviates the curse of dimensionality. On the theoretical front, we establish the continuity of the Helmholtz operator with respect to domain perturbations and provide rigorous error estimates for the proposed encodings. Comprehensive numerical experiments demonstrate that our framework achieves state-of-the-art accuracy and robustness. Consequently, this work provides a powerful, data-efficient tool for varying-domain simulations, offering new possibilities for real-time shape optimization.",
+      "authors": [
+        "Shanshan Xiao",
+        "Ye Li",
+        "Zhongyi Huang",
+        "Hao Wu"
+      ],
+      "primary_category": "math.NA",
+      "categories": [
+        "math.NA"
+      ],
+      "published": "2026-04-05T11:08:10+00:00",
+      "link": "https://arxiv.org/pdf/2604.04061v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Geometry-aware operator learning for varying domains and interface problems",
+      "llm_evidence_cn": "针对变域和界面问题的几何感知算子学习",
+      "llm_evidence": "针对变域和界面问题的几何感知算子学习",
+      "canonical_evidence": "针对变域和界面问题的几何感知算子学习",
+      "llm_tldr_en": "A neural operator framework for solving PDEs on varying geometries, highly relevant to intake/nozzle design.",
+      "llm_tldr_cn": "一种用于在变几何形状上求解PDE的神经算子框架，与进气道/喷管设计高度相关。",
+      "llm_tldr": "一种用于在变几何形状上求解PDE的神经算子框架，与进气道/喷管设计高度相关。",
+      "llm_tags": [
+        "query:dl-pde:composite"
+      ],
+      "matched_query_tag": "query:dl-pde:composite",
+      "matched_query_text": "Papers central to 深度学习 神经算子 飞机进气道，尾喷管 PDE求解, especially work that connects or combines: Deep learning neural operators for PDE solving; Deep learning simulation of aircraft engine intakes; Neural network modeling of aircraft exhaust nozzles; Physics-informed neural networks for partial differential equations; Neural operator applications in intake and nozzle flow simulation.",
+      "matched_requirement_id": "req-composite-dl-pde",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.03504v1",
+      "source": "arxiv",
+      "title": "Amalgamation of Physics-Informed Neural Network and LBM for the Prediction of Unsteady Fluid Flows in Fractal-Rough Microchannels",
+      "abstract": "One of the biggest challenges in the optimization of micro-scale fluid transport phenomena is the prediction of unsteady fluid flow in the presence of rough channel walls. Even though the accuracy of available computational fluid dynamics (CFD) solvers such as the lattice Boltzmann method (LBM) is satisfactory, the computational cost of design exploration is very high due to the diverse range of geometries and flow regimes involved in microchannel flows. The present paper introduces a revolutionary concept of a ground-breaking physics-informed neural network (PINN) that utilizes sparse lattice Boltzmann data in combination with the Navier-Stokes equations for the prediction of unsteady fluid flow in fractal-rough microchannels. The roughness of the channel walls is represented by the Weierstrass-Mandelbrot function, considering the characteristics of the surface roughness in real-life problems. The constraints of the Navier-Stokes equations are incorporated in the loss function of the PINN concept for achieving accuracy at much lower computational costs of 150-200 times fewer data points. The validation of the accuracy of the reconstruction of the flow fields is carried out for different Reynolds numbers ranging from Re = 1 to 45 and different amplitude values of the rough channel walls ranging from 5 to 20 lattice units.",
+      "authors": [
+        "Ganesh Sahadeo Meshram",
+        "Partha Pratim Chakrabarti",
+        "Suman Chakraborty"
+      ],
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE"
+      ],
+      "published": "2026-04-03T23:04:23+00:00",
+      "link": "https://arxiv.org/pdf/2604.03504v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Physics-informed neural network (PINN) for predicting unsteady fluid flows using Navier-Stokes equations",
+      "llm_evidence_cn": "利用纳维-斯托克斯方程预测非定常流体的物理信息神经网络 (PINN)",
+      "llm_evidence": "利用纳维-斯托克斯方程预测非定常流体的物理信息神经网络 (PINN)",
+      "canonical_evidence": "利用纳维-斯托克斯方程预测非定常流体的物理信息神经网络 (PINN)",
+      "llm_tldr_en": "Combines PINNs with lattice Boltzmann data to predict unsteady fluid flows in complex microchannel geometries.",
+      "llm_tldr_cn": "结合PINN与格子玻尔兹曼数据，用于预测复杂微通道几何形状中的非定常流体流动。",
+      "llm_tldr": "结合PINN与格子玻尔兹曼数据，用于预测复杂微通道几何形状中的非定常流体流动。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Physics-informed neural networks for partial differential equations",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.08076v1",
+      "source": "arxiv",
+      "title": "$φ-$DeepONet: A Discontinuity Capturing Neural Operator",
+      "abstract": "We present $φ-$DeepONet, a physics-informed neural operator designed to learn mappings between function spaces that may contain discontinuities or exhibit non-smooth behavior. Classical neural operators are based on the universal approximation theorem which assumes that both the operator and the functions it acts on are continuous. However, many scientific and engineering problems involve naturally discontinuous input fields as well as strong and weak discontinuities in the output fields caused by material interfaces. In $φ$-DeepONet, discontinuities in the input are handled using multiple branch networks, while discontinuities in the output are learned through a nonlinear latent embedding of the interface. This embedding is constructed from a {\\it one-hot} representation of the domain decomposition that is combined with the spatial coordinates in a modified trunk network. The outputs of the branch and trunk networks are then combined through a dot product to produce the final solution, which is trained using a physics- and interface-informed loss function. We evaluate $φ$-DeepONet on several one- and two-dimensional benchmark problems and demonstrate that it delivers accurate and stable predictions even in the presence of strong interface-driven discontinuities.",
+      "authors": [
+        "Sumanta Roy",
+        "Stephen T. Castonguay",
+        "Pratanu Roy",
+        "Michael D. Shields"
+      ],
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE",
+        "math.AP"
+      ],
+      "published": "2026-04-09T10:47:31+00:00",
+      "link": "https://arxiv.org/pdf/2604.08076v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Physics-informed neural operator for capturing discontinuities in engineering problems",
+      "llm_evidence_cn": "用于捕捉工程问题中不连续性的物理信息神经算子",
+      "llm_evidence": "用于捕捉工程问题中不连续性的物理信息神经算子",
+      "canonical_evidence": "用于捕捉工程问题中不连续性的物理信息神经算子",
+      "llm_tldr_en": "Introduces phi-DeepONet to handle discontinuities in input/output fields for scientific and engineering PDEs.",
+      "llm_tldr_cn": "引入 phi-DeepONet 处理科学与工程 PDE 中输入/输出场的不连续性。",
+      "llm_tldr": "引入 phi-DeepONet 处理科学与工程 PDE 中输入/输出场的不连续性。",
+      "llm_tags": [
+        "query:dl-pde:composite"
+      ],
+      "matched_query_tag": "query:dl-pde:composite",
+      "matched_query_text": "Papers central to 深度学习 神经算子 飞机进气道，尾喷管 PDE求解, especially work that connects or combines: Deep learning neural operators for PDE solving; Deep learning simulation of aircraft engine intakes; Neural network modeling of aircraft exhaust nozzles; Physics-informed neural networks for partial differential equations; Neural operator applications in intake and nozzle flow simulation.",
+      "matched_requirement_id": "req-composite-dl-pde",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2604.05230v1",
+      "source": "arxiv",
+      "title": "Curvature-Aware Optimization for High-Accuracy Physics-Informed Neural Networks",
+      "abstract": "Efficient and robust optimization is essential for neural networks, enabling scientific machine learning models to converge rapidly to very high accuracy -- faithfully capturing complex physical behavior governed by differential equations. In this work, we present advanced optimization strategies to accelerate the convergence of physics-informed neural networks (PINNs) for challenging partial (PDEs) and ordinary differential equations (ODEs). Specifically, we provide efficient implementations of the Natural Gradient (NG) optimizer, Self-Scaling BFGS and Broyden optimizers, and demonstrate their performance on problems including the Helmholtz equation, Stokes flow, inviscid Burgers equation, Euler equations for high-speed flows, and stiff ODEs arising in pharmacokinetics and pharmacodynamics. Beyond optimizer development, we also propose new PINN-based methods for solving the inviscid Burgers and Euler equations, and compare the resulting solutions against high-order numerical methods to provide a rigorous and fair assessment. Finally, we address the challenge of scaling these quasi-Newton optimizers for batched training, enabling efficient and scalable solutions for large data-driven problems.",
+      "authors": [
+        "Anas Jnini",
+        "Elham Kiyani",
+        "Khemraj Shukla",
+        "Jorge F. Urban",
+        "Nazanin Ahmadi Daryakenari",
+        "Johannes Muller",
+        "Marius Zeinhofer",
+        "George Em Karniadakis"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.NA",
+        "math.OC"
+      ],
+      "published": "2026-04-06T22:52:34+00:00",
+      "link": "https://arxiv.org/pdf/2604.05230v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Optimization strategies for PINNs applied to Euler equations and high-speed flows",
+      "llm_evidence_cn": "应用于欧拉方程和高速流的PINN优化策略",
+      "llm_evidence": "应用于欧拉方程和高速流的PINN优化策略",
+      "canonical_evidence": "应用于欧拉方程和高速流的PINN优化策略",
+      "llm_tldr_en": "Improves PINN accuracy for high-speed flows and Euler equations using advanced optimization techniques.",
+      "llm_tldr_cn": "利用先进的优化技术提高了PINN在高速流和欧拉方程中的求解精度。",
+      "llm_tldr": "利用先进的优化技术提高了PINN在高速流和欧拉方程中的求解精度。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Physics-informed neural networks for partial differential equations",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2604.03020v1",
+      "source": "arxiv",
+      "title": "Generalized Transferable Neural Networks for Steady-State Partial Differential Equations",
+      "abstract": "Deep learning has emerged as a compelling framework for scientific and engineering computing, motivating growing interest in neural network-based solvers for partial differential equations (PDEs). Within this landscape, network architectures with deterministic feature construction have become an appealing approach, offering both high accuracy and computational efficiency in practice. Among them, the transferable neural network (TransNet) is a special class of shallow neural networks (i.e., single-hidden-layer architectures), whose hidden-layer parameters are predetermined according to the principle of uniformly distributed partition hyperplanes. Although TransNet has demonstrated strong performance in solving PDEs with relatively smooth solutions, its accuracy and stability may deteriorate in the presence of highly oscillatory solution structures, where activation saturation and system conditioning issues become limiting factors. In this paper, we propose a generalized transferable neural network (GTransNet) for solving steady-state PDEs, which augments the original TransNet design with additional hidden layers while preserving its interpretable feature-generation mechanism. In particular, the first hidden layer of GTransNet retains TransNet's parameter sampling strategy but incorporates an additional symmetry constraint on the neuron biases, while the subsequent hidden layers omit bias terms and employ a variance-controlled sampling strategy for selecting neuron weights.",
+      "authors": [
+        "Tao Cheng",
+        "Lili Ju",
+        "Zhonghua Qiao",
+        "Xiaoping Zhang"
+      ],
+      "primary_category": "math.NA",
+      "categories": [
+        "math.NA"
+      ],
+      "published": "2026-04-03T13:11:45+00:00",
+      "link": "https://arxiv.org/pdf/2604.03020v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Transferable neural networks for solving steady-state PDEs",
+      "llm_evidence_cn": "用于求解稳态偏微分方程的可迁移神经网络",
+      "llm_evidence": "用于求解稳态偏微分方程的可迁移神经网络",
+      "canonical_evidence": "用于求解稳态偏微分方程的可迁移神经网络",
+      "llm_tldr_en": "Develops a deterministic feature construction network for efficient and accurate steady-state PDE solving.",
+      "llm_tldr_cn": "开发了一种确定性特征构建网络，用于高效准确地求解稳态偏微分方程。",
+      "llm_tldr": "开发了一种确定性特征构建网络，用于高效准确地求解稳态偏微分方程。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.03449v1",
+      "source": "arxiv",
+      "title": "Neural Operators for Multi-Task Control and Adaptation",
+      "abstract": "Neural operator methods have emerged as powerful tools for learning mappings between infinite-dimensional function spaces, yet their potential in optimal control remains largely unexplored. We focus on multi-task control problems, whose solution is a mapping from task description (e.g., cost or dynamics functions) to optimal control law (e.g., feedback policy). We approximate these solution operators using a permutation-invariant neural operator architecture. Across a range of parametric optimal control environments and a locomotion benchmark, a single operator trained via behavioral cloning accurately approximates the solution operator and generalizes to unseen tasks, out-of-distribution settings, and varying amounts of task observations. We further show that the branch-trunk structure of our neural operator architecture enables efficient and flexible adaptation to new tasks. We develop structured adaptation strategies ranging from lightweight updates to full-network fine-tuning, achieving strong performance across different data and compute settings. Finally, we introduce meta-trained operator variants that optimize the initialization for few-shot adaptation. These methods enable rapid task adaptation with limited data and consistently outperform a popular meta-learning baseline. Together, our results demonstrate that neural operators provide a unified and efficient framework for multi-task control and adaptation.",
+      "authors": [
+        "David Sewell",
+        "Xingjian Li",
+        "Stepan Tretiakov",
+        "Krishna Kumar",
+        "David Fridovich-Keil"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "eess.SY"
+      ],
+      "published": "2026-04-03T20:45:32+00:00",
+      "link": "https://arxiv.org/pdf/2604.03449v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Neural operator methods for learning mappings between function spaces in control",
+      "llm_evidence_cn": "用于学习控制中函数空间映射的神经算子方法",
+      "llm_evidence": "用于学习控制中函数空间映射的神经算子方法",
+      "canonical_evidence": "用于学习控制中函数空间映射的神经算子方法",
+      "llm_tldr_en": "Explores neural operators for multi-task optimal control and generalization across parametric environments.",
+      "llm_tldr_cn": "探索神经算子在多任务最优控制中的应用，并在参数化环境中实现泛化。",
+      "llm_tldr": "探索神经算子在多任务最优控制中的应用，并在参数化环境中实现泛化。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2604.05652v1",
+      "source": "arxiv",
+      "title": "Multiscale Physics-Informed Neural Network for Complex Fluid Flows with Long-Range Dependencies",
+      "abstract": "Fluid flows are governed by the nonlinear Navier-Stokes equations, which can manifest multiscale dynamics even from predictable initial conditions. Predicting such phenomena remains a formidable challenge in scientific machine learning, particularly regarding convergence speed, data requirements, and solution accuracy. In complex fluid flows, these challenges are exacerbated by long-range spatial dependencies arising from distant boundary conditions, which typically necessitate extensive supervision data to achieve acceptable results. We propose the Domain-Decomposed and Shifted Physics-Informed Neural Network (DDS-PINN), a framework designed to resolve such multiscale interactions with minimal supervision. By utilizing localized networks with a unified global loss, DDS-PINN captures global dependencies while maintaining local precision. The robustness of the approach is demonstrated across a suite of benchmarks, including a multiscale linear differential equation, the nonlinear Burgers' equation, and data-free Navier-Stokes simulations of flat-plate boundary layers. Finally, DDS-PINN is applied to the computationally challenging backward-facing step (BFS) problem; for laminar regimes (Re = 100), the model yields results comparable to computational fluid dynamics (CFD) without the need for any data, accurately predicting boundary layer thickness, separation, and reattachment lengths. For turbulent BFS flow at Re = 10,000, the framework achieves convergence to O(10^-4) using only 500 random supervision points (< 0.3 % of the total domain), outperforming established methods like Residual-based Attention-PINN in accuracy. This approach demonstrates strong potential for the super-resolution of complex turbulent flows from sparse experimental measurements.",
+      "authors": [
+        "Prashant Kumar",
+        "Rajesh Ranjan"
+      ],
+      "primary_category": "physics.flu-dyn",
+      "categories": [
+        "physics.flu-dyn",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-04-07T09:54:50+00:00",
+      "link": "https://arxiv.org/pdf/2604.05652v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Multiscale PINN for complex fluid flows and Navier-Stokes equations",
+      "llm_evidence_cn": "用于复杂流体流动和纳维-斯托克斯方程的多尺度PINN",
+      "llm_evidence": "用于复杂流体流动和纳维-斯托克斯方程的多尺度PINN",
+      "canonical_evidence": "用于复杂流体流动和纳维-斯托克斯方程的多尺度PINN",
+      "llm_tldr_en": "Proposes a domain-decomposed PINN to resolve multiscale interactions in complex fluid flow simulations.",
+      "llm_tldr_cn": "提出了一种域分解PINN，用于解决复杂流体模拟中的多尺度交互问题。",
+      "llm_tldr": "提出了一种域分解PINN，用于解决复杂流体模拟中的多尺度交互问题。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Physics-informed neural networks for partial differential equations",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2604.03186v1",
+      "source": "arxiv",
+      "title": "High-Precision Phase-Shift Transferable Neural Networks for High-Frequency Function Approximation and PDE Solution",
+      "abstract": "Neural network based methods have emerged as a promising paradigm for scientific computing, yet they face critical bottlenecks in high frequency function approximation and partial differential equation (PDE) solving.",
+      "authors": [
+        "Xuyang Gao",
+        "Liang Chen",
+        "Minqiang Xu",
+        "Jing Niu"
+      ],
+      "primary_category": "math.NA",
+      "categories": [
+        "math.NA"
+      ],
+      "published": "2026-04-03T17:02:04+00:00",
+      "link": "https://arxiv.org/pdf/2604.03186v1",
+      "tags": [
+        "keyword:DL PDE"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Neural network based methods for high-frequency PDE solving",
+      "llm_evidence_cn": "基于神经网络的高频偏微分方程求解方法",
+      "llm_evidence": "基于神经网络的高频偏微分方程求解方法",
+      "canonical_evidence": "基于神经网络的高频偏微分方程求解方法",
+      "llm_tldr_en": "Proposes phase-shift transferable neural networks to solve high-frequency function approximation and PDE problems.",
+      "llm_tldr_cn": "提出相移可迁移神经网络，用于解决高频函数逼近和偏微分方程求解问题。",
+      "llm_tldr": "提出相移可迁移神经网络，用于解决高频函数逼近和偏微分方程求解问题。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.04150v1",
+      "source": "arxiv",
+      "title": "A Multi-Scale ResNet-augmented Fourier Neural Operator Framework for High-Frequency Sequence-to-Sequence Prediction of Magnetic Hysteresis",
+      "abstract": "Accurate modeling of magnetic hysteresis is essential for high-fidelity power electronics device simulations. The transient hysteresis phenomena such as the ringing effect and the minor loops are the bottleneck for the accurate hysteresis modeling and the core losses estimation. To capture the hysteresis loops with both the macro structure and the micro transient details, in this paper, we propose the multi-scale ResNet augmented Fourier Neural Operator (Res-FNO). The framework employs a hybrid input structure that combines sequential time-series data with scalar material labels through specialized feature engineering. Specifically, the time derivative of magnetic flux density ($\\frac{dB}{dt}$) is incorporated as a critical physical feature to enhance the model sensitivity to high-frequency oscillations and minor loop triggers. The proposed architecture synergizes global spectral modeling with localized refinement by integrating a multi-scale ResNet path in parallel with the FNO blocks. This design allows the global operator path to capture the underlying physical evolution while the local refinement path, compensates for spectral bias and reconstructs fine-grained temporal details. Extensive experimental validation across diverse magnetic materials from 79 to Material 3C90 demonstrates the strong generalization capability of the proposed Res-FNO, proving its robust ability to model complex ringing effects and minor loops in realistic power electronic applications.",
+      "authors": [
+        "Ziqing Guo",
+        "Xiaobing Shen",
+        "Ruth V. Sabariego"
+      ],
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY"
+      ],
+      "published": "2026-04-05T15:29:07+00:00",
+      "link": "https://arxiv.org/pdf/2604.04150v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Fourier Neural Operator framework for high-frequency sequence prediction",
+      "llm_evidence_cn": "用于高频序列预测的傅里叶神经算子框架",
+      "llm_evidence": "用于高频序列预测的傅里叶神经算子框架",
+      "canonical_evidence": "用于高频序列预测的傅里叶神经算子框架",
+      "llm_tldr_en": "Uses a ResNet-augmented Fourier Neural Operator for high-frequency magnetic hysteresis modeling.",
+      "llm_tldr_cn": "使用 ResNet 增强的傅里叶神经算子进行高频磁滞建模。",
+      "llm_tldr": "使用 ResNet 增强的傅里叶神经算子进行高频磁滞建模。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2604.06475v1",
+      "source": "arxiv",
+      "title": "AE-ViT: Stable Long-Horizon Parametric Partial Differential Equations Modeling",
+      "abstract": "Deep Learning Reduced Order Models (ROMs) are becoming increasingly popular as surrogate models for parametric partial differential equations (PDEs) due to their ability to handle high-dimensional data, approximate highly nonlinear mappings, and utilize GPUs. Existing approaches typically learn evolution either on the full solution field, which requires capturing long-range spatial interactions at high computational cost, or on compressed latent representations obtained from autoencoders, which reduces the cost but often yields latent vectors that are difficult to evolve, since they primarily encode spatial information. Moreover, in parametric PDEs, the initial condition alone is not sufficient to determine the trajectory, and most current approaches are not evaluated on jointly predicting multiple solution components with differing magnitudes and parameter sensitivities. To address these challenges, we propose a joint model consisting of a convolutional encoder, a transformer operating on latent representations, and a decoder for reconstruction. The main novelties are joint training with multi-stage parameter injection and coordinate channel injection. Parameters are injected at multiple stages to improve conditioning. Physical coordinates are encoded to provide spatial information. This allows the model to dynamically adapt its computations to the specific PDE parameters governing each system, rather than learning a single fixed response. Experiments on the Advection-Diffusion-Reaction equation and Navier-Stokes flow around the cylinder wake demonstrate that our approach combines the efficiency of latent evolution with the fidelity of full-field models, outperforming DL-ROMs, latent transformers, and plain ViTs in multi-field prediction, reducing the relative rollout error by approximately $5$ times.",
+      "authors": [
+        "Iva Mikuš",
+        "Boris Muha",
+        "Domagoj Vlah"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "math.NA"
+      ],
+      "published": "2026-04-07T21:19:45+00:00",
+      "link": "https://arxiv.org/pdf/2604.06475v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Surrogate modeling for parametric partial differential equations",
+      "llm_evidence_cn": "参数化偏微分方程的代理模型",
+      "llm_evidence": "参数化偏微分方程的代理模型",
+      "canonical_evidence": "参数化偏微分方程的代理模型",
+      "llm_tldr_en": "Presents AE-ViT for stable, long-horizon modeling of parametric PDEs using reduced order models.",
+      "llm_tldr_cn": "提出了AE-ViT，利用降阶模型对参数化PDE进行稳定的长时程建模。",
+      "llm_tldr": "提出了AE-ViT，利用降阶模型对参数化PDE进行稳定的长时程建模。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2604.03892v1",
+      "source": "arxiv",
+      "title": "Lotka-Sharpe Neural Operators for Control of Population PDEs",
+      "abstract": "Age-structured predator-prey integro-partial differential equations provide models of interacting populations in ecology, epidemiology, and biotechnology. A key challenge in feedback design for these systems is the scalar $ζ$, defined implicitly by the Lotka-Sharpe nonlinear integral condition, as a mapping from fertility and mortality rates to $ζ$. To solve this challenge with operator learning, we first prove that the Lotka-Sharpe operator is Lipschitz continuous, guaranteeing the existence of arbitrarily accurate neural operator approximations over a compact set of fertility and mortality functions. We then show that the resulting approximate feedback law preserves semi-global practical asymptotic stability under propagation of the operator approximation error through various other nonlinear operators, all the way through to the control input. In the numerical results, not only do we learn ``once-and-for-all'' the canonical Lotka-Sharpe (LS) operator, and thus make it available for future uses in control of other age-structured population interconnections, but we demonstrate the online usage of the neural LS operator under estimation of the fertility and mortality functions.",
+      "authors": [
+        "Miroslav Krstic",
+        "Iasson Karafyllis",
+        "Luke Bhan",
+        "Carina Veil"
+      ],
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.LG",
+        "math.OC"
+      ],
+      "published": "2026-04-04T23:17:44+00:00",
+      "link": "https://arxiv.org/pdf/2604.03892v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Neural operators for solving population integro-partial differential equations",
+      "llm_evidence_cn": "用于求解种群积分偏微分方程的神经算子",
+      "llm_evidence": "用于求解种群积分偏微分方程的神经算子",
+      "canonical_evidence": "用于求解种群积分偏微分方程的神经算子",
+      "llm_tldr_en": "Applies neural operators to solve and control age-structured predator-prey integro-PDEs.",
+      "llm_tldr_cn": "应用神经算子求解并控制具有年龄结构的捕食者-猎物积分偏微分方程。",
+      "llm_tldr": "应用神经算子求解并控制具有年龄结构的捕食者-猎物积分偏微分方程。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.06881v1",
+      "source": "arxiv",
+      "title": "MENO: MeanFlow-Enhanced Neural Operators for Dynamical Systems",
+      "abstract": "Neural operators have emerged as powerful surrogates for dynamical systems due to their grid-invariant properties and computational efficiency. However, the Fourier-based neural operator framework inherently truncates high-frequency components in spectral space, resulting in the loss of small-scale structures and degraded prediction quality at high resolutions when trained on low-resolution data. While diffusion-based enhancement methods can recover multi-scale features, they introduce substantial inference overhead that undermines the efficiency advantage of neural operators. In this work, we introduce \\textbf{M}eanFlow-\\textbf{E}nhanced \\textbf{N}eural \\textbf{O}perators (MENO), a novel framework that achieves accurate all-scale predictions with minimal inference cost. By leveraging the improved MeanFlow method, MENO restores both small-scale details and large-scale dynamics with superior physical fidelity and statistical accuracy. We evaluate MENO on three challenging dynamical systems, including phase-field dynamics, 2D Kolmogorov flow, and active matter dynamics, at resolutions up to 256$\\times$256. Across all benchmarks, MENO improves the power spectrum density accuracy by up to a factor of 2 compared to baseline neural operators while achieving 12$\\times$ faster inference than the state-of-the-art Diffusion Denoising Implicit Model (DDIM)-enhanced counterparts, effectively bridging the gap between accuracy and efficiency. The flexibility and efficiency of MENO position it as an efficient surrogate model for scientific machine learning applications where both statistical integrity and computational efficiency are paramount.",
+      "authors": [
+        "Tianyue Yang",
+        "Xiao Xue"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "physics.flu-dyn"
+      ],
+      "published": "2026-04-08T09:39:49+00:00",
+      "link": "https://arxiv.org/pdf/2604.06881v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "MeanFlow-enhanced neural operators for all-scale predictions in dynamical systems",
+      "llm_evidence_cn": "用于动力系统全尺度预测的均流增强神经算子",
+      "llm_evidence": "用于动力系统全尺度预测的均流增强神经算子",
+      "canonical_evidence": "用于动力系统全尺度预测的均流增强神经算子",
+      "llm_tldr_en": "Enhances neural operators to capture small-scale structures in fluid dynamics and PDEs.",
+      "llm_tldr_cn": "增强了神经算子捕捉流体动力学和PDE中细微结构的能力。",
+      "llm_tldr": "增强了神经算子捕捉流体动力学和PDE中细微结构的能力。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2604.04828v1",
+      "source": "arxiv",
+      "title": "Hybrid Fourier Neural Operator for Surrogate Modeling of Laser Processing with a Quantum-Circuit Mixer",
+      "abstract": "Data-driven surrogates can replace expensive multiphysics solvers for parametric PDEs, yet building compact, accurate neural operators for three-dimensional problems remains challenging: in Fourier Neural Operators, dense mode-wise spectral channel mixing scales linearly with the number of retained Fourier modes, inflating parameter counts and limiting real-time deployability. We introduce HQ-LP-FNO, a hybrid quantum-classical FNO that replaces a configurable fraction of these dense spectral blocks with a compact, mode-shared variational quantum circuit mixer whose parameter count is independent of the Fourier mode budget. A parameter-matched classical bottleneck control is co-designed to provide a rigorous evaluation framework. Evaluated on three-dimensional surrogate modeling of high-energy laser processing, coupling heat transfer, melt-pool convection, free-surface deformation, and phase change, HQ-LP-FNO reduces trainable parameters by 15.6% relative to a classical baseline while lowering phase-fraction mean absolute error by 26% and relative temperature MAE from 2.89% to 2.56%. A sweep over the quantum-channel budget reveals that a moderate VQC allocation yields the best temperature metrics across all tested configurations, including the fully classical baseline, pointing toward an optimal classical-quantum partitioning. The ablation confirms that mode-shared mixing, naturally implemented by the VQC through its compact circuit structure, is the dominant contributor to these improvements. A noisy-simulator study under backend-calibrated noise from ibm-torino confirms numerical stability of the quantum mixer across the tested shot range. These results demonstrate that VQC-based parameter-efficient spectral mixing can improve neural operator surrogates for complex multiphysics problems and establish a controlled evaluation protocol for hybrid quantum operator learning in practice.",
+      "authors": [
+        "Mateusz Papierz",
+        "Asel Sagingalieva",
+        "Alix Benoit",
+        "Toni Ivas",
+        "Elia Iseli",
+        "Alexey Melnikov"
+      ],
+      "primary_category": "quant-ph",
+      "categories": [
+        "quant-ph",
+        "cs.CE",
+        "cs.LG",
+        "physics.comp-ph"
+      ],
+      "published": "2026-04-06T16:28:49+00:00",
+      "link": "https://arxiv.org/pdf/2604.04828v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Hybrid Fourier Neural Operator for surrogate modeling of parametric PDEs",
+      "llm_evidence_cn": "用于参数化PDE代理建模的混合傅里叶神经算子",
+      "llm_evidence": "用于参数化PDE代理建模的混合傅里叶神经算子",
+      "canonical_evidence": "用于参数化PDE代理建模的混合傅里叶神经算子",
+      "llm_tldr_en": "Combines quantum circuits with FNOs to create efficient surrogate models for 3D multiphysics PDEs.",
+      "llm_tldr_cn": "将量子电路与FNO结合，为三维多物理场PDE构建高效的代理模型。",
+      "llm_tldr": "将量子电路与FNO结合，为三维多物理场PDE构建高效的代理模型。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Deep learning neural operators for PDE solving",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.07412v1",
+      "source": "arxiv",
+      "title": "Physics-informed neural operators for the in situ characterization of locally reacting sound absorbers",
+      "abstract": "Accurate knowledge of acoustic surface admittance or impedance is essential for reliable wave-based simulations, yet its in situ estimation remains challenging due to noise, model inaccuracies, and restrictive assumptions of conventional methods. This work presents a physics-informed neural operator approach for estimating frequency-dependent surface admittance directly from near-field measurements of sound pressure and particle velocity. A deep operator network is employed to learn the mapping from measurement data, spatial coordinates, and frequency to acoustic field quantities, while simultaneously inferring a globally consistent surface admittance spectrum without requiring an explicit forward model. The governing acoustic relations, including the Helmholtz equation, the linearized momentum equation, and Robin boundary conditions, are embedded into the training process as physics-based regularization, enabling physically consistent and noise-robust predictions while avoiding frequency-wise inversion. The method is validated using synthetically generated data from a simulation model for two planar porous absorbers under semi free-field conditions across a broad frequency range. Results demonstrate accurate reconstruction of both real and imaginary admittance components and reliable prediction of acoustic field quantities. Parameter studies confirm improved robustness to noise and sparse sampling compared to purely data-driven approaches, highlighting the potential of physics-informed neural operators for in situ acoustic material characterization.",
+      "authors": [
+        "Jonas M. Schmid",
+        "Johannes D. Schmid",
+        "Martin Eser",
+        "Steffen Marburg"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "physics.data-an"
+      ],
+      "published": "2026-04-08T12:19:24+00:00",
+      "link": "https://arxiv.org/pdf/2604.07412v1",
+      "tags": [
+        "keyword:DL PDE",
+        "query:DL PDE"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Physics-informed neural operator for acoustic wave-based simulations",
+      "llm_evidence_cn": "用于声波模拟的物理信息神经算子",
+      "llm_evidence": "用于声波模拟的物理信息神经算子",
+      "canonical_evidence": "用于声波模拟的物理信息神经算子",
+      "llm_tldr_en": "Employs a physics-informed DeepONet to characterize sound absorbers from acoustic field measurements.",
+      "llm_tldr_cn": "采用物理信息 DeepONet，通过声场测量表征吸声体特性。",
+      "llm_tldr": "采用物理信息 DeepONet，通过声场测量表征吸声体特性。",
+      "llm_tags": [
+        "query:dl-pde"
+      ],
+      "matched_query_tag": "query:dl-pde",
+      "matched_query_text": "Physics-informed neural networks for partial differential equations",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    }
+  ]
+}
