@@ -1,0 +1,126 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-001.webp",
+      "caption": "Table 5. Relative errors of the macroscopic moments (ρ, ux, uy, T ) for the 2D smooth problem across different Knudsen numbers (Kn ∈ {1.0, 0.1, 0.01}).",
+      "page": 21,
+      "index": 1,
+      "width": 964,
+      "height": 640
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-002.webp",
+      "caption": "Table 6. Relative errors of the macroscopic moments (ρ, ux, uy, T ) for the 2D Riemann problem across different Knudsen numbers (Kn ∈ {1.0, 0.1, 0.01}).",
+      "page": 22,
+      "index": 2,
+      "width": 964,
+      "height": 639
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-003.webp",
+      "caption": "Figure 5. Relative error curves of the distribution function f and macroscopic moments (ρ, ux, T ) according to the polynomial growth rate β at Kn = 0.1.",
+      "page": 18,
+      "index": 3,
+      "width": 976,
+      "height": 588
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-004.webp",
+      "caption": "Table 3. Ablation study results of relative errors at Kn = 1.0 for the standard L2 Loss, relative loss [29], and the proposed loss with specific choices of α and β.",
+      "page": 18,
+      "index": 4,
+      "width": 968,
+      "height": 429
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-005.webp",
+      "caption": "Table 7. Relative errors of the distribution function f and macroscopic moments (ρ, ux, T ) for the 3D smooth problem across different Knudsen numbers (Kn ∈ {1.0, 0.1, 0.01}).",
+      "page": 23,
+      "index": 5,
+      "width": 964,
+      "height": 384
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-006.webp",
+      "caption": "Figure 8. Comparison of weight shapes between the relative loss and the proposed loss for the 1D smooth problem at Kn = 0.01.",
+      "page": 23,
+      "index": 6,
+      "width": 976,
+      "height": 315
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-007.webp",
+      "caption": "Figure 6. Relative error curves of the distribution function f and macroscopic moments (ρ, ux, T ) according to the polynomial growth rate β at Kn = 1.0.",
+      "page": 19,
+      "index": 7,
+      "width": 976,
+      "height": 588
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-008.webp",
+      "caption": "Figure 4. Distribution function f (top row) and macroscopic moments (ρ, ux, T ) (bottom row) at t = 0.1 for the 1D Smooth problem at Kn = 0.01.",
+      "page": 17,
+      "index": 8,
+      "width": 976,
+      "height": 538
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-009.webp",
+      "caption": "Table 2. Ablation study results of relative errors at Kn = 0.1 for the standard L2 Loss, relative loss [29], and the proposed loss with specific choices of α and β.",
+      "page": 17,
+      "index": 9,
+      "width": 968,
+      "height": 449
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-010.webp",
+      "caption": "Figure 9. Comparison of weight shapes between the relative loss and the proposed loss for the 1D Riemann problem at Kn = 1.0.",
+      "page": 24,
+      "index": 10,
+      "width": 976,
+      "height": 315
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-011.webp",
+      "caption": "Table 4. Relative errors of the distribution function f and macroscopic moments (ρ, ux, T ) for the 1D Riemann problem across different Knudsen numbers (Kn ∈ {1.0, 0.1, 0.01}).",
+      "page": 20,
+      "index": 11,
+      "width": 968,
+      "height": 250
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-012.webp",
+      "caption": "Figure 7. Distribution function f (top row) and macroscopic moments (ρ, ux, T ) (bottom row) at t = 0.1 for the 1D Riemann problem at Kn = 1.0.",
+      "page": 20,
+      "index": 12,
+      "width": 979,
+      "height": 548
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-013.webp",
+      "caption": "Figure 1. Visualization of the function Kε(v) for ε = 0.01.",
+      "page": 5,
+      "index": 13,
+      "width": 490,
+      "height": 327
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-014.webp",
+      "caption": "Table 1. Ablation study results of relative errors at Kn = 0.01 for the standard L2 Loss, relative loss [29], and the proposed loss with specific choices of α and β.",
+      "page": 16,
+      "index": 14,
+      "width": 968,
+      "height": 231
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04971v1/fig-015.webp",
+      "caption": "Figure 3. Relative error curves of the distribution function f and macroscopic moments (ρ, ux, T ) according to the polynomial growth rate β at Kn = 0.01.",
+      "page": 16,
+      "index": 15,
+      "width": 976,
+      "height": 588
+    }
+  ]
+}
