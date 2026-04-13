@@ -1,0 +1,182 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-001.webp",
+      "caption": "Figure 3: Rising bubble, coarse mesh h = 125 m: low-resolution solution computed by the AV model (left in each panel), reference solution computed by the AV model (center in each panel), and improvement by the super resolution with CNN (right in each panel) for different times t, with T = 1020 s.",
+      "page": 11,
+      "index": 1,
+      "width": 964,
+      "height": 479
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-002.webp",
+      "caption": "Figure 11: Rising bubble, Smagorinsky model for the reference solution: evolution of error (30) for the solutions computed by the AV model with coarse meshes h = 62.5,125,250,500 m.",
+      "page": 15,
+      "index": 2,
+      "width": 482,
+      "height": 302
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-003.webp",
+      "caption": "Figure 10: Rising bubble, coarse mesh h = 500 m: low resolution solution computed by the AV model (left in each panel), reference solution computed by the Smagorinsky model (center in each panel), and improvement by the super resolution with CNN (right in each panel) for different times t, with T = 1020 s.",
+      "page": 15,
+      "index": 3,
+      "width": 964,
+      "height": 478
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-004.webp",
+      "caption": "Figure 19: Density current, Smagorinsky model for the reference solution (computed with mesh h = 25): evolution of error (30) for the solutions computed by the AV model with coarse meshes h = 400,200 m enhanced by SR with A-CNN and m-CNN.",
+      "page": 21,
+      "index": 4,
+      "width": 590,
+      "height": 358
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-005.webp",
+      "caption": "Figure 18: Density current, coarse mesh h = 200 m: low resolution solution computed by the AV model (first column), reference solution computed by the Smagorinsky model (second column), improvement by the super resolution with m-CNN (third column) and A-CNN (fourth column) for increasing time t from top to bottom, with T = 900 s.",
+      "page": 21,
+      "index": 5,
+      "width": 786,
+      "height": 555
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-006.webp",
+      "caption": "Figure 1: Schematic diagram of a A-CNN architecture: Uα denotes upsampling layer α , Cβ denotes convolution layer β , K is a filter matrix, AF represents an activation function, and A denotes an attention block.",
+      "page": 7,
+      "index": 6,
+      "width": 933,
+      "height": 201
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-007.webp",
+      "caption": "Table 3: Hyperparameters of the Diff network.",
+      "page": 10,
+      "index": 7,
+      "width": 610,
+      "height": 381
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-008.webp",
+      "caption": "Figure 8: Rising bubble, coarse mesh h = 125 m: low-resolution solution computed by the AV model (left in each panel), reference solution computed by the Smagorinsky model (center in each panel), and improvement by the super resolution with CNN (right in each panel) for different times t, with T = 1020 s.",
+      "page": 14,
+      "index": 8,
+      "width": 964,
+      "height": 478
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-009.webp",
+      "caption": "Figure 9: Rising bubble, coarse mesh h = 250 m: low-resolution solution computed by the AV model (left in each panel), reference solution computed by the Smagorinsky model (center in each panel), and improvement by the super resolution with CNN (right in each panel) for different times t, with T = 1020 s.",
+      "page": 14,
+      "index": 9,
+      "width": 964,
+      "height": 477
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-010.webp",
+      "caption": "Figure 15: Density current, coarse mesh h = 200 m: low resolution solution computed by the AV model (first column), reference solution computed by the AV model (second column), improvement by the super resolution with m-CNN (third column), A-CNN (fourth column), and Diff (fifth column) for increasing time t from top to bottom, with T = 900 s.",
+      "page": 18,
+      "index": 10,
+      "width": 882,
+      "height": 512
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-011.webp",
+      "caption": "Figure 6: Rising bubble, AV model for the reference solution: evolution of error (30) for the solutions computed by the AV model with coarse meshes h = 125,250,500 m.",
+      "page": 13,
+      "index": 11,
+      "width": 540,
+      "height": 340
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-012.webp",
+      "caption": "Figure 7: Rising bubble, coarse mesh h = 62 m: low-resolution solution computed by the AV model (left in each panel), reference solution by the Smagorinsky model (center in each panel), and improvement by the super resolution with CNN (right in each panel) for different times t, with T = 1020 s.",
+      "page": 13,
+      "index": 12,
+      "width": 964,
+      "height": 479
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-013.webp",
+      "caption": "Figure 2: Schematic diagram of an m-CNN architecture, using the same notation as in Fig. 1.",
+      "page": 8,
+      "index": 13,
+      "width": 933,
+      "height": 514
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-014.webp",
+      "caption": "Figure 16: Density current, AV model ( reference solution computed with mesh h = 100): evolution of error (30) for coarse meshes h = 400 m (left) and h = 200 m (right) enhanced by SR with A-CNN, m-CNN, and Diff.",
+      "page": 19,
+      "index": 14,
+      "width": 979,
+      "height": 319
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-015.webp",
+      "caption": "Figure 14: Density current, coarse mesh h = 400 m: low resolution solution computed by the AV model (first column), reference solution computed by the AV model (second column), improvement by the super resolution with m-CNN (third column), A-CNN (fourth column), and Diff (fifth column) for increasing time t from top to bottom, with T = 900 s.",
+      "page": 17,
+      "index": 15,
+      "width": 882,
+      "height": 512
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-016.webp",
+      "caption": "Figure 13: Density current, coarse mesh h = 400 m (left panel) and h = 200 m (right panel): low resolution solution computed by the AV model (ILR), reference solution computed by the AV model (IHR), and improvement by the super resolution with CNN (“SR with CNN”) for increasing time t from top to bottom, with T = 900 s.",
+      "page": 17,
+      "index": 16,
+      "width": 964,
+      "height": 507
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-017.webp",
+      "caption": "Figure 4: Rising bubble, coarse mesh h = 250 m: low-resolution solution computed by the AV model (left in each panel), reference solution computed by the AV model (center in each panel), and improvement by the super resolution with CNN (right in each panel) for different times t, with T = 1020 s.",
+      "page": 12,
+      "index": 17,
+      "width": 964,
+      "height": 478
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-018.webp",
+      "caption": "Figure 5: Rising bubble, coarse mesh h = 500 m: low-resolution solution computed by the AV model (left in each panel), reference solution computed by the AV model (center in each panel), and improvement by the super resolution with CNN (right in each panel) for different times t, with T = 1020 s.",
+      "page": 12,
+      "index": 18,
+      "width": 964,
+      "height": 477
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-019.webp",
+      "caption": "Table 1: Hyperparameters of the CNN and A-CNN networks.",
+      "page": 9,
+      "index": 19,
+      "width": 614,
+      "height": 323
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-020.webp",
+      "caption": "Table 2: Hyperparameters of the m-CNN network.",
+      "page": 9,
+      "index": 20,
+      "width": 482,
+      "height": 324
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-021.webp",
+      "caption": "Figure 17: Density current, coarse mesh h = 400 m: low resolution solution computed by the AV model (first column), reference solution computed by the Smagorinsky model (second column), improvement by the super resolution with m-CNN (third column) and A-CNN (fourth column) for increasing time t from top to bottom, with T = 900 s.",
+      "page": 20,
+      "index": 21,
+      "width": 786,
+      "height": 555
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09505v1/fig-022.webp",
+      "caption": "Figure 12: Rising bubble, coarse mesh h = 500 m: improvements to the low-resolution solution computed by the AV model at time T = 1020 s by the super resolution with CNN trained with 80%, 60%, 40%, 20% of the dataset. The IHR dataset consists of solutions computed by the Smagorinsky model.",
+      "page": 16,
+      "index": 22,
+      "width": 897,
+      "height": 261
+    }
+  ]
+}

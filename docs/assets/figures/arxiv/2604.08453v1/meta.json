@@ -1,0 +1,182 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-001.webp",
+      "caption": "Figure 1: Admissible polynomial window functions considered in this work: (a) interface window functions, (b) Dirichlet window functions, (c) Neumann window functions. Here, k denotes the maximum vanishing derivative order.",
+      "page": 11,
+      "index": 1,
+      "width": 813,
+      "height": 292
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-002.webp",
+      "caption": "Figure B.11: Impact of the boundary/interface subdomain size: (a) window configuration with various boundary/interface element size; and (b) Relative L2 error of the trained solutions depending on the boundary/interface element size. For interior subdomains, W̃ (1) int is used for all cases.",
+      "page": 43,
+      "index": 2,
+      "width": 825,
+      "height": 464
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-003.webp",
+      "caption": "Figure 2: Model problem with a slanted interface in a two-dimensional domain: (a) solution; and (b) source term.",
+      "page": 26,
+      "index": 3,
+      "width": 969,
+      "height": 290
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-004.webp",
+      "caption": "Table D.11: Window element parameters. Interior half-widths marked with ∗ are in reference coordinates (ξ1, ξ2) ∈ [0, 1]2. Interface edge sizes are expressed as fractions of the interface length Litf = √ 29/5 ≈ 1.08. Interface corner angle widths are given as approximate (left, right) subdomain pairs.",
+      "page": 47,
+      "index": 4,
+      "width": 796,
+      "height": 518
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-005.webp",
+      "caption": "Table 5: Comparison between different PINN approaches on problem 2",
+      "page": 30,
+      "index": 5,
+      "width": 839,
+      "height": 189
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-006.webp",
+      "caption": "Table 6: Comparison among different PINN approaches on problem 3",
+      "page": 30,
+      "index": 6,
+      "width": 731,
+      "height": 190
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-007.webp",
+      "caption": "Figure 4: The training performance of the buffer approach on the problem in Section 3.1: (a) the left-hand side of the solution compared with the source term; and (b) the left-hand side contributions of the neural networks and the buffer function.",
+      "page": 29,
+      "index": 7,
+      "width": 771,
+      "height": 345
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-008.webp",
+      "caption": "Table 4: Comparison between different PINN approaches on problem 1",
+      "page": 29,
+      "index": 8,
+      "width": 731,
+      "height": 187
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-009.webp",
+      "caption": "Figure B.8: Training performance of the windowing approach with various window functions: (a) window configuration for the target problem in Section 3.1; and (b) relative L2 error of the trained solutions depending on the combination of different window functions.",
+      "page": 39,
+      "index": 9,
+      "width": 825,
+      "height": 464
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-010.webp",
+      "caption": "Figure 6: Trained solution of buffer approach (Eq. 38) for Problem 4: (a) trained solution; (b) the ground truth; (c) PINN term NNm(x); and (d) buffer term gm(x) (Eq. 51).",
+      "page": 34,
+      "index": 10,
+      "width": 976,
+      "height": 541
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-011.webp",
+      "caption": "Figure 7: Boundary enforcement of the buffer approach: (a) the Neumann condition on the bottom-left boundary; (b) the Dirichlet condition on the bottom-right boundary; (c) the Neumann condition on the top-left boundary; (d) the Dirichlet condition on the top-right boundary; (e) the Neumann condition on the left boundary; (f) the Dirichlet condition on the right boundary; (g) the solution condition on the interface; and (h) the flux condition on the interface. Blue lines indicate the trained solution, and red markers indicate the boundary sample points where the buffer term hard-constrains the boundary conditions.",
+      "page": 35,
+      "index": 11,
+      "width": 748,
+      "height": 934
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-012.webp",
+      "caption": "Table C.9: Ablation test on problem 2",
+      "page": 46,
+      "index": 12,
+      "width": 702,
+      "height": 187
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-013.webp",
+      "caption": "Table C.10: Ablation test on problem 3",
+      "page": 46,
+      "index": 13,
+      "width": 702,
+      "height": 187
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-014.webp",
+      "caption": "Table C.8: Ablation test on problem 1",
+      "page": 46,
+      "index": 14,
+      "width": 702,
+      "height": 187
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-015.webp",
+      "caption": "Figure B.9: Second derivatives of target window functions: (a) interior; (b) Dirichlet; and (c) Neumann. For the interior window, the coordinate was mirrored about τ = 0 to illustrate the behavior of the functions across the subdomain.",
+      "page": 40,
+      "index": 15,
+      "width": 808,
+      "height": 292
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-016.webp",
+      "caption": "Table 7: Comparison between different PINN approaches on problem 4. Note that, for windowing approach, only the interface is hard-constrained while all the other boundary conditions are soft-constrained.",
+      "page": 36,
+      "index": 16,
+      "width": 766,
+      "height": 187
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-017.webp",
+      "caption": "Figure D.14: Comparison of the modified residual terms in (D.2) after training: (a) r2LHS[u]; and (b) r2f(x).",
+      "page": 49,
+      "index": 17,
+      "width": 976,
+      "height": 260
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-018.webp",
+      "caption": "Figure 5: Trained solution of window approach (10) for Problem 4: (a) trained solution; (b) LHS[u]; (c) trained solution (zoom-in); and (d) LHS[u] (zoom-in). Red box indicates the zoom-in region used in (c) and (d), where boundary condition and physics residual is most violated.",
+      "page": 32,
+      "index": 18,
+      "width": 969,
+      "height": 539
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-019.webp",
+      "caption": "Figure B.12: Windowing approach with perfectly overlapping boundary/interface subdomains (β = 2): (a) the left-hand side contribution of each subdomain for the best case of W̃ (1) int , W̃ (1) d , W̃ (1) n ; and (b) the relative L2 error of the trained solution with various window function combinations.",
+      "page": 44,
+      "index": 19,
+      "width": 789,
+      "height": 427
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-020.webp",
+      "caption": "Figure B.10: Each subdomain solution’s contribution to the left-hand side of the physics equation (2): (a) the worst case W̃ (1) int , W̃ (1) d , W̃ (1) n ; and (b) the best case W̃ (2) int , W̃ (2) d , W̃ (2) n .",
+      "page": 41,
+      "index": 20,
+      "width": 796,
+      "height": 397
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-021.webp",
+      "caption": "Figure 3: The training performance of the windowing approach on the problem in Section 3.1: the left-hand side of the solution compared with the source term, using the interior window function (a) W̃ (1) int , (b) W̃ (2) int , or (c) W̃ (3) int ; and (d) the left-hand side contribution of each subdomain solution for the best case of W̃ (1) int .",
+      "page": 27,
+      "index": 21,
+      "width": 783,
+      "height": 720
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08453v1/fig-022.webp",
+      "caption": "Figure D.13: Spatial layout of window elements for the fully hard-constrained windowing approach applied to the two-dimensional Poisson problem.",
+      "page": 48,
+      "index": 22,
+      "width": 799,
+      "height": 289
+    }
+  ]
+}
